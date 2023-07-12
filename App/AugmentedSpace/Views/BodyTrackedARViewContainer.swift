@@ -8,7 +8,6 @@
 import RealityKit
 import SwiftUI
 
-
 struct BodyTrackedARViewContainer: UIViewRepresentable {
 
     func makeUIView(context: Context) -> ARView { BodyTrackedARView() }

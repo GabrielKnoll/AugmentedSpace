@@ -5,17 +5,18 @@
 //  Created by Gabriel Knoll on 12.07.23.
 //
 
-import SwiftUI
 import RealityKit
+import SwiftUI
 
-struct ContentView : View {
+struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                //edgesIgnoringSafeAre(.all)
+                // edgesIgnoringSafeAre(.all)
                 NavigationLink(destination: StaticARViewContainer()) {
                     Text("Open StaticARViewContainer")
                 }
+                Spacer()
                 NavigationLink(destination: BodyTrackedARViewContainer()) {
                     Text("Open BodyTrackedARViewContainer")
                 }
@@ -24,10 +25,8 @@ struct ContentView : View {
     }
 }
 
-
-
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
