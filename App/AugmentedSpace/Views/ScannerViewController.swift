@@ -10,16 +10,28 @@ import SwiftUI
 import UIKit
 
 struct ScannerViewControllerContainer: UIViewControllerRepresentable {
+    @EnvironmentObject var state: AppState
+
     typealias UIViewControllerType = ScannerViewController
 
-    func makeUIViewController(context: Context) -> ScannerViewController { ScannerViewController() }
+    func makeUIViewController(context: Context) -> ScannerViewController { ScannerViewController(state: state) }
 
     func updateUIViewController(_ uiViewController: ScannerViewController, context: Context) {}
 }
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    var state: AppState
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+
+    init(state: AppState) {
+        self.state = state
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +116,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
 
     func found(code: String) {
-        print(code)
+        state.partnerName = code
     }
 
     override var prefersStatusBarHidden: Bool {

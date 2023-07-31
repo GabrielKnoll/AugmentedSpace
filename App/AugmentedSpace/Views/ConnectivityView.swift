@@ -17,7 +17,11 @@ struct ConnectivityView: View {
             if state.role == .checklist {
                 //Guest
                 Text("Scan QR Code")
-
+                if state.partnerName.isEmpty {
+                    ScannerViewControllerContainer()
+                } else {
+                    Text("Your partner is \($state.partnerName.wrappedValue)")
+                }
             } else {
                 //Host
                 Text("Show this QR-Code to your second player")
