@@ -1,5 +1,5 @@
 //
-//  SelectRoleButton.swift
+//  EndSessionButton.swift
 //  AugmentedSpace
 //
 //  Created by Tristan Häuser on 31.07.23.
@@ -8,16 +8,14 @@
 import RealityKit
 import SwiftUI
 
-struct SelectRoleButton: View {
-    var textlarge: String
-    var textsmall: String
+struct EndSessionButton: View {
+    var text: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
-            VStack {
-                Text(textlarge)
-                Text(textsmall)
+            HStack {
+                Text(text)
             }
             .padding(50.0)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
@@ -29,11 +27,10 @@ struct SelectRoleButton: View {
 }
 
 #if DEBUG
-struct SelectRoleButton_Previews: PreviewProvider {
+struct EndSessionButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectRoleButton(
-            textlarge: "Fitting Specialist",
-            textsmall: ""
+        EndSessionButton(
+            text: "End Session"
         ) {
         }
     }

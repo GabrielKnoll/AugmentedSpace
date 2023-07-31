@@ -1,15 +1,13 @@
 //
-//  BackButton.swift
+//  TakePhotoIconButton.swift
 //  AugmentedSpace
 //
 //  Created by Tristan Häuser on 31.07.23.
 //
 
-import RealityKit
 import SwiftUI
 
-struct BackButton: View {
-    var text: String
+struct TakePhotoIconButton: View {
     var icon: String
     var clicked: (() -> Void)
 
@@ -22,24 +20,21 @@ struct BackButton: View {
                         .scaledToFit()
                         .frame(alignment: .center)
                         .padding(10)
-                    Text(text)
-                        .frame(alignment: .center)
                 }
             }
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.278, green: 0.467, blue: 0.821))
+            .background(Color(red: 0.953, green: 0.262, blue: 0.129))
             .cornerRadius(10)
         }
     }
 }
 #if DEBUG
-struct BackButton_Previews: PreviewProvider {
+struct TakePhotoIconButton_Previews: PreviewProvider {
     static var previews: some View {
-        BackButton(
-            text: "Back",
-            icon: "Icon_BackArrow"
+        TakePhotoIconButton(
+            icon: "Icon_Camera"
         ) {
         }
     }

@@ -12,33 +12,6 @@ struct ContentView: View {
     @StateObject var state = State()
 
     var body: some View {
-        HStack {
-            Spacer(minLength: 10)
-            VStack {
-                Spacer(minLength: 200)
-                StartGameButton(
-                    text: "Start Session"
-                ) {
-                }
-                SelectRoleButton(
-                    text: "Fitting Specialist"
-                ) {
-                }
-                SelectRoleButton(
-                    text: "Checklist Navigator"
-                ) {
-                }
-                ContinueButton(
-                    text: "Continue"
-                ) {
-                }
-                TakePhotoButton(
-                    text: "TAKE A PHOTO"
-                ) {
-                }
-            }
-            Spacer(minLength: 10)
-        }
         NavigationView {
             VStack {
                 // edgesIgnoringSafeAre(.all)

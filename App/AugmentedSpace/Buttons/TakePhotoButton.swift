@@ -14,14 +14,27 @@ struct TakePhotoButton: View {
 
     var body: some View {
         Button(action: clicked) {
-            HStack {
-                Text(text)
+            VStack {
+                HStack {
+                    Text(text)
+                        .frame(alignment: .center)
+                }
             }
             .frame(maxWidth: .infinity)
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.black)
             .padding()
-            .background(Color(red: 0.952_941_176_470_588_2, green: 0.262_745_098_039_215_7, blue: 0.129_411_764_705_882_37))
+            .background(Color(red: 0.953, green: 0.262, blue: 0.129))
             .cornerRadius(10)
         }
     }
 }
+#if DEBUG
+struct TakePhotoButton_Previews: PreviewProvider {
+    static var previews: some View {
+        TakePhotoButton(
+            text: "TAKE A PHOTO"
+        ) {
+        }
+    }
+}
+#endif

@@ -22,6 +22,9 @@
 		C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */; };
 		C0BD00802A5EDF6500AB4EFB /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C0BD007F2A5EDF6500AB4EFB /* robot.usdz */; };
 		E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */; };
+		E97C64042A77F6A2008E0C3A /* TakePhotoIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */; };
+		E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64062A77F805008E0C3A /* SaveButton.swift */; };
+		E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */; };
 		E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F52A77C14F007E19ED /* StartGameButton.swift */; };
 		E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */; };
 		E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729FF2A77C410007E19ED /* ContinueButton.swift */; };
@@ -48,6 +51,9 @@
 		C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTrackedARView.swift; sourceTree = "<group>"; };
 		C0BD007F2A5EDF6500AB4EFB /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
 		E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatButton.swift; sourceTree = "<group>"; };
+		E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoIconButton.swift; sourceTree = "<group>"; };
+		E97C64062A77F805008E0C3A /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
+		E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionButton.swift; sourceTree = "<group>"; };
 		E9B729F52A77C14F007E19ED /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleButton.swift; sourceTree = "<group>"; };
 		E9B729FF2A77C410007E19ED /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
@@ -135,9 +141,12 @@
 			isa = PBXGroup;
 			children = (
 				E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */,
+				E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */,
 				E9B729F52A77C14F007E19ED /* StartGameButton.swift */,
 				E9B729FF2A77C410007E19ED /* ContinueButton.swift */,
 				E9B72A022A77C587007E19ED /* TakePhotoButton.swift */,
+				E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */,
+				E97C64062A77F805008E0C3A /* SaveButton.swift */,
 				E9B72A062A77C8A9007E19ED /* BackButton.swift */,
 				E9B72A092A77C8C9007E19ED /* ChoosePieceButton.swift */,
 				E9B72A0C2A77C8E7007E19ED /* ShowInformationButton.swift */,
@@ -257,12 +266,15 @@
 				C04A65222A77AB91003D9729 /* ViewProvider.swift in Sources */,
 				C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */,
 				C04A65252A77AD07003D9729 /* State.swift in Sources */,
+				E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */,
 				E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */,
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
 				E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */,
 				E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */,
+				E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */,
+				E97C64042A77F6A2008E0C3A /* TakePhotoIconButton.swift in Sources */,
 				E9B72A032A77C587007E19ED /* TakePhotoButton.swift in Sources */,
 				E9B72A072A77C8A9007E19ED /* BackButton.swift in Sources */,
 				C0BD007A2A5EDB6100AB4EFB /* StaticARViewContainer.swift in Sources */,

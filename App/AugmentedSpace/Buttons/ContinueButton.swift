@@ -25,3 +25,13 @@ struct ContinueButton: View {
         }
     }
 }
+#if DEBUG
+struct ContinueButton_Previews: PreviewProvider {
+    static var previews: some View {
+        ContinueButton(
+            text: "Continue"
+        ) {
+        }
+    }
+}
+#endif

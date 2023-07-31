@@ -25,3 +25,13 @@ struct StartGameButton: View {
         }
     }
 }
+#if DEBUG
+struct StartGameButton_Previews: PreviewProvider {
+    static var previews: some View {
+        StartGameButton(
+            text: "Start Game"
+        ) {
+        }
+    }
+}
+#endif
