@@ -25,6 +25,7 @@
 		E97C64042A77F6A2008E0C3A /* TakePhotoIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */; };
 		E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64062A77F805008E0C3A /* SaveButton.swift */; };
 		E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */; };
+		E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C640C2A77FA15008E0C3A /* StartMenuView.swift */; };
 		E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F52A77C14F007E19ED /* StartGameButton.swift */; };
 		E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */; };
 		E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729FF2A77C410007E19ED /* ContinueButton.swift */; };
@@ -54,6 +55,7 @@
 		E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoIconButton.swift; sourceTree = "<group>"; };
 		E97C64062A77F805008E0C3A /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionButton.swift; sourceTree = "<group>"; };
+		E97C640C2A77FA15008E0C3A /* StartMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuView.swift; sourceTree = "<group>"; };
 		E9B729F52A77C14F007E19ED /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleButton.swift; sourceTree = "<group>"; };
 		E9B729FF2A77C410007E19ED /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C08755FB2A5ED83100965129 /* Models */,
 				C08755EB2A5ED2FB00965129 /* AppDelegate.swift */,
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
+				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
 				E9B729FB2A77C221007E19ED /* Buttons */,
 				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
@@ -270,6 +273,7 @@
 				E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */,
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
+				E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */,
 				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
 				E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */,
 				E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */,
