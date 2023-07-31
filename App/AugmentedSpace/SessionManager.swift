@@ -119,6 +119,8 @@ extension SessionManager: MCSessionDelegate {
     }
 
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        state?.mcText = String(data: data, encoding: .utf8)!
+        DispatchQueue.main.async {
+            self.state?.mcText = String(data: data, encoding: .utf8)!
+        }
     }
 }
