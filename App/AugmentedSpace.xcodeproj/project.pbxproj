@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
+		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755EB2A5ED2FB00965129 /* AppDelegate.swift */; };
 		C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755ED2A5ED2FB00965129 /* ContentView.swift */; };
 		C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C08755EF2A5ED2FB00965129 /* Experience.rcproject */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C08755E82A5ED2FB00965129 /* AugmentedSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentedSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08755EB2A5ED2FB00965129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08755ED2A5ED2FB00965129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +71,7 @@
 				C08755FB2A5ED83100965129 /* Models */,
 				C08755EB2A5ED2FB00965129 /* AppDelegate.swift */,
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
+				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
 				C08755EF2A5ED2FB00965129 /* Experience.rcproject */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
 				C08755F32A5ED2FC00965129 /* Preview Content */,
@@ -116,8 +121,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				C04A651C2A77A328003D9729 /* PBXTargetDependency */,
 			);
 			name = AugmentedSpace;
+			packageProductDependencies = (
+				C04A65172A77A2FD003D9729 /* RswiftLibrary */,
+			);
 			productName = AugmentedSpace;
 			productReference = C08755E82A5ED2FB00965129 /* AugmentedSpace.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +155,9 @@
 				Base,
 			);
 			mainGroup = C08755DF2A5ED2FB00965129;
+			packageReferences = (
+				C04A65162A77A2FD003D9729 /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = C08755E92A5ED2FB00965129 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,12 +212,20 @@
 				C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */,
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
 				C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */,
+				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
 				C0BD007A2A5EDB6100AB4EFB /* StaticARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C04A651C2A77A328003D9729 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C04A651B2A77A328003D9729 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C08755F62A5ED2FC00965129 /* Debug */ = {
@@ -406,6 +426,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C04A65162A77A2FD003D9729 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C04A65172A77A2FD003D9729 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C04A65162A77A2FD003D9729 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		C04A651B2A77A328003D9729 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C08755E02A5ED2FB00965129 /* Project object */;
 }

@@ -19,6 +19,7 @@ struct ContentView: View {
                 Spacer()
                 NavigationLink(destination: BodyTrackedARViewContainer()) {
                     Text("Open BodyTrackedARViewContainer")
+                        .background(R.color.testColor.color)
                 }
             }
         }
