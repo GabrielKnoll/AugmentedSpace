@@ -9,20 +9,39 @@ import RealityKit
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var state = State()
+    @StateObject var state = AppState()
+    @State private var isShowingNameView = false
 
     var body: some View {
         NavigationView {
             VStack {
-                // edgesIgnoringSafeAre(.all)
-                NavigationLink(destination: StaticARViewContainer()) {
-                    Text("Open StaticARViewContainer")
+                NavigationLink(destination: NameView(), isActive: $isShowingNameView) { EmptyView() }
+                Spacer()
+                Button("Start as Checklist Navigator") {
+                    state.role = .checklist
+                    isShowingNameView = true
                 }
                 Spacer()
-                NavigationLink(destination: ViewProvider.nextView(current: .menu)) {
-                    Text("Open BodyTrackedARViewContainer")
-                        .background(R.color.testColor.color)
+                Button("Start as Fitting Specialist") {
+                    state.role = .fitting
+                    isShowingNameView = true
                 }
+                Spacer()
+                // edgesIgnoringSafeAre(.all)
+//                NavigationLink(destination: StaticARViewContainer()) {
+//                    Text("Open StaticARViewContainer")
+//                }
+//                NavigationLink(destination: ViewProvider.nextView(current: .menu)) {
+//                    Text("Open BodyTrackedARViewContainer")
+//                        .background(R.color.testColor.color)
+//                }
+//                NavigationLink(destination: ViewProvider.connectivityView) {
+//                    Text("Open ConnectivityView")
+//                }
+//                NavigationLink(destination: ScannerViewControllerContainer()) {
+//                    Text("Open Scanner")
+//                }
+
             }
         }
         .environmentObject(state)
