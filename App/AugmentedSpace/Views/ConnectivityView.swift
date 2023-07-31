@@ -32,10 +32,6 @@ struct ConnectivityView: View {
                     .scaledToFit()
             }
         }
-        .alert("Enter your name", isPresented: $showingAlert) {
-            TextField("Enter your name", text: $state.name)
-            Button("OK", action: { showingAlert = false })
-        }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 showingAlert = true

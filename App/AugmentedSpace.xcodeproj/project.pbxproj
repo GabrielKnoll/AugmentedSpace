@@ -15,6 +15,7 @@
 		C051E0832A77DF9900DB0AF4 /* QRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E0822A77DF9900DB0AF4 /* QRUtility.swift */; };
 		C051E0882A77E30500DB0AF4 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */; };
 		C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */; };
+		C051E08E2A77F90600DB0AF4 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08D2A77F90600DB0AF4 /* NameView.swift */; };
 		C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755EB2A5ED2FB00965129 /* AppDelegate.swift */; };
 		C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755ED2A5ED2FB00965129 /* ContentView.swift */; };
 		C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C08755EF2A5ED2FB00965129 /* Experience.rcproject */; };
@@ -35,6 +36,7 @@
 		C051E0822A77DF9900DB0AF4 /* QRUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRUtility.swift; sourceTree = "<group>"; };
 		C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
 		C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		C051E08D2A77F90600DB0AF4 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		C08755E82A5ED2FB00965129 /* AugmentedSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentedSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08755EB2A5ED2FB00965129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08755ED2A5ED2FB00965129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */,
 				C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */,
 				C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */,
+				C051E08D2A77F90600DB0AF4 /* NameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				C04A65252A77AD07003D9729 /* AppState.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
+				C051E08E2A77F90600DB0AF4 /* NameView.swift in Sources */,
 				C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */,
 				C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */,
 				C0BD007A2A5EDB6100AB4EFB /* StaticARViewContainer.swift in Sources */,

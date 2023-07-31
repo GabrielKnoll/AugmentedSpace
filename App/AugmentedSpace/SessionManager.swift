@@ -15,21 +15,40 @@ class SessionManager: NSObject {
     var serviceBrowser: MCNearbyServiceBrowser?
     weak var state: AppState?
 
-    func initSession(state: AppState) {
-        peerID = MCPeerID(displayName: UIDevice.current.name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .optional)
-        mcSession.delegate = self
-        serviceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "ifi-par")
-        serviceBrowser = MCNearbyServiceBrowser(peer: peerID, serviceType: "ifi-par")
-        serviceAdvertiser!.delegate = self
-        serviceBrowser!.delegate = self
-
-        serviceAdvertiser!.startAdvertisingPeer()
-        serviceBrowser!.startBrowsingForPeers()
-        mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "ifi-par", discoveryInfo: nil, session: mcSession)
-        mcAdvertiserAssistant!.start()
+    init(state: AppState) {
         self.state = state
     }
+
+    func startSession() {
+        initSession()
+        serviceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "ifi-par")
+        serviceAdvertiser?.delegate = self
+        serviceAdvertiser?.startAdvertisingPeer()
+    }
+
+    func joinSession() {
+        initSession()
+        serviceBrowser = MCNearbyServiceBrowser(peer: peerID, serviceType: "ifi-par")
+        serviceBrowser?.delegate = self
+        serviceBrowser?.startBrowsingForPeers()
+    }
+
+    private func initSession() {
+        guard let state = state, !state.name.isEmpty && !state.partnerName.isEmpty else {
+            print("SessionManager can't launch, infos are missing")
+            return
+        }
+
+        peerID = MCPeerID(displayName: state.name)
+        mcSession = MCSession(peer: peerID)
+        mcSession.delegate = self
+    }
+
+//    func initSession(state: AppState) {
+//        mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "ifi-par", discoveryInfo: nil, session: mcSession)
+//        mcAdvertiserAssistant!.start()
+//        self.state = state
+//    }
 
     func sendText(text: String) {
         if !mcSession.connectedPeers.isEmpty {

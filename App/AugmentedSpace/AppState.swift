@@ -8,7 +8,7 @@
 import Foundation
 
 class AppState: ObservableObject {
-    var sessionManager = SessionManager()
+    var sessionManager: SessionManager?
     var role: Role = .checklist
     @Published var step: Step?
     @Published var name = ""
@@ -17,5 +17,9 @@ class AppState: ObservableObject {
         didSet {
             print("wow, new text: \(mcText)")
         }
+    }
+
+    init() {
+        sessionManager = SessionManager(state: self)
     }
 }
