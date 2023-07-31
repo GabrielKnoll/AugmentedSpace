@@ -14,22 +14,31 @@ struct ConnectivityView: View {
 
     var body: some View {
         VStack {
-            if state.role == .checklist {
-                //Guest
+            if state.role == .fitting {
+                //Host
                 Text("Scan QR Code")
                 if state.partnerName.isEmpty {
                     ScannerViewControllerContainer()
                 } else {
                     Text("Your partner is \($state.partnerName.wrappedValue)")
+                        .onAppear {
+                            state.sessionManager?.startSession()
+                        }
                 }
             } else {
-                //Host
+                //Guest
                 Text("Show this QR-Code to your second player")
                     .font(.title)
                 Image(uiImage: QRUtility.generateQRCode(from: state.name))
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
+                    .onAppear {
+                        state.sessionManager?.joinSession()
+                    }
+            }
+            Button("Send Text") {
+                state.sessionManager?.sendText(text: "Hello World!")
             }
         }
         .onAppear {

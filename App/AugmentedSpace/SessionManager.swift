@@ -20,35 +20,34 @@ class SessionManager: NSObject {
     }
 
     func startSession() {
-        initSession()
+        guard let state = state, !state.name.isEmpty && !state.partnerName.isEmpty else {
+            print("SessionManager can't launch, infos are missing")
+            return
+        }
+
+        initSession(name: state.name)
         serviceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "ifi-par")
         serviceAdvertiser?.delegate = self
         serviceAdvertiser?.startAdvertisingPeer()
     }
 
     func joinSession() {
-        initSession()
+        guard let state = state, !state.name.isEmpty else {
+            print("SessionManager can't launch, infos are missing")
+            return
+        }
+
+        initSession(name: state.name)
         serviceBrowser = MCNearbyServiceBrowser(peer: peerID, serviceType: "ifi-par")
         serviceBrowser?.delegate = self
         serviceBrowser?.startBrowsingForPeers()
     }
 
-    private func initSession() {
-        guard let state = state, !state.name.isEmpty && !state.partnerName.isEmpty else {
-            print("SessionManager can't launch, infos are missing")
-            return
-        }
-
-        peerID = MCPeerID(displayName: state.name)
+    private func initSession(name: String) {
+        peerID = MCPeerID(displayName: name)
         mcSession = MCSession(peer: peerID)
         mcSession.delegate = self
     }
-
-//    func initSession(state: AppState) {
-//        mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "ifi-par", discoveryInfo: nil, session: mcSession)
-//        mcAdvertiserAssistant!.start()
-//        self.state = state
-//    }
 
     func sendText(text: String) {
         if !mcSession.connectedPeers.isEmpty {
@@ -77,6 +76,11 @@ extension SessionManager: MCNearbyServiceBrowserDelegate {
 extension SessionManager: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         print("didReceiveInvitationFromPeer: \(peerID)")
+        guard peerID.displayName == state?.partnerName else {
+            print("wrong invitation from unknown \(peerID)")
+            invitationHandler(false, mcSession)
+            return
+        }
         invitationHandler(true, mcSession)
     }
 }
