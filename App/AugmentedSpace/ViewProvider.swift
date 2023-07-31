@@ -28,7 +28,8 @@ enum Role {
 
 struct ViewProvider {
     @ViewBuilder
-    static func nextView(current: Page) -> some View {
-        return BodyTrackedARViewContainer()
-    }
+    static func nextView(current: Page) -> some View { BodyTrackedARViewContainer() }
+
+    @ViewBuilder
+    static func sessionView() -> some View { SessionViewControllerContainer() }
 }

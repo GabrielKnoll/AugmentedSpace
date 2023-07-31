@@ -23,9 +23,13 @@ struct ContentView: View {
                     Text("Open BodyTrackedARViewContainer")
                         .background(R.color.testColor.color)
                 }
+                NavigationLink(destination: ViewProvider.sessionView) {
+                    Text("Open Session View")
+                }
             }
         }
         .environmentObject(state)
+        .onAppear(perform: { state.sessionManager.initSession(state: state) })
     }
 }
 

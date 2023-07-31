@@ -8,7 +8,12 @@
 import Foundation
 
 class State: ObservableObject {
-    var sessionId: UUID?
+    var sessionManager = SessionManager()
     var role: Role?
     @Published var step: Step?
+    @Published var mcText = "No text so far" {
+        didSet {
+            print("wow, new text: \(mcText)")
+        }
+    }
 }
