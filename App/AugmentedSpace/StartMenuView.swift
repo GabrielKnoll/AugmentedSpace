@@ -16,6 +16,8 @@ struct StartMenuView: View {
               .background(
                 Image("spaceBackground")
                       .resizable()
+                      .scaledToFit()
+                      .frame(maxWidth: .infinity, maxHeight: .infinity)
               )
     }
 }

@@ -17,7 +17,7 @@ struct ContentView: View {
             VStack {
                 NavigationLink(destination: NameView(), isActive: $isShowingNameView) { EmptyView() }
                 Spacer()
-                Button("Start as Checklist Navigator") {
+                SelectRoleButton(textlarge: "Checklist Navigator", textsmall: "osdlfhglhjs") {
                     state.role = .checklist
                     isShowingNameView = true
                 }
