@@ -9,6 +9,8 @@ import RealityKit
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var state = State()
+
     var body: some View {
         NavigationView {
             VStack {
@@ -17,12 +19,13 @@ struct ContentView: View {
                     Text("Open StaticARViewContainer")
                 }
                 Spacer()
-                NavigationLink(destination: BodyTrackedARViewContainer()) {
+                NavigationLink(destination: ViewProvider.nextView(current: .menu)) {
                     Text("Open BodyTrackedARViewContainer")
                         .background(R.color.testColor.color)
                 }
             }
         }
+        .environmentObject(state)
     }
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
+		C04A65222A77AB91003D9729 /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65212A77AB91003D9729 /* ViewProvider.swift */; };
+		C04A65252A77AD07003D9729 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65242A77AD07003D9729 /* State.swift */; };
 		C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755EB2A5ED2FB00965129 /* AppDelegate.swift */; };
 		C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755ED2A5ED2FB00965129 /* ContentView.swift */; };
 		C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C08755EF2A5ED2FB00965129 /* Experience.rcproject */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
+		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
+		C04A65242A77AD07003D9729 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		C08755E82A5ED2FB00965129 /* AugmentedSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentedSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08755EB2A5ED2FB00965129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08755ED2A5ED2FB00965129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				C08755EB2A5ED2FB00965129 /* AppDelegate.swift */,
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
 				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
+				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
+				C04A65242A77AD07003D9729 /* State.swift */,
 				C08755EF2A5ED2FB00965129 /* Experience.rcproject */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
 				C08755F32A5ED2FC00965129 /* Preview Content */,
@@ -211,7 +217,9 @@
 				C0BD007C2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift in Sources */,
 				C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */,
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
+				C04A65222A77AB91003D9729 /* ViewProvider.swift in Sources */,
 				C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */,
+				C04A65252A77AD07003D9729 /* State.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
 				C0BD007A2A5EDB6100AB4EFB /* StaticARViewContainer.swift in Sources */,
