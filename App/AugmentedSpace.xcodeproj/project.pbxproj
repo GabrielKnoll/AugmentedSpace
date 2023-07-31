@@ -10,11 +10,11 @@
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65222A77AB91003D9729 /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65212A77AB91003D9729 /* ViewProvider.swift */; };
-		C04A65252A77AD07003D9729 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65242A77AD07003D9729 /* State.swift */; };
+		C04A65252A77AD07003D9729 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65242A77AD07003D9729 /* AppState.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
-		C04A652B2A77B515003D9729 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A652A2A77B515003D9729 /* SessionViewController.swift */; };
-		C04A652D2A77B636003D9729 /* SessionViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A652C2A77B636003D9729 /* SessionViewControllerContainer.swift */; };
 		C051E0832A77DF9900DB0AF4 /* QRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E0822A77DF9900DB0AF4 /* QRUtility.swift */; };
+		C051E0882A77E30500DB0AF4 /* ConnectivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */; };
+		C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */; };
 		C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755EB2A5ED2FB00965129 /* AppDelegate.swift */; };
 		C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755ED2A5ED2FB00965129 /* ContentView.swift */; };
 		C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C08755EF2A5ED2FB00965129 /* Experience.rcproject */; };
@@ -30,11 +30,11 @@
 /* Begin PBXFileReference section */
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
-		C04A65242A77AD07003D9729 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C04A65272A77B2E3003D9729 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		C04A652A2A77B515003D9729 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
-		C04A652C2A77B636003D9729 /* SessionViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewControllerContainer.swift; sourceTree = "<group>"; };
 		C051E0822A77DF9900DB0AF4 /* QRUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRUtility.swift; sourceTree = "<group>"; };
+		C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityView.swift; sourceTree = "<group>"; };
+		C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		C08755E82A5ED2FB00965129 /* AugmentedSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentedSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08755EB2A5ED2FB00965129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08755ED2A5ED2FB00965129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
 				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
-				C04A65242A77AD07003D9729 /* State.swift */,
+				C04A65242A77AD07003D9729 /* AppState.swift */,
 				C04A65272A77B2E3003D9729 /* SessionManager.swift */,
 				C08755EF2A5ED2FB00965129 /* Experience.rcproject */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
@@ -118,8 +118,8 @@
 				C0BD00792A5EDB6100AB4EFB /* StaticARViewContainer.swift */,
 				C0BD007B2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift */,
 				C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */,
-				C04A652A2A77B515003D9729 /* SessionViewController.swift */,
-				C04A652C2A77B636003D9729 /* SessionViewControllerContainer.swift */,
+				C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */,
+				C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,18 +227,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0BD007C2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift in Sources */,
-				C04A652D2A77B636003D9729 /* SessionViewControllerContainer.swift in Sources */,
 				C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */,
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
 				C051E0832A77DF9900DB0AF4 /* QRUtility.swift in Sources */,
 				C04A65222A77AB91003D9729 /* ViewProvider.swift in Sources */,
 				C08755EC2A5ED2FB00965129 /* AppDelegate.swift in Sources */,
-				C04A65252A77AD07003D9729 /* State.swift in Sources */,
+				C04A65252A77AD07003D9729 /* AppState.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
-				C04A652B2A77B515003D9729 /* SessionViewController.swift in Sources */,
 				C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */,
+				C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */,
 				C0BD007A2A5EDB6100AB4EFB /* StaticARViewContainer.swift in Sources */,
+				C051E0882A77E30500DB0AF4 /* ConnectivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,5 +31,5 @@ struct ViewProvider {
     static func nextView(current: Page) -> some View { BodyTrackedARViewContainer() }
 
     @ViewBuilder
-    static func sessionView() -> some View { SessionViewControllerContainer() }
+    static func connectivityView() -> some View { ConnectivityView() }
 }

@@ -13,9 +13,9 @@ class SessionManager: NSObject {
     var mcAdvertiserAssistant: MCAdvertiserAssistant?
     var serviceAdvertiser: MCNearbyServiceAdvertiser?
     var serviceBrowser: MCNearbyServiceBrowser?
-    weak var state: State?
+    weak var state: AppState?
 
-    func initSession(state: State) {
+    func initSession(state: AppState) {
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .optional)
         mcSession.delegate = self
@@ -26,6 +26,8 @@ class SessionManager: NSObject {
 
         serviceAdvertiser!.startAdvertisingPeer()
         serviceBrowser!.startBrowsingForPeers()
+        mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "ifi-par", discoveryInfo: nil, session: mcSession)
+        mcAdvertiserAssistant!.start()
         self.state = state
     }
 

@@ -5,23 +5,22 @@
 //  Created by Gabriel Knoll on 31.07.23.
 //
 
-import SwiftUI
+import CoreImage.CIFilterBuiltins
 import UIKit
 
 struct QRUtility {
-    static func generateQRCode(from string: String) -> Image? {
-        let data = string.data(using: String.Encoding.ascii)
+    static func generateQRCode(from string: String) -> UIImage {
+        let context = CIContext()
+        let filter = CIFilter.qrCodeGenerator()
 
-        if let filter = CIFilter(name: "CIQRCodeGenerator") {
-            filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
+        filter.message = Data(string.utf8)
 
-            if let output = filter.outputImage?.transformed(by: transform) {
-                return Image(uiImage: UIImage(ciImage: output))
+        if let outputImage = filter.outputImage {
+            if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+                return UIImage(cgImage: cgimg)
             }
         }
 
-        return nil
+        return UIImage(systemName: "xmark.circle") ?? UIImage()
     }
-
 }
