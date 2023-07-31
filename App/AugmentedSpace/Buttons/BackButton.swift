@@ -1,5 +1,5 @@
 //
-//  ContinueButton.swift
+//  BackButton.swift
 //  AugmentedSpace
 //
 //  Created by Tristan Häuser on 31.07.23.
@@ -8,7 +8,7 @@
 import RealityKit
 import SwiftUI
 
-struct ContinueButton: View {
+struct BackButton: View {
     var text: String
     var clicked: (() -> Void)
 

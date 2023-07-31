@@ -32,6 +32,10 @@ struct ContentView: View {
                     text: "Continue"
                 ) {
                 }
+                TakePhotoButton(
+                    text: "TAKE A PHOTO"
+                ) {
+                }
             }
             Spacer(minLength: 10)
         }

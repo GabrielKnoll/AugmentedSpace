@@ -8,7 +8,7 @@
 import RealityKit
 import SwiftUI
 
-struct StartGame: View {
+struct StartGameButton: View {
     var text: String
     var clicked: (() -> Void)
 
