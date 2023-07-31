@@ -144,6 +144,7 @@ extension SessionManager: MCSessionDelegate {
             do {
                 if let step = try? decoder.decode(Step.self, from: data) {
                     print("Received step: \(step)")
+                    self.state?.receivedStepUpdate(new: step)
                     return
                 }
 

@@ -8,13 +8,23 @@
 import Foundation
 
 class AppState: ObservableObject {
-    var sessionManager: SessionManager?
+    private(set) var sessionManager: SessionManager?
     var role: Role = .checklist
-    @Published var step: Step?
+    @Published private(set) var step: Step?
     @Published var name = ""
     @Published var partnerName = ""
+    @Published var shouldShowStatusBar = false
 
     init() {
         sessionManager = SessionManager(state: self)
+    }
+
+    func updateStep(new step: Step) {
+        self.step = step
+        sessionManager?.sendStep(step: step)
+    }
+
+    func receivedStepUpdate(new step: Step) {
+        self.step = step
     }
 }

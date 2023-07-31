@@ -21,6 +21,7 @@
 		C0BD007C2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD007B2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift */; };
 		C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */; };
 		C0BD00802A5EDF6500AB4EFB /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C0BD007F2A5EDF6500AB4EFB /* robot.usdz */; };
+		C0E2EB7A2A781E6C00CA730E /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2EB792A781E6C00CA730E /* StatusBarView.swift */; };
 		E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */; };
 		E97C64042A77F6A2008E0C3A /* TakePhotoIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */; };
 		E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64062A77F805008E0C3A /* SaveButton.swift */; };
@@ -61,6 +62,7 @@
 		C0BD007B2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTrackedARViewContainer.swift; sourceTree = "<group>"; };
 		C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTrackedARView.swift; sourceTree = "<group>"; };
 		C0BD007F2A5EDF6500AB4EFB /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		C0E2EB792A781E6C00CA730E /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatButton.swift; sourceTree = "<group>"; };
 		E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoIconButton.swift; sourceTree = "<group>"; };
 		E97C64062A77F805008E0C3A /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
@@ -107,20 +109,20 @@
 		C08755EA2A5ED2FB00965129 /* AugmentedSpace */ = {
 			isa = PBXGroup;
 			children = (
+				E9B729FB2A77C221007E19ED /* Buttons */,
 				C0BD00782A5EDB4A00AB4EFB /* Views */,
 				C08755FB2A5ED83100965129 /* Models */,
 				C08755EB2A5ED2FB00965129 /* AppDelegate.swift */,
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
 				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
-				E9B729FB2A77C221007E19ED /* Buttons */,
 				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
 				C04A65242A77AD07003D9729 /* AppState.swift */,
 				C04A65272A77B2E3003D9729 /* SessionManager.swift */,
+				C051E0822A77DF9900DB0AF4 /* QRUtility.swift */,
 				C08755EF2A5ED2FB00965129 /* Experience.rcproject */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
 				C08755F32A5ED2FC00965129 /* Preview Content */,
-				C051E0822A77DF9900DB0AF4 /* QRUtility.swift */,
 			);
 			path = AugmentedSpace;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 				C051E0872A77E30500DB0AF4 /* ConnectivityView.swift */,
 				C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */,
 				C051E08D2A77F90600DB0AF4 /* NameView.swift */,
+				C0E2EB792A781E6C00CA730E /* StatusBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */,
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
 				E9B72A0A2A77C8C9007E19ED /* ChoosePieceButton.swift in Sources */,
+				C0E2EB7A2A781E6C00CA730E /* StatusBarView.swift in Sources */,
 				E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */,
 				E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */,
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,

@@ -45,6 +45,7 @@ struct ConnectivityView: View {
             }
         }
         .onAppear {
+            state.shouldShowStatusBar = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 showingAlert = true
             }
