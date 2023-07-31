@@ -16,7 +16,7 @@ enum Page {
     case photo
 }
 
-enum Step {
+enum Step: Codable {
     case helmet
     case torso
 }

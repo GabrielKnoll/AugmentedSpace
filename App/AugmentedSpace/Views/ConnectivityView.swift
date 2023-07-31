@@ -40,7 +40,9 @@ struct ConnectivityView: View {
             Button("Send Text") {
                 state.sessionManager?.sendText(text: "Hello World!")
             }
-            Text(String(state.counter))
+            Button("Send Step") {
+                state.sessionManager?.sendStep(step: .helmet)
+            }
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

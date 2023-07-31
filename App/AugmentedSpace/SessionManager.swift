@@ -7,6 +7,10 @@
 
 import MultipeerConnectivity
 
+enum DecodingError: Error {
+    case unsupportedDataType
+}
+
 class SessionManager: NSObject {
     var peerID: MCPeerID!
     var mcSession: MCSession!
@@ -60,6 +64,18 @@ class SessionManager: NSObject {
             print("no peers")
         }
     }
+
+    func sendStep(step: Step) {
+        if !mcSession.connectedPeers.isEmpty {
+            do {
+                let encoder = JSONEncoder()
+                let data = try encoder.encode(step)
+                try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
+            } catch let error as NSError {
+                print("Error sending step: \(error)")
+            }
+        }
+    }
 }
 
 extension SessionManager: MCNearbyServiceBrowserDelegate {
@@ -74,7 +90,10 @@ extension SessionManager: MCNearbyServiceBrowserDelegate {
 }
 
 extension SessionManager: MCNearbyServiceAdvertiserDelegate {
-    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser,
+                    didReceiveInvitationFromPeer peerID: MCPeerID,
+                    withContext context: Data?,
+                    invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         print("didReceiveInvitationFromPeer: \(peerID)")
         guard peerID.displayName == state?.partnerName else {
             print("wrong invitation from unknown \(peerID)")
@@ -119,9 +138,24 @@ extension SessionManager: MCSessionDelegate {
     }
 
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        let decoder = JSONDecoder()
+
         DispatchQueue.main.async {
-            self.state?.mcText = String(data: data, encoding: .utf8)!
-            self.state?.counter += 1
+            do {
+                if let step = try? decoder.decode(Step.self, from: data) {
+                    print("Received step: \(step)")
+                    return
+                }
+
+                if let text = String(data: data, encoding: .utf8) {
+                    print("Received new text: \(text)")
+                    return
+                }
+
+                throw DecodingError.unsupportedDataType
+            } catch {
+                print("Error receiving data: \(error)")
+            }
         }
     }
 }
