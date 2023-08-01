@@ -17,8 +17,26 @@ enum Page {
 }
 
 enum Step: Codable {
-    case helmet
-    case torso
+    case helmet(complete: Bool)
+    case torso(complete: Bool)
+
+    var number: Int {
+        switch self {
+        case .helmet:
+            return 1
+        case .torso:
+            return 2
+        }
+    }
+
+    var complete: Bool {
+        switch self {
+        case let .helmet(complete: result):
+            return result
+        case let .torso(complete: result):
+            return result
+        }
+    }
 }
 
 enum Role {

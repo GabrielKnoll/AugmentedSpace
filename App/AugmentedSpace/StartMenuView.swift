@@ -15,7 +15,7 @@ struct StartMenuView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
 //            HStack {
-               
+
                 VStack(alignment: .leading) {
                    Spacer(minLength: 50)
                     Text("Welcome to")
@@ -29,13 +29,13 @@ struct StartMenuView: View {
                     .font(.system(size: 48))
                     Text("This is a two player game.")
                         .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
-                    Text ("Find a teammate and select your side")
+                    Text("Find a teammate and select your side")
                         .foregroundColor(Color.white)
                     Spacer(minLength: 700)
                 }
                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
-                
-            }
+
+        }
 //        }
     }
 }

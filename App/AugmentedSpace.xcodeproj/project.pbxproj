@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C03EBCE62A78F35800F10033 /* StatusCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCE52A78F35800F10033 /* StatusCircleView.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C03EBCE52A78F35800F10033 /* StatusCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCircleView.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		C0BD00782A5EDB4A00AB4EFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C03EBCE52A78F35800F10033 /* StatusCircleView.swift */,
 				C0BD00792A5EDB6100AB4EFB /* StaticARViewContainer.swift */,
 				C0BD007B2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift */,
 				C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */,
@@ -307,6 +310,7 @@
 				C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */,
 				C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */,
 				C051E0882A77E30500DB0AF4 /* ConnectivityView.swift in Sources */,
+				C03EBCE62A78F35800F10033 /* StatusCircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
