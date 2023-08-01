@@ -7,5 +7,26 @@
 		<string>_ifi-par._tcp</string>
 		<string>_ifi-par._udp</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ProjectFonts/Poppins-Black.ttf</string>
+		<string>ProjectFonts/Poppins-BlackItalic.ttf</string>
+		<string>ProjectFonts/Poppins-Bold.ttf</string>
+		<string>ProjectFonts/Poppins-BoldItalic.ttf</string>
+		<string>ProjectFonts/Poppins-ExtraBold.ttf</string>
+		<string>ProjectFonts/Poppins-ExtraBoldItalic.ttf</string>
+		<string>ProjectFonts/Poppins-ExtraLight.ttf</string>
+		<string>ProjectFonts/Poppins-ExtraLightItalic.ttf</string>
+		<string>ProjectFonts/Poppins-Italic.ttf</string>
+		<string>ProjectFonts/Poppins-Light.ttf</string>
+		<string>ProjectFonts/Poppins-LigthItalic.ttf</string>
+		<string>ProjectFonts/Poppins-Medium.ttf</string>
+		<string>ProjectFonts/Poppins-MediumItalic.ttf</string>
+		<string>ProjectFonts/Poppins-Regular.ttf</string>
+		<string>ProjectFonts/Poppins-SemiBold.ttf</string>
+		<string>ProjectFonts/Poppins-SemiBoldItalic.ttf</string>
+		<string>ProjectFonts/Poppins-Thin.ttf</string>
+		<string>ProjectFonts/Poppins-ThinItalic.ttf</string>
+	</array>
 </dict>
 </plist>

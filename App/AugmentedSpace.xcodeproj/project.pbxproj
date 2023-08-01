@@ -28,6 +28,7 @@
 		E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64062A77F805008E0C3A /* SaveButton.swift */; };
 		E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */; };
 		E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C640C2A77FA15008E0C3A /* StartMenuView.swift */; };
+		E9A697B82A78F90400C006FE /* ProjectFonts in Resources */ = {isa = PBXBuildFile; fileRef = E9A697B32A78F28C00C006FE /* ProjectFonts */; };
 		E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F52A77C14F007E19ED /* StartGameButton.swift */; };
 		E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */; };
 		E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729FF2A77C410007E19ED /* ContinueButton.swift */; };
@@ -70,6 +71,7 @@
 		E97C64062A77F805008E0C3A /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionButton.swift; sourceTree = "<group>"; };
 		E97C640C2A77FA15008E0C3A /* StartMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuView.swift; sourceTree = "<group>"; };
+		E9A697B32A78F28C00C006FE /* ProjectFonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProjectFonts; sourceTree = "<group>"; };
 		E9B729F52A77C14F007E19ED /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleButton.swift; sourceTree = "<group>"; };
 		E9B729FF2A77C410007E19ED /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
 				C04A65242A77AD07003D9729 /* AppState.swift */,
 				C04A65272A77B2E3003D9729 /* SessionManager.swift */,
-				C051E0822A77DF9900DB0AF4 /* QRUtility.swift */,
+				E9A697B32A78F28C00C006FE /* ProjectFonts */,
 				C08755EF2A5ED2FB00965129 /* Experience.rcproject */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
 				C08755F32A5ED2FC00965129 /* Preview Content */,
@@ -246,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A697B82A78F90400C006FE /* ProjectFonts in Resources */,
 				C0BD00802A5EDF6500AB4EFB /* robot.usdz in Resources */,
 				C08755F52A5ED2FC00965129 /* Preview Assets.xcassets in Resources */,
 				C08755FF2A5ED86F00965129 /* astronaut.usdz in Resources */,
