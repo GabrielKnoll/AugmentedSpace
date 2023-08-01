@@ -15,7 +15,6 @@
 		C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */; };
 		C051E08E2A77F90600DB0AF4 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08D2A77F90600DB0AF4 /* NameView.swift */; };
 		C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755ED2A5ED2FB00965129 /* ContentView.swift */; };
-		C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C08755EF2A5ED2FB00965129 /* Experience.rcproject */; };
 		C08755F22A5ED2FC00965129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08755F12A5ED2FC00965129 /* Assets.xcassets */; };
 		C08755F52A5ED2FC00965129 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08755F42A5ED2FC00965129 /* Preview Assets.xcassets */; };
 		C08755FF2A5ED86F00965129 /* astronaut.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C08755FE2A5ED86F00965129 /* astronaut.usdz */; };
@@ -56,7 +55,6 @@
 		C08755E82A5ED2FB00965129 /* AugmentedSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentedSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08755EB2A5ED2FB00965129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08755ED2A5ED2FB00965129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C08755EF2A5ED2FB00965129 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		C08755F12A5ED2FC00965129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C08755F42A5ED2FC00965129 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C08755FE2A5ED86F00965129 /* astronaut.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = astronaut.usdz; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
 				C04A65242A77AD07003D9729 /* AppState.swift */,
 				C04A65272A77B2E3003D9729 /* SessionManager.swift */,
-				C08755EF2A5ED2FB00965129 /* Experience.rcproject */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
 				C08755F32A5ED2FC00965129 /* Preview Content */,
 			);
@@ -301,7 +298,6 @@
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */,
-				C08755F02A5ED2FB00965129 /* Experience.rcproject in Sources */,
 				E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */,
 				E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */,
 				E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */,
