@@ -30,7 +30,7 @@ struct ShowInformationButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.202, green: 0.194, blue: 0.277))
+            .background(R.color.customBlue.color)
             .cornerRadius(10)
         }
     }

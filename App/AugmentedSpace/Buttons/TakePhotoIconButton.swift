@@ -25,7 +25,7 @@ struct TakePhotoIconButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.953, green: 0.262, blue: 0.129))
+            .background(R.color.customOrange.color)
             .cornerRadius(10)
         }
     }

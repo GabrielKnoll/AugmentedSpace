@@ -24,7 +24,7 @@ struct SelectRoleButton: View {
             .padding(EdgeInsets(top: 50, leading: 30, bottom: 50, trailing: 30))
             .frame(maxWidth: .infinity, alignment: .center)
             .foregroundColor(Color.white)
-            .background(R.color.buttonColor.color)
+            .background(R.color.customBlue.color)
             .cornerRadius(10)
         }
     }

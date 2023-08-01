@@ -29,7 +29,7 @@ struct BackButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.278, green: 0.467, blue: 0.821))
+            .background(R.color.customGrey.color)
             .cornerRadius(10)
         }
     }

@@ -17,7 +17,7 @@ struct SelectRoleView: View {
                 HStack {
                     Text("AR-")
                         .font(Font.custom("Poppins-SemiBold", size: 46))
-                        .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
+                        .foregroundColor(R.color.customOrange.color)
                     Text("Stronaut")
                         .font(Font.custom("Poppins-SemiBold", size: 46))
                         .foregroundColor(Color.white)
@@ -27,7 +27,7 @@ struct SelectRoleView: View {
                 Spacer()
                 Text("Select your Role:")
                     .font(Font.custom("Poppins-SemiBold", size: 21))
-                    .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
+                    .foregroundColor(R.color.customOrange.color)
             }
             .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
 

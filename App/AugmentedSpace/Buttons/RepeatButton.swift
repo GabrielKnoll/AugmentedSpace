@@ -30,7 +30,7 @@ struct RepeatButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.284, green: 0.277, blue: 0.321))
+            .background(R.color.customGrey.color)
             .cornerRadius(10)
         }
     }

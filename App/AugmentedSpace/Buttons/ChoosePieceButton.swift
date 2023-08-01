@@ -30,7 +30,7 @@ struct ChoosePieceButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.247, green: 0.467, blue: 0.821))
+            .background(R.color.customLightBlue.color)
             .cornerRadius(10)
         }
     }

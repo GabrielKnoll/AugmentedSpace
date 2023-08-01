@@ -18,7 +18,7 @@ struct StartMenuView: View {
                 HStack {
                     Text("AR-")
                         .font(Font.custom("Poppins-SemiBold", size: 46))
-                        .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
+                        .foregroundColor(R.color.customOrange.color)
                     Text("Stronaut")
                         .font(Font.custom("Poppins-SemiBold", size: 46))
                         .foregroundColor(Color.white)
@@ -28,7 +28,7 @@ struct StartMenuView: View {
                 Spacer()
                 Text("This is a two player game.\n")
                     .font(Font.custom("Poppins-SemiBold", size: 21))
-                    .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
+                    .foregroundColor(R.color.customOrange.color)
                 Text("Find a teammate and select your side.")
                     .font(Font.custom("Poppins-SemiBold", size: 21))
                     .foregroundColor(Color.white)

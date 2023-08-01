@@ -20,7 +20,7 @@ struct ContinueButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(R.color.buttonColor.color)
+            .background(R.color.customBlue.color)
             .cornerRadius(10)
         }
     }
