@@ -20,7 +20,7 @@ struct EndSessionButton: View {
             .padding(50.0)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
             .foregroundColor(Color.white)
-            .background(Color(red: 0.203_921_568_627_450_98, green: 0.196_078_431_372_549_02, blue: 0.278_431_372_549_019_6))
+            .background(R.color.buttonColor.color)
             .cornerRadius(10)
         }
     }

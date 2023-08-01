@@ -20,7 +20,7 @@ struct StartGameButton: View {
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
             .padding()
-            .background(Color(red: 0.203_921_568_627_450_98, green: 0.196_078_431_372_549_02, blue: 0.278_431_372_549_019_6))
+            .background(R.color.buttonColor.color)
             .cornerRadius(10)
         }
     }
