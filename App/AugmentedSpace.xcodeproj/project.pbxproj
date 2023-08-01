@@ -32,6 +32,8 @@
 		E9A697B82A78F90400C006FE /* ProjectFonts in Resources */ = {isa = PBXBuildFile; fileRef = E9A697B32A78F28C00C006FE /* ProjectFonts */; };
 		E9A697C12A78FCD600C006FE /* QRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697C02A78FCD600C006FE /* QRUtility.swift */; };
 		E9A697C62A79023B00C006FE /* SelectRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697C52A79023B00C006FE /* SelectRoleView.swift */; };
+		E9A697DD2A792D9300C006FE /* FittingSpecialistIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */; };
+		E9A697E02A792DAC00C006FE /* ChecklistNavigatorIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */; };
 		E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F52A77C14F007E19ED /* StartGameButton.swift */; };
 		E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */; };
 		E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729FF2A77C410007E19ED /* ContinueButton.swift */; };
@@ -76,6 +78,8 @@
 		E9A697B32A78F28C00C006FE /* ProjectFonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProjectFonts; sourceTree = "<group>"; };
 		E9A697C02A78FCD600C006FE /* QRUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRUtility.swift; sourceTree = "<group>"; };
 		E9A697C52A79023B00C006FE /* SelectRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleView.swift; sourceTree = "<group>"; };
+		E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingSpecialistIntroView.swift; sourceTree = "<group>"; };
+		E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistNavigatorIntroView.swift; sourceTree = "<group>"; };
 		E9B729F52A77C14F007E19ED /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleButton.swift; sourceTree = "<group>"; };
 		E9B729FF2A77C410007E19ED /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				C051E08D2A77F90600DB0AF4 /* NameView.swift */,
 				C0E2EB792A781E6C00CA730E /* StatusBarView.swift */,
 				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
+				E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */,
+				E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */,
 				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
 				C03EBCF62A790FF500F10033 /* ItemScrollView.swift */,
 				C03EBCF92A7912A100F10033 /* ItemCardView.swift */,
@@ -298,9 +304,11 @@
 				C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */,
 				E9FC441F2A7807EE0003BEF7 /* AppState.swift in Sources */,
 				E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */,
+				E9A697E02A792DAC00C006FE /* ChecklistNavigatorIntroView.swift in Sources */,
 				C0BD007C2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift in Sources */,
 				C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */,
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
+				E9A697DD2A792D9300C006FE /* FittingSpecialistIntroView.swift in Sources */,
 				E9B72A0A2A77C8C9007E19ED /* ChoosePieceButton.swift in Sources */,
 				C0E2EB7A2A781E6C00CA730E /* StatusBarView.swift in Sources */,
 				C03EBCF72A790FF500F10033 /* ItemScrollView.swift in Sources */,

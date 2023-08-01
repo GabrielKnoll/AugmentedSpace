@@ -7,6 +7,11 @@
 import SwiftUI
 
 struct SelectRoleView: View {
+
+    @StateObject var state = AppState()
+    @State private var isShowingFittingSpecialistIntroView = false
+    @State private var isShowingChecklistNavigatorIntroView = false
+
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
@@ -31,12 +36,20 @@ struct SelectRoleView: View {
             }
             .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
 
+            NavigationLink(destination: FittingSpecialistIntroView().navigationBarBackButtonHidden(true), isActive: $isShowingFittingSpecialistIntroView) { EmptyView() }
+
             SelectRoleButton(textlarge: "Fitting Specialist", textsmall: "Try to assemble the components of the spacesuit correctly") {
+                state.role = .checklist
+                isShowingFittingSpecialistIntroView = true
             }
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 20))
+
+            NavigationLink(destination: FittingSpecialistIntroView().navigationBarBackButtonHidden(true), isActive: $isShowingChecklistNavigatorIntroView ) { EmptyView() }
             SelectRoleButton(textlarge: "Checklist Navigator", textsmall: "Give instructions which components are needed") {
+                state.role = .checklist
+                isShowingChecklistNavigatorIntroView = true
             }
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
             Spacer(minLength: 30)
         }
         .background(
@@ -46,7 +59,9 @@ struct SelectRoleView: View {
                 .clipped(antialiased: true)
         )
         .edgesIgnoringSafeArea(.all)
+
     }
+
 }
 
 struct SelectRoleView_Previews: PreviewProvider {
