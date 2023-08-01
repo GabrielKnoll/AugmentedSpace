@@ -11,19 +11,20 @@ struct StartMenuView: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                Spacer()
-                    .frame(maxHeight: 75)
                 Text("Welcome to")
-                    .font(Font.custom("Poppins-SemiBold", size: 18))
+                    .font(Font.custom("Poppins-SemiBold", size: 21))
                     .foregroundColor(Color.white)
+                    .padding(.top, 100)
                 HStack {
                     Text("AR-")
-                        .font(Font.custom("Poppins-SemiBold", size: 47))
+                        .font(Font.custom("Poppins-SemiBold", size: 46))
                         .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
                     Text("Stronaut")
+                        .font(Font.custom("Poppins-SemiBold", size: 46))
                         .foregroundColor(Color.white)
+                        .padding(.leading, -8)
                 }
-                .font(.system(size: 48))
+                .minimumScaleFactor(0.9)
                 Spacer()
                 Text("This is a two player game.\n")
                     .font(Font.custom("Poppins-SemiBold", size: 21))
@@ -36,7 +37,8 @@ struct StartMenuView: View {
             Spacer(minLength: 100)
             StartGameButton(text: "Start Game") {
             }
-            .padding(30)
+            .padding(20)
+           Spacer(minLength: 30)
         }
         .background(
             Image("spaceBackground")

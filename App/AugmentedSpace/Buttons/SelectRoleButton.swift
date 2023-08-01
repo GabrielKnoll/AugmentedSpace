@@ -17,10 +17,12 @@ struct SelectRoleButton: View {
         Button(action: clicked) {
             VStack {
                 Text(textlarge)
+                    .font(Font.custom("Poppins-SemiBold", size: 21))
                 Text(textsmall)
+                    .font(Font.custom("Poppins-Regular", size: 14))
             }
-            .padding(50.0)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .padding(EdgeInsets(top: 50, leading: 30, bottom: 50, trailing: 30))
+            .frame(maxWidth: .infinity, alignment: .center)
             .foregroundColor(Color.white)
             .background(R.color.buttonColor.color)
             .cornerRadius(10)
