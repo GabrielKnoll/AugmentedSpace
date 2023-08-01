@@ -11,13 +11,10 @@ struct ItemScrollView: View {
     var body: some View {
         ScrollViewReader { value in
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
+                HStack(spacing: 10) {
                     ForEach(0..<10) {
-                        Text("Item \($0)")
-                            .foregroundStyle(.white)
-                            .font(.largeTitle)
-                            .frame(width: 200, height: 200)
-                            .background(.red)
+                        ItemCardView(item: .glove)
+                            .frame(width: 325, height: 450)
                             .id($0)
                     }
                 }

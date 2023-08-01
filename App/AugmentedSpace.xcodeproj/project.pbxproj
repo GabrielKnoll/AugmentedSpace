@@ -10,6 +10,9 @@
 		C03EBCE62A78F35800F10033 /* StatusCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCE52A78F35800F10033 /* StatusCircleView.swift */; };
 		C03EBCF72A790FF500F10033 /* ItemScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCF62A790FF500F10033 /* ItemScrollView.swift */; };
 		C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCF92A7912A100F10033 /* ItemCardView.swift */; };
+		C03EBCFD2A7917CF00F10033 /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */; };
+		C03EBD002A79183F00F10033 /* ItemFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */; };
+		C03EBD022A79187000F10033 /* ItemBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD012A79187000F10033 /* ItemBackView.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -50,6 +53,9 @@
 		C03EBCE52A78F35800F10033 /* StatusCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCircleView.swift; sourceTree = "<group>"; };
 		C03EBCF62A790FF500F10033 /* ItemScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemScrollView.swift; sourceTree = "<group>"; };
 		C03EBCF92A7912A100F10033 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
+		C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
+		C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFrontView.swift; sourceTree = "<group>"; };
+		C03EBD012A79187000F10033 /* ItemBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBackView.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		C08755DF2A5ED2FB00965129 = {
 			isa = PBXGroup;
 			children = (
+				C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */,
 				C08755EA2A5ED2FB00965129 /* AugmentedSpace */,
 				C08755E92A5ED2FB00965129 /* Products */,
 			);
@@ -166,6 +173,8 @@
 				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
 				C03EBCF62A790FF500F10033 /* ItemScrollView.swift */,
 				C03EBCF92A7912A100F10033 /* ItemCardView.swift */,
+				C03EBD012A79187000F10033 /* ItemBackView.swift */,
+				C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,7 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FC44232A7808090003BEF7 /* ViewProvider.swift in Sources */,
+				C03EBD002A79183F00F10033 /* ItemFrontView.swift in Sources */,
+				C03EBD022A79187000F10033 /* ItemBackView.swift in Sources */,
 				E9FC44222A7808050003BEF7 /* AppDelegate.swift in Sources */,
+				C03EBCFD2A7917CF00F10033 /* FlipEffect.swift in Sources */,
 				E9FC44212A7808010003BEF7 /* StaticARViewContainer.swift in Sources */,
 				C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */,
 				E9FC441F2A7807EE0003BEF7 /* AppState.swift in Sources */,
