@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C03EBCE62A78F35800F10033 /* StatusCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCE52A78F35800F10033 /* StatusCircleView.swift */; };
+		C03EBCF72A790FF500F10033 /* ItemScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCF62A790FF500F10033 /* ItemScrollView.swift */; };
+		C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCF92A7912A100F10033 /* ItemCardView.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		C03EBCE52A78F35800F10033 /* StatusCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCircleView.swift; sourceTree = "<group>"; };
+		C03EBCF62A790FF500F10033 /* ItemScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemScrollView.swift; sourceTree = "<group>"; };
+		C03EBCF92A7912A100F10033 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				C0E2EB792A781E6C00CA730E /* StatusBarView.swift */,
 				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
 				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
+				C03EBCF62A790FF500F10033 /* ItemScrollView.swift */,
+				C03EBCF92A7912A100F10033 /* ItemCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				E9FC44232A7808090003BEF7 /* ViewProvider.swift in Sources */,
 				E9FC44222A7808050003BEF7 /* AppDelegate.swift in Sources */,
 				E9FC44212A7808010003BEF7 /* StaticARViewContainer.swift in Sources */,
+				C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */,
 				E9FC441F2A7807EE0003BEF7 /* AppState.swift in Sources */,
 				E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */,
 				C0BD007C2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift in Sources */,
@@ -296,6 +303,7 @@
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
 				E9B72A0A2A77C8C9007E19ED /* ChoosePieceButton.swift in Sources */,
 				C0E2EB7A2A781E6C00CA730E /* StatusBarView.swift in Sources */,
+				C03EBCF72A790FF500F10033 /* ItemScrollView.swift in Sources */,
 				E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */,
 				E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */,
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,
