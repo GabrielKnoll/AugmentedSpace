@@ -14,6 +14,7 @@ struct ContentView: View {
 
     var body: some View {
             NavigationView {
+                StartMenuView()
                 VStack {
                     NavigationLink(destination: NameView(), isActive: $isShowingNameView) { EmptyView() }
                     Spacer()

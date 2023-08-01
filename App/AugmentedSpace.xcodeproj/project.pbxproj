@@ -29,6 +29,7 @@
 		E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C640C2A77FA15008E0C3A /* StartMenuView.swift */; };
 		E9A697B82A78F90400C006FE /* ProjectFonts in Resources */ = {isa = PBXBuildFile; fileRef = E9A697B32A78F28C00C006FE /* ProjectFonts */; };
 		E9A697C12A78FCD600C006FE /* QRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697C02A78FCD600C006FE /* QRUtility.swift */; };
+		E9A697C62A79023B00C006FE /* SelectRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697C52A79023B00C006FE /* SelectRoleView.swift */; };
 		E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F52A77C14F007E19ED /* StartGameButton.swift */; };
 		E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */; };
 		E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729FF2A77C410007E19ED /* ContinueButton.swift */; };
@@ -70,6 +71,7 @@
 		E97C640C2A77FA15008E0C3A /* StartMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuView.swift; sourceTree = "<group>"; };
 		E9A697B32A78F28C00C006FE /* ProjectFonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProjectFonts; sourceTree = "<group>"; };
 		E9A697C02A78FCD600C006FE /* QRUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRUtility.swift; sourceTree = "<group>"; };
+		E9A697C52A79023B00C006FE /* SelectRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleView.swift; sourceTree = "<group>"; };
 		E9B729F52A77C14F007E19ED /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleButton.swift; sourceTree = "<group>"; };
 		E9B729FF2A77C410007E19ED /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				C08755EB2A5ED2FB00965129 /* AppDelegate.swift */,
 				E9A697C02A78FCD600C006FE /* QRUtility.swift */,
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
-				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
 				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
 				C04A65242A77AD07003D9729 /* AppState.swift */,
@@ -157,6 +158,8 @@
 				C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */,
 				C051E08D2A77F90600DB0AF4 /* NameView.swift */,
 				C0E2EB792A781E6C00CA730E /* StatusBarView.swift */,
+				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
+				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				E97C64042A77F6A2008E0C3A /* TakePhotoIconButton.swift in Sources */,
 				E9A697C12A78FCD600C006FE /* QRUtility.swift in Sources */,
 				E9B72A032A77C587007E19ED /* TakePhotoButton.swift in Sources */,
+				E9A697C62A79023B00C006FE /* SelectRoleView.swift in Sources */,
 				E9B72A072A77C8A9007E19ED /* BackButton.swift in Sources */,
 				E9B72A102A77C91D007E19ED /* SelectEquipmentButton.swift in Sources */,
 				C051E08E2A77F90600DB0AF4 /* NameView.swift in Sources */,
