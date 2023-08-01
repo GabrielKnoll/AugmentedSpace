@@ -30,9 +30,11 @@ struct StartMenuView: View {
                     }
                     .font(.system(size: 48))
                     Spacer()
-                    Text("This is a two player game.")
+                    Text("This is a two player game.\n")
+                        .font(Font.custom("Poppins-SemiBold", size: 21))
                         .foregroundColor(Color(red: 0.953, green: 0.262, blue: 0.129))
-                    Text("Find a teammate and select your side")
+                    Text("Find a teammate and select your side.")
+                        .font(Font.custom("Poppins-SemiBold", size: 21))
                         .foregroundColor(Color.white)
                 }
                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
