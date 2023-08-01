@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ItemScrollView: View {
+    @State private var selectedCard = 5
+
     var body: some View {
         ScrollViewReader { value in
             ScrollView(.horizontal, showsIndicators: false) {
@@ -18,9 +20,24 @@ struct ItemScrollView: View {
                             .id($0)
                     }
                 }
+                .background(GeometryReader { proxy -> Color in
+                    DispatchQueue.main.async {
+                        let offset = -proxy.frame(in: .named("scroll")).minX
+                        let newCard = Int(round(offset / 335))
+                        if newCard != selectedCard {
+                            selectedCard = newCard
+                            print("new card selected: \(selectedCard)")
+                            withAnimation() {
+                                value.scrollTo(selectedCard, anchor: .center)
+                            }
+                        }
+                    }
+                    return Color.clear
+                })
             }
+            .coordinateSpace(name: "scroll")
             .onAppear {
-                value.scrollTo(5, anchor: .center)
+                value.scrollTo(selectedCard, anchor: .center)
             }
         }
     }
