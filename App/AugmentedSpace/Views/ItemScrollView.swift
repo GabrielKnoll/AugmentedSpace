@@ -27,7 +27,7 @@ struct ItemScrollView: View {
                         if newCard != selectedCard {
                             selectedCard = newCard
                             print("new card selected: \(selectedCard)")
-                            withAnimation() {
+                            withAnimation {
                                 value.scrollTo(selectedCard, anchor: .center)
                             }
                         }

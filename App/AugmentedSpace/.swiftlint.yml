@@ -5,6 +5,7 @@ disabled_rules: # rule identifiers to exclude from running
   - identifier_name
   - inclusive_language
   - comment_spacing
+  - force_unwrapping
   
 opt_in_rules: # some rules are only opt-in
   - closure_end_indentation
@@ -14,7 +15,6 @@ opt_in_rules: # some rules are only opt-in
   - empty_string
   - explicit_init
   - first_where
-  - force_unwrapping
   - joined_default_parameter
   - let_var_whitespace
   - literal_expression_end_indentation

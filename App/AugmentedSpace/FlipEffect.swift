@@ -27,12 +27,12 @@ struct FlipEffect: GeometryEffect {
         let ang = CGFloat(Angle(degrees: tweakedAngle).radians)
 
         var transform3d = CATransform3DIdentity
-        transform3d.m34 = -1/max(size.width, size.height)
+        transform3d.m34 = -1 / max(size.width, size.height)
 
         transform3d = CATransform3DRotate(transform3d, ang, axis.x, axis.y, 0)
-        transform3d = CATransform3DTranslate(transform3d, -size.width/2.0, -size.height/2.0, 0)
+        transform3d = CATransform3DTranslate(transform3d, -size.width / 2.0, -size.height / 2.0, 0)
 
-        let affineTransform = ProjectionTransform(CGAffineTransform(translationX: size.width/2.0, y: size.height / 2.0))
+        let affineTransform = ProjectionTransform(CGAffineTransform(translationX: size.width / 2.0, y: size.height / 2.0))
 
         return ProjectionTransform(transform3d).concatenating(affineTransform)
     }
