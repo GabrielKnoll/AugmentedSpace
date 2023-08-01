@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct ItemCardView: View {
+    let item: Item
+
+    @State var flipped = false
+    @State var animate3d = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            ZStack {
+                ItemFrontView(item: .helmet, animate3d: $animate3d).opacity(flipped ? 0.0 : 1.0)
+                ItemBackView(item: .glove, animate3d: $animate3d).opacity(flipped ? 1.0 : 0.0)
+            }
+            .modifier(FlipEffect(flipped: $flipped, angle: animate3d ? 180 : 0, axis: (x: 0, y: 1)))
+        }
+    }
+
+    private func flipCard() {
+        print("LOL")
     }
 }
 
 struct ItemCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemCardView()
+        ItemCardView(item: .helmet)
     }
 }

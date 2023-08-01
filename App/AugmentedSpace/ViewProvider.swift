@@ -44,6 +44,54 @@ enum Role {
     case fitting
 }
 
+enum Item {
+    case glove
+    case helmet
+
+    var image: UIImage {
+        switch self {
+        case .glove:
+            return R.image.glove()!
+        case .helmet:
+            return R.image.helmet()!
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .glove:
+            return "Gloves"
+        case .helmet:
+            return "Helmet"
+        }
+    }
+
+    var description: String {
+        switch self {
+        case .glove:
+            return "Put the glove on your hand"
+        case .helmet:
+            return "Something to think about"
+        }
+    }
+
+    var facts: ItemFacts {
+        switch self {
+        case .glove:
+            return ItemFacts(weight: "25 kg", color: "white", cost: "9000000$", material: "fabric")
+        case .helmet:
+            return ItemFacts(weight: "100 kg", color: "black", cost: "9$", material: "metal")
+        }
+    }
+}
+
+struct ItemFacts {
+    let weight: String
+    let color: String
+    let cost: String
+    let material: String
+}
+
 struct ViewProvider {
     @ViewBuilder
     static func nextView(current: Page) -> some View { BodyTrackedARViewContainer() }

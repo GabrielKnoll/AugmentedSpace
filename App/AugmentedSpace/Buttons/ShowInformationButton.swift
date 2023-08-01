@@ -10,39 +10,31 @@ import SwiftUI
 
 struct ShowInformationButton: View {
     var text: String
-    var icon: String
+    var icon: UIImage
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
-            VStack {
-                HStack {
-                    Text(text)
-                        .frame(alignment: .center)
-
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(alignment: .center)
-                        .padding(10)
-                }
+            HStack(spacing: 10) {
+                Text(text)
+                    .lineLimit(1)
+                Image(uiImage: icon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
             }
-            .frame(maxWidth: .infinity)
-            .foregroundColor(Color.white)
-            .padding()
-            .background(R.color.customBlue.color)
-            .cornerRadius(10)
         }
+        .fixedSize()
+        .frame(maxWidth: .infinity)
+        .padding(5)
+        .foregroundColor(Color.white)
+        .background(R.color.customBlue.color)
+        .cornerRadius(10)
     }
 }
 #if DEBUG
 struct ShowInformationButton_Previews: PreviewProvider {
     static var previews: some View {
-        ShowInformationButton(
-            text: "Show Information",
-            icon: "Icon_Info"
-        ) {
-        }
+        ShowInformationButton(text: "Show Information", icon: R.image.icon_Info()!) {}
     }
 }
 #endif
