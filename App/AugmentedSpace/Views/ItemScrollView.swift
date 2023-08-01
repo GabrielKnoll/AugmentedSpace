@@ -15,7 +15,7 @@ struct ItemScrollView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     ForEach(0..<10) {
-                        ItemCardView(item: .glove)
+                        ItemCardView(item: .gloves)
                             .frame(width: 325, height: 450)
                             .id($0)
                     }

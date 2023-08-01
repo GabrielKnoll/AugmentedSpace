@@ -16,7 +16,7 @@ struct ItemFrontView: View {
             Text(item.title)
                 .font(.title)
                 .foregroundColor(.white)
-            Image(uiImage: item.image)
+            Image(uiImage: item.image!)
                 .resizable()
                 .scaledToFit()
             Spacer(minLength: 50)
@@ -34,6 +34,6 @@ struct ItemFrontView: View {
 
 struct ItemFrontView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemFrontView(item: .glove, animate3d: Binding.constant(false))
+        ItemFrontView(item: .gloves, animate3d: Binding.constant(false))
     }
 }

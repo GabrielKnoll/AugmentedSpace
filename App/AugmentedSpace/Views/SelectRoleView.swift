@@ -36,7 +36,10 @@ struct SelectRoleView: View {
             }
             .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
 
-            NavigationLink(destination: FittingSpecialistIntroView().navigationBarBackButtonHidden(true), isActive: $isShowingFittingSpecialistIntroView) { EmptyView() }
+            NavigationLink(
+                destination: FittingSpecialistIntroView()
+                    .navigationBarBackButtonHidden(true),
+                           isActive: $isShowingFittingSpecialistIntroView) { EmptyView() }
 
             SelectRoleButton(textlarge: "Fitting Specialist", textsmall: "Try to assemble the components of the spacesuit correctly") {
                 state.role = .checklist
@@ -44,7 +47,11 @@ struct SelectRoleView: View {
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 20))
 
-            NavigationLink(destination: FittingSpecialistIntroView().navigationBarBackButtonHidden(true), isActive: $isShowingChecklistNavigatorIntroView ) { EmptyView() }
+            NavigationLink(
+                destination: ChecklistNavigatorIntroView()
+                    .navigationBarBackButtonHidden(true),
+                           isActive: $isShowingChecklistNavigatorIntroView ) { EmptyView() }
+
             SelectRoleButton(textlarge: "Checklist Navigator", textsmall: "Give instructions which components are needed") {
                 state.role = .checklist
                 isShowingChecklistNavigatorIntroView = true

@@ -41,7 +41,7 @@ struct ConnectivityView: View {
                 state.sessionManager?.sendText(text: "Hello World!")
             }
             Button("Send Step") {
-                state.sessionManager?.sendStep(step: .helmet(complete: false))
+                state.sessionManager?.sendStep(step: .helmet(state: .active))
             }
         }
         .onAppear {

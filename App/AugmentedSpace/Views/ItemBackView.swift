@@ -21,15 +21,15 @@ struct ItemBackView: View {
             Spacer()
             HStack {
                 Text("Material").bold()
-                Text(item.facts.material)
+                Text(item.facts!.material)
             }
             HStack {
                 Text("Weight").bold()
-                Text(item.facts.weight)
+                Text(item.facts!.weight)
             }
             HStack {
                 Text("Color").bold()
-                Text(item.facts.color)
+                Text(item.facts!.color)
             }
             Spacer()
             Text(item.description)

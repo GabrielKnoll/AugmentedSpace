@@ -13,7 +13,8 @@ struct StatusCircleView: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(step.complete ? .green : .red)
+            //TODO: Add Color
+                //.fill(step.complete ? .green : .red)
             Text(String(step.number))
                 .scaledToFit()
                 .font(.system(size: 400))
@@ -27,7 +28,8 @@ struct StatusCircleView: View {
 
 struct StatusCircle_Previews: PreviewProvider {
     static var previews: some View {
-        StatusCircleView(step: .helmet(complete: false))
-        StatusCircleView(step: .torso(complete: true))
+        StatusCircleView(step: .helmet(state: .active))
+        StatusCircleView(step: .hardUpperTorso(state: .inactive))
+        StatusCircleView(step: .gloves(state: .complete))
     }
 }

@@ -11,7 +11,7 @@ class AppState: ObservableObject {
     private(set) var sessionManager: SessionManager?
     var role: Role = .checklist
     @Published private(set) var currentStep: Step?
-    @Published private(set) var steps: [Step] = [.helmet(state: .inactive), .torso(state: .inactive)]
+    @Published private(set) var steps: [Step] = []
     @Published var name = ""
     @Published var partnerName = ""
 
