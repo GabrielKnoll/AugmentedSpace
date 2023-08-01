@@ -14,6 +14,7 @@
 		C03EBD002A79183F00F10033 /* ItemFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */; };
 		C03EBD022A79187000F10033 /* ItemBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD012A79187000F10033 /* ItemBackView.swift */; };
 		C03EBD0F2A7952D600F10033 /* FittingARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD0E2A7952D600F10033 /* FittingARView.swift */; };
+		C03EBD112A79624A00F10033 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD102A79624A00F10033 /* Step.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -60,6 +61,7 @@
 		C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFrontView.swift; sourceTree = "<group>"; };
 		C03EBD012A79187000F10033 /* ItemBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBackView.swift; sourceTree = "<group>"; };
 		C03EBD0E2A7952D600F10033 /* FittingARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingARView.swift; sourceTree = "<group>"; };
+		C03EBD102A79624A00F10033 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
 				C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */,
 				C04A65212A77AB91003D9729 /* ViewProvider.swift */,
+				C03EBD102A79624A00F10033 /* Step.swift */,
 				C04A65242A77AD07003D9729 /* AppState.swift */,
 				C04A65272A77B2E3003D9729 /* SessionManager.swift */,
 				C08755F12A5ED2FC00965129 /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 				C03EBCFD2A7917CF00F10033 /* FlipEffect.swift in Sources */,
 				E9FC44212A7808010003BEF7 /* StaticARViewContainer.swift in Sources */,
 				C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */,
+				C03EBD112A79624A00F10033 /* Step.swift in Sources */,
 				E9FC441F2A7807EE0003BEF7 /* AppState.swift in Sources */,
 				E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */,
 				E9A697E02A792DAC00C006FE /* ChecklistNavigatorIntroView.swift in Sources */,

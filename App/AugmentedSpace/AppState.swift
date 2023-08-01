@@ -10,7 +10,8 @@ import Foundation
 class AppState: ObservableObject {
     private(set) var sessionManager: SessionManager?
     var role: Role = .checklist
-    @Published private(set) var step: Step?
+    @Published private(set) var currentStep: Step?
+    @Published private(set) var steps: [Step] = [.helmet(state: .inactive), .torso(state: .inactive)]
     @Published var name = ""
     @Published var partnerName = ""
 
@@ -18,12 +19,20 @@ class AppState: ObservableObject {
         sessionManager = SessionManager(state: self)
     }
 
-    func updateStep(new step: Step) {
-        self.step = step
-        sessionManager?.sendStep(step: step)
+    func finishCurrentStep() {
+        guard var currStep = currentStep else { return }
+        let index = currStep.number - 1
+        currStep.updateState(new: .complete)
+        steps[index] = currStep
+        if index + 1 < steps.count {
+            currentStep = steps[index + 1]
+            currentStep?.updateState(new: .active)
+        } else {
+            currentStep = nil
+        }
     }
 
-    func receivedStepUpdate(new step: Step) {
-        self.step = step
+    func receivedStepUpdate(step: Step) {
+        self.currentStep = step
     }
 }
