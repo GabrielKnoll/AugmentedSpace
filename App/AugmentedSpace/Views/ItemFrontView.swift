@@ -21,7 +21,9 @@ struct ItemFrontView: View {
                 .scaledToFit()
             Spacer(minLength: 50)
             ShowInformationButton(text: "Show Information", icon: R.image.icon_Info()!) {
-                animate3d.toggle()
+                withAnimation(.linear(duration: 0.35)) {
+                    animate3d.toggle()
+                }
             }
         }
         .padding(25)

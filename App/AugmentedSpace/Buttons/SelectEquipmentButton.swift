@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SelectEquipmentButton: View {
     var text: String
-    var icon: String
+    var icon: UIImage
     var clicked: (() -> Void)
 
     var body: some View {
@@ -19,8 +19,7 @@ struct SelectEquipmentButton: View {
                 HStack {
                     Text(text)
                         .frame(alignment: .center)
-
-                    Image(icon)
+                    Image(uiImage: icon)
                         .resizable()
                         .scaledToFit()
                         .frame(alignment: .center)
@@ -40,7 +39,7 @@ struct SelectEquipmentButton_Previews: PreviewProvider {
     static var previews: some View {
         SelectEquipmentButton(
             text: "Select Equipment",
-            icon: "Icon_Helmet"
+            icon: R.image.icon_Helmet()!
         ) {
         }
     }

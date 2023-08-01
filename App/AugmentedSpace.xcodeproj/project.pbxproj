@@ -13,6 +13,7 @@
 		C03EBCFD2A7917CF00F10033 /* FlipEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */; };
 		C03EBD002A79183F00F10033 /* ItemFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */; };
 		C03EBD022A79187000F10033 /* ItemBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD012A79187000F10033 /* ItemBackView.swift */; };
+		C03EBD0F2A7952D600F10033 /* FittingARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD0E2A7952D600F10033 /* FittingARView.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -59,6 +60,7 @@
 		C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipEffect.swift; sourceTree = "<group>"; };
 		C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFrontView.swift; sourceTree = "<group>"; };
 		C03EBD012A79187000F10033 /* ItemBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBackView.swift; sourceTree = "<group>"; };
+		C03EBD0E2A7952D600F10033 /* FittingARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingARView.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 		C08755DF2A5ED2FB00965129 = {
 			isa = PBXGroup;
 			children = (
-				C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */,
 				C08755EA2A5ED2FB00965129 /* AugmentedSpace */,
 				C08755E92A5ED2FB00965129 /* Products */,
 			);
@@ -134,6 +135,7 @@
 				C0BD00782A5EDB4A00AB4EFB /* Views */,
 				C08755FB2A5ED83100965129 /* Models */,
 				E9A697B32A78F28C00C006FE /* ProjectFonts */,
+				C03EBCFC2A7917CF00F10033 /* FlipEffect.swift */,
 				C08755EB2A5ED2FB00965129 /* AppDelegate.swift */,
 				E9A697C02A78FCD600C006FE /* QRUtility.swift */,
 				C08755ED2A5ED2FB00965129 /* ContentView.swift */,
@@ -184,6 +186,7 @@
 				C03EBCF92A7912A100F10033 /* ItemCardView.swift */,
 				C03EBD012A79187000F10033 /* ItemBackView.swift */,
 				C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */,
+				C03EBD0E2A7952D600F10033 /* FittingARView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */,
 				E9A697E02A792DAC00C006FE /* ChecklistNavigatorIntroView.swift in Sources */,
 				C0BD007C2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift in Sources */,
+				C03EBD0F2A7952D600F10033 /* FittingARView.swift in Sources */,
 				C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */,
 				C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */,
 				E9A697DD2A792D9300C006FE /* FittingSpecialistIntroView.swift in Sources */,
@@ -482,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
@@ -515,7 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;

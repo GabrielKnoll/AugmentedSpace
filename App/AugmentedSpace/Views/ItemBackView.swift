@@ -35,7 +35,9 @@ struct ItemBackView: View {
             Text(item.description)
             Spacer()
             ShowInformationButton(text: "Show Image", icon: R.image.icon_Image()!) {
-                animate3d.toggle()
+                withAnimation(.linear(duration: 0.35)) {
+                    animate3d.toggle()
+                }
             }
         }
         .padding()
