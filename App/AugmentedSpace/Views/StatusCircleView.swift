@@ -15,8 +15,10 @@ struct StatusCircleView: View {
             Circle()
                 .fill(step.complete ? .green : .red)
             Text(String(step.number))
+                .scaledToFit()
                 .font(.system(size: 400))
                 .minimumScaleFactor(0.01)
+                .padding(50)
                 .foregroundColor(.white)
 
         }

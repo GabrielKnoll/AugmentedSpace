@@ -13,7 +13,6 @@ class AppState: ObservableObject {
     @Published private(set) var step: Step?
     @Published var name = ""
     @Published var partnerName = ""
-    @Published var shouldShowStatusBar = false
 
     init() {
         sessionManager = SessionManager(state: self)

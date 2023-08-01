@@ -13,10 +13,6 @@ struct ContentView: View {
     @State private var isShowingNameView = false
 
     var body: some View {
-        VStack {
-            if state.shouldShowStatusBar {
-                StatusBarView()
-            }
             NavigationView {
                 VStack {
                     NavigationLink(destination: NameView(), isActive: $isShowingNameView) { EmptyView() }
@@ -49,7 +45,6 @@ struct ContentView: View {
                 }
             }
             .environmentObject(state)
-        }
     }
 }
 
