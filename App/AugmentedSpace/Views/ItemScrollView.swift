@@ -15,11 +15,12 @@ struct ItemScrollView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     ForEach(Item.allCases) { item in
-                        ItemCardView(item: item)
-                            .frame(width: 325, height: 450)
+                        ItemCardView(item: .helmet)
+                            .frame(width: 325, height: 500)
                             .id(item)
                     }
                 }
+                .frame(maxHeight: 700)
                 .background(GeometryReader { proxy -> Color in
                     DispatchQueue.main.async {
                         let offset = -proxy.frame(in: .named("scroll")).minX

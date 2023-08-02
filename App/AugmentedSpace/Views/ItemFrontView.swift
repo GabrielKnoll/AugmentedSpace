@@ -14,21 +14,22 @@ struct ItemFrontView: View {
     var body: some View {
         VStack {
             Text(item.title)
-                .font(.title)
+                .font(Font.custom("Poppins-Medium", size: 35))
                 .foregroundColor(.white)
+                .padding(.top, 40)
             Image(uiImage: item.image!)
                 .resizable()
                 .scaledToFit()
-            Spacer(minLength: 50)
-            ShowInformationButton(text: "Show Information", icon: R.image.icon_Info()!) {
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            Spacer()
+            ShowInformationButton() {
                 withAnimation(.linear(duration: 0.35)) {
                     animate3d.toggle()
                 }
-            }
+            } .padding(EdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30))
         }
-        .padding(25)
         .background(Color.black)
-        .cornerRadius(15)
+        .cornerRadius(20)
     }
 }
 

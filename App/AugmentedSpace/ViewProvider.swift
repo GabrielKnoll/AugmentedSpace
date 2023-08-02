@@ -54,17 +54,15 @@ enum Item: CaseIterable, Identifiable {
     var description: String {
         switch self {
         case .gloves:
-            return "Put the glove on your hand"
+            return "In space, hands freeze, but not with these special gloves. They have built-in heaters and maintain finger dexterity for tool use."
         case .helmet:
             return "Something to think about"
         case .coolingGarment:
-            return ""
+            return "Long spacewalks require hard work. Astronauts wear a cooling garment with water tubes to stay cool."
         case .lowerTorso:
-            return ""
+            return "The lower torso shields legs and feet in space. Rings along the waist secure astronauts to the station and hold essential tools during spacewalks."
         case .hardUpperTorso:
-            return ""
-        case .lifeSupportSystem:
-            return ""
+            return "The Hard Upper Torso establishes a connection between the suit's internal components and the relevant systems in the Portable Life Support System."
         }
     }
 

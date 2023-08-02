@@ -16,7 +16,7 @@ struct ItemBackView: View {
             HStack(alignment: .center) {
                 Spacer()
                 Text(item.title)
-                    .font(Font.custom("Poppins-Regular", size: 36))
+                    .font(Font.custom("Poppins-Regular", size: 32))
                 Spacer()
             }.padding(.top, 30)
             Spacer()
@@ -27,21 +27,21 @@ struct ItemBackView: View {
                     Text("Color:")
                 }
                 .padding(.trailing, 15)
-                .font(Font.custom("Poppins-Bold", size: 21))
+                .font(Font.custom("Poppins-Bold", size: 19))
                 VStack(alignment: .leading) {
                     Text(item.facts!.weight)
                     Text(item.facts!.material)
                     Text(item.facts!.color)
-                }.font(Font.custom("Poppins-Regular", size: 21))
+                }.font(Font.custom("Poppins-Regular", size: 19))
                 Spacer()
             }.padding(.horizontal, 40)
             Spacer()
             Text(item.description)
                 .padding(.horizontal, 40)
                 .multilineTextAlignment(.leading)
-                .font(Font.custom("Poppins-Regular", size: 21))
+                .font(Font.custom("Poppins-Regular", size: 19))
             Spacer()
-            ShowInformationButton(text: "Show Image", icon: R.image.icon_Image()!) {
+            ShowInformationButton() {
                 withAnimation(.linear(duration: 0.35)) {
                     animate3d.toggle()
                 }

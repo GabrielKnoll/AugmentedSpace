@@ -16,8 +16,8 @@ struct ItemCardView: View {
     var body: some View {
         VStack {
             ZStack {
-                ItemFrontView(item: .helmet, animate3d: $animate3d).opacity(flipped ? 0.0 : 1.0)
-                ItemBackView(item: .gloves, animate3d: $animate3d).opacity(flipped ? 1.0 : 0.0)
+                ItemFrontView(item: item, animate3d: $animate3d).opacity(flipped ? 0.0 : 1.0)
+                ItemBackView(item: item, animate3d: $animate3d).opacity(flipped ? 1.0 : 0.0)
             }
             .modifier(FlipEffect(flipped: $flipped, angle: animate3d ? 180 : 0, axis: (x: 0, y: 1)))
         }
