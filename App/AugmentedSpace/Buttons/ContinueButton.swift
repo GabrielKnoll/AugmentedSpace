@@ -9,7 +9,6 @@ import RealityKit
 import SwiftUI
 
 struct ContinueButton: View {
-    var backgroundColor: Color = R.color.customBlue.color
     var clicked: (() -> Void)
 
     var body: some View {
@@ -19,9 +18,9 @@ struct ContinueButton: View {
             }
             .frame(maxWidth: .infinity, maxHeight: 30)
             .font(Font.custom("Poppins-SemiBold", size: 18))
-            .foregroundColor(Color.white)
+            .foregroundColor(.black)
             .padding()
-            .background(backgroundColor)
+            .background(R.color.customOrange.color)
             .cornerRadius(10)
         }
     }

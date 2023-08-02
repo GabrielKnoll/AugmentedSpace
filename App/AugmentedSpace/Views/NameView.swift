@@ -17,11 +17,10 @@ struct NameView: View {
                 Text("What's")
                     .font(Font.custom("Poppins-SemiBold", size: 46))
                     .foregroundColor(.white)
-                    .padding(EdgeInsets(top: 60, leading: 0, bottom: -20, trailing: 0))
+                    .padding(EdgeInsets(top: 100, leading: 0, bottom: -20, trailing: 0))
                 Text("your name?")
                     .font(Font.custom("Poppins-SemiBold", size: 46))
                     .foregroundColor(R.color.customOrange.color)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             Spacer()
             HStack {
@@ -30,6 +29,7 @@ struct NameView: View {
                     .padding()
                     .foregroundColor(.white)
                     .background(R.color.customBlue.color)
+                    .cornerRadius(15)
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(Color.gray, lineWidth: 1)
@@ -37,7 +37,7 @@ struct NameView: View {
                 Spacer(minLength: 30)
             }
             Spacer()
-            ContinueButton(backgroundColor: R.color.customOrange.color) {
+            ContinueButton {
                 shouldContinue = true
             }
             .padding(30)

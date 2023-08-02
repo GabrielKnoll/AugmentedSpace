@@ -17,12 +17,18 @@ struct ConnectivityView: View {
             Image("spaceBackground")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            VStack {
+            VStack(alignment: .center) {
                 if state.role == .fitting {
                     //Host
-                    Text("Scan QR Code")
                     if state.partnerName.isEmpty {
+                        Text("Scan the QR Code on your partners device")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                            .padding(.top, 100)
+                        Spacer(minLength: 150)
                         ScannerViewControllerContainer()
+                            .padding(.leading, 40)
+                        Spacer()
                     } else {
                         Text("Your partner is \($state.partnerName.wrappedValue)")
                             .onAppear {
@@ -42,13 +48,12 @@ struct ConnectivityView: View {
                             state.sessionManager?.joinSession()
                         }
                 }
-                Button("Send Text") {
-                    state.sessionManager?.sendText(text: "Hello World!")
+                ContinueButton {
+                    print("Hello")
                 }
-                Button("Send Step") {
-                    state.sessionManager?.sendStep(step: .helmet(state: .active))
-                }
+                .padding(30)
             }
+            .padding()
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     showingAlert = true
@@ -64,6 +69,6 @@ struct ConnectivityView_Previews: PreviewProvider {
 
     static var previews: some View {
         ConnectivityView()
-            .environmentObject(state)
+            .environmentObject(AppState())
     }
 }
