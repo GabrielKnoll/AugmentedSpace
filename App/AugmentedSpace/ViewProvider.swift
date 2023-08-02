@@ -32,15 +32,15 @@ enum Item {
     var image: UIImage? {
         switch self {
         case .gloves:
-            return R.image.glove()!
+            return R.image.card_Gloves()!
         case .helmet:
-            return R.image.helmet()!
+            return R.image.card_Helmet()!
         case .coolingGarment:
-            return nil
+            return R.image.card_Cooling_Garment()!
         case .lowerTorso:
-            return nil
+            return R.image.card_Lower_Torso()!
         case .hardUpperTorso:
-            return nil
+            return R.image.card_Upper_Torso()!
         case .lifeSupportSystem:
             return nil
         }
