@@ -9,29 +9,18 @@ import RealityKit
 import SwiftUI
 
 struct RepeatButton: View {
-    var text: String
-    var icon: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
-            VStack {
                 HStack {
-                    Text(text)
-                        .frame(alignment: .center)
-
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(alignment: .center)
-                        .padding(10)
+                    Text("Repeat")
+                    Image(systemName: "arrow.2.squarepath")
                 }
-            }
-            .frame(maxWidth: .infinity)
-            .foregroundColor(Color.white)
-            .padding()
-            .background(R.color.customGrey.color)
-            .cornerRadius(10)
+                .foregroundColor(Color.white)
+                .padding(15)
+                .background(R.color.customGrey.color)
+                .cornerRadius(10)
         }
     }
 }
@@ -41,11 +30,7 @@ struct RepeatButton_Previews: PreviewProvider {
         HStack {
             VStack {
                 Spacer(minLength: 675)
-                RepeatButton(
-                    text: "Repeat",
-                    icon: "Icon_Retry"
-                ) {
-                }
+                RepeatButton {}
             }
             Spacer(minLength: 200)
         }

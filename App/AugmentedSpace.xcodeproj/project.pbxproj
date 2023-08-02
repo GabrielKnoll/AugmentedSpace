@@ -32,6 +32,7 @@
 		C0BD007E2A5EDE1D00AB4EFB /* BodyTrackedARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */; };
 		C0BD00802A5EDF6500AB4EFB /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C0BD007F2A5EDF6500AB4EFB /* robot.usdz */; };
 		C0E2EB7A2A781E6C00CA730E /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2EB792A781E6C00CA730E /* StatusBarView.swift */; };
+		C0F70A9D2A7A98EC00BACE77 /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F70A9C2A7A98EC00BACE77 /* FinalView.swift */; };
 		E9165CAC2A79499100741FF0 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9165CAB2A79499100741FF0 /* ComponentView.swift */; };
 		E93161C82A7A5336000B080F /* EndSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93161C72A7A5336000B080F /* EndSessionView.swift */; };
 		E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */; };
@@ -88,6 +89,7 @@
 		C0BD007D2A5EDE1D00AB4EFB /* BodyTrackedARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTrackedARView.swift; sourceTree = "<group>"; };
 		C0BD007F2A5EDF6500AB4EFB /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
 		C0E2EB792A781E6C00CA730E /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
+		C0F70A9C2A7A98EC00BACE77 /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
 		E9165CAB2A79499100741FF0 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
 		E93161C72A7A5336000B080F /* EndSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionView.swift; sourceTree = "<group>"; };
 		E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatButton.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		C08755DF2A5ED2FB00965129 = {
 			isa = PBXGroup;
 			children = (
+				C0F70A9C2A7A98EC00BACE77 /* FinalView.swift */,
 				C08755EA2A5ED2FB00965129 /* AugmentedSpace */,
 				C08755E92A5ED2FB00965129 /* Products */,
 			);
@@ -371,6 +374,7 @@
 				C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */,
 				C051E0882A77E30500DB0AF4 /* ConnectivityView.swift in Sources */,
 				C03EBCE62A78F35800F10033 /* StatusCircleView.swift in Sources */,
+				C0F70A9D2A7A98EC00BACE77 /* FinalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,12 +510,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSNearbyInteractionUsageDescription = Multiplayer;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -539,12 +544,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSNearbyInteractionUsageDescription = Multiplayer;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;

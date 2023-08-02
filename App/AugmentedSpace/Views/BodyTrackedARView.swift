@@ -75,6 +75,16 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
         }
     }
 
+    func takeSnapshot(completion: @escaping (Image) -> Void) {
+        snapshot(saveToHDR: false) { image in
+            guard let image = image else {
+                assertionFailure("Nix Foto")
+                return
+            }
+            completion(image)
+        }
+    }
+
     @MainActor required dynamic init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

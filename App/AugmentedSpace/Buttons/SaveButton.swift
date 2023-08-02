@@ -8,29 +8,20 @@
 import SwiftUI
 
 struct SaveButton: View {
-    var text: String
-    var icon: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
-            VStack {
                 HStack {
-                    Text(text)
-                        .frame(alignment: .center)
-
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(alignment: .center)
-                        .padding(10)
+                    Spacer()
+                    Text("Save")
+                    Image(systemName: "square.and.arrow.down")
+                    Spacer()
                 }
-            }
-            .frame(maxWidth: .infinity)
-            .foregroundColor(Color.black)
-            .padding()
-            .background(R.color.customOrange.color)
-            .cornerRadius(10)
+                .foregroundColor(Color.white)
+                .padding(15)
+                .background(R.color.customOrange.color)
+                .cornerRadius(10)
         }
     }
 }
@@ -38,11 +29,7 @@ struct SaveButton: View {
 #if DEBUG
 struct SaveButton_Previews: PreviewProvider {
     static var previews: some View {
-        SaveButton(
-            text: "Save",
-            icon: "Icon_Download"
-        ) {
-        }
+        SaveButton {}
     }
 }
 #endif
