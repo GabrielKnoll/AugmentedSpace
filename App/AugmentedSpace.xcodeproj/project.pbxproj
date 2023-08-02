@@ -16,6 +16,8 @@
 		C03EBD0F2A7952D600F10033 /* FittingARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD0E2A7952D600F10033 /* FittingARView.swift */; };
 		C03EBD112A79624A00F10033 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD102A79624A00F10033 /* Step.swift */; };
 		C03EBD182A7A5DE600F10033 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD172A7A5DE600F10033 /* PhotoView.swift */; };
+		C03EBD222A7A784800F10033 /* PhotoIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD212A7A784800F10033 /* PhotoIntroView.swift */; };
+		C03EBD252A7A809A00F10033 /* FinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD242A7A809A00F10033 /* FinderView.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -66,6 +68,8 @@
 		C03EBD0E2A7952D600F10033 /* FittingARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingARView.swift; sourceTree = "<group>"; };
 		C03EBD102A79624A00F10033 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		C03EBD172A7A5DE600F10033 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		C03EBD212A7A784800F10033 /* PhotoIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoIntroView.swift; sourceTree = "<group>"; };
+		C03EBD242A7A809A00F10033 /* FinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderView.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 				C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */,
 				C03EBD0E2A7952D600F10033 /* FittingARView.swift */,
 				C03EBD172A7A5DE600F10033 /* PhotoView.swift */,
+				C03EBD212A7A784800F10033 /* PhotoIntroView.swift */,
+				C03EBD242A7A809A00F10033 /* FinderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			files = (
 				E9FC44232A7808090003BEF7 /* ViewProvider.swift in Sources */,
 				C03EBD002A79183F00F10033 /* ItemFrontView.swift in Sources */,
+				C03EBD252A7A809A00F10033 /* FinderView.swift in Sources */,
 				C03EBD022A79187000F10033 /* ItemBackView.swift in Sources */,
 				E9FC44222A7808050003BEF7 /* AppDelegate.swift in Sources */,
 				C03EBCFD2A7917CF00F10033 /* FlipEffect.swift in Sources */,
@@ -354,6 +361,7 @@
 				E97C64072A77F805008E0C3A /* SaveButton.swift in Sources */,
 				E97C64042A77F6A2008E0C3A /* TakePhotoIconButton.swift in Sources */,
 				E9A697C12A78FCD600C006FE /* QRUtility.swift in Sources */,
+				C03EBD222A7A784800F10033 /* PhotoIntroView.swift in Sources */,
 				E9B72A032A77C587007E19ED /* TakePhotoButton.swift in Sources */,
 				E9A697C62A79023B00C006FE /* SelectRoleView.swift in Sources */,
 				E9B72A072A77C8A9007E19ED /* BackButton.swift in Sources */,

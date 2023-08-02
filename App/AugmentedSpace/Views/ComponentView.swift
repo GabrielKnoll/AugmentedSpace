@@ -46,7 +46,7 @@ struct ComponentView: View {
                 Spacer()
                 HStack {
                     if currentIndex > 0 {
-                        BackButton() {
+                        BackButton {
                             if currentIndex > 0 {
                                 currentIndex -= 1
                             }

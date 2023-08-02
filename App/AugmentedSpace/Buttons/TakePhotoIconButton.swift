@@ -8,35 +8,28 @@
 import SwiftUI
 
 struct TakePhotoIconButton: View {
-    var icon: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
-            VStack {
-                HStack {
-                    Image(icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(alignment: .center)
-                        .padding(10)
-                }
+            HStack {
+                Spacer()
+                Image(systemName: "camera.fill")
+                    .font(.title)
+                Spacer()
             }
-            .frame(maxWidth: .infinity)
-            .foregroundColor(Color.white)
-            .padding()
-            .background(R.color.customOrange.color)
-            .cornerRadius(10)
         }
+        .padding(15)
+        .foregroundColor(Color.white)
+        .background(R.color.customOrange.color)
+        .cornerRadius(10)
     }
 }
+
 #if DEBUG
 struct TakePhotoIconButton_Previews: PreviewProvider {
     static var previews: some View {
-        TakePhotoIconButton(
-            icon: "Icon_Camera"
-        ) {
-        }
+        TakePhotoIconButton {}
     }
 }
 #endif
