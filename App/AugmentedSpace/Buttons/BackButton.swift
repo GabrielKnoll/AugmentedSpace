@@ -19,12 +19,11 @@ struct BackButton: View {
                         .resizable()
                         .scaledToFit()
                         .frame(alignment: .center)
-                        .padding(10)
                     Text("Back")
                         .frame(alignment: .center)
                 }
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: 20)
             .foregroundColor(Color.white)
             .padding()
             .background(R.color.customGrey.color)

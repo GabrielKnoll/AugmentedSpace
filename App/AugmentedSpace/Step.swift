@@ -52,17 +52,17 @@ enum Step: Codable {
     var componentTitleCL: String {
         switch self {
         case .coolingGarment:
-            return ("CG")
+            return ("Component 1")
         case .lowerTorso:
-            return ("LT")
+            return ("Component 2")
         case .hardUpperTorso:
-            return ("HUT")
+            return ("Component 3")
         case .gloves:
-            return ("GL")
+            return ("Component 4")
         case .helmet:
-            return ("HT")
+            return ("Component 5")
         case .photo:
-            return ("PH")
+            return ("Ready for Takeoff")
         }
     }
 
@@ -90,7 +90,7 @@ enum Step: Codable {
         case .helmet:
             return ("The last piece we are looking for serves as a pressure bubble and is made of strong plastic to keep the pressure of the suit contained. It also has a ventilation system that provides astronauts with oxygen. Outside of this bubble is a protective visor that keeps the pressure bubble from getting bumped or scratched.")
         case .photo:
-            return ""
+            return ("Capture your personal space experience and take a souvenir photo.")
         }
     }
 
