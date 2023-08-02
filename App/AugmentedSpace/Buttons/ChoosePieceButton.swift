@@ -18,13 +18,14 @@ struct ChoosePieceButton: View {
             VStack {
                 HStack {
                     Text(text)
-                        .frame(alignment: .center)
+                        .frame(maxWidth: .infinity, maxHeight: 30)
+                        .font(Font.custom("Poppins-Medium", size: 18))
 
                     Image(icon)
                         .resizable()
                         .scaledToFit()
                         .frame(alignment: .center)
-                        .padding(10)
+                        .padding(7)
                 }
             }
             .frame(maxWidth: .infinity)

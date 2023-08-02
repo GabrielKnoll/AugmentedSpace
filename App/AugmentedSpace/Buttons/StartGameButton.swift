@@ -9,15 +9,15 @@ import RealityKit
 import SwiftUI
 
 struct StartGameButton: View {
-    var text: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
             HStack {
-                Text(text)
+                Text("Start Game")
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: 30)
+            .font(Font.custom("Poppins-SemiBold", size: 15))
             .foregroundColor(Color.white)
             .padding()
             .background(R.color.customBlue.color)
@@ -29,7 +29,6 @@ struct StartGameButton: View {
 struct StartGameButton_Previews: PreviewProvider {
     static var previews: some View {
         StartGameButton(
-            text: "Start Game"
         ) {
         }
     }

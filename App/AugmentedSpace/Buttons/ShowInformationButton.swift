@@ -18,13 +18,15 @@ struct ShowInformationButton: View {
             HStack(spacing: 10) {
                 Text(text)
                     .lineLimit(1)
+                    .font(Font.custom("Poppins-Medium", size: 15))
                 Image(uiImage: icon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(maxHeight: 30)
             }
         }
         .fixedSize()
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: 40)
         .padding(5)
         .foregroundColor(Color.white)
         .background(R.color.customBlue.color)

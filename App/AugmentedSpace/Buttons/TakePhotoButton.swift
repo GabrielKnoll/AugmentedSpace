@@ -20,7 +20,8 @@ struct TakePhotoButton: View {
                         .frame(alignment: .center)
                 }
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: 30)
+            .font(Font.custom("Poppins-SemiBold", size: 18))
             .foregroundColor(Color.black)
             .padding()
             .background(R.color.customOrange.color)
