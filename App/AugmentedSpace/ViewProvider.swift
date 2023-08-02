@@ -30,7 +30,6 @@ enum Item: CaseIterable, Identifiable {
     case coolingGarment
     case lowerTorso
     case hardUpperTorso
-    case lifeSupportSystem
     case gloves
     case helmet
 
@@ -46,8 +45,6 @@ enum Item: CaseIterable, Identifiable {
             return R.image.card_Lower_Torso()!
         case .hardUpperTorso:
             return R.image.card_Upper_Torso()!
-        case .lifeSupportSystem:
-            return nil
         }
     }
 
@@ -78,8 +75,6 @@ enum Item: CaseIterable, Identifiable {
             return nil
         case .hardUpperTorso:
             return nil
-        case .lifeSupportSystem:
-            return nil
         }
     }
 
@@ -95,8 +90,6 @@ enum Item: CaseIterable, Identifiable {
             return "Lowet Torso"
         case .hardUpperTorso:
             return "Hard Upper Torso"
-        case .lifeSupportSystem:
-            return "Life Support System"
         }
     }
 
