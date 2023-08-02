@@ -16,7 +16,7 @@ struct ItemBackView: View {
             HStack(alignment: .center) {
                 Spacer()
                 Text(item.title)
-                    .font(Font.custom("Poppins-Regular", size: 25))
+                    .font(Font.custom("Poppins-Medium", size: 25))
                 Spacer()
             }
             Spacer()
@@ -27,7 +27,7 @@ struct ItemBackView: View {
                     Text("Color:")
                 }
                 .padding(.trailing, 15)
-                .font(Font.custom("Poppins-Medium", size: 15))
+                .font(Font.custom("Poppins-Bold", size: 15))
                 if let facts = item.facts {
                     VStack(alignment: .leading) {
                         Text(facts.weight)

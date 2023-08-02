@@ -15,7 +15,7 @@ struct ItemFrontView: View {
         ZStack {
             VStack {
                 Text(item.title)
-                    .font(Font.custom("Poppins-Regular", size: 25))
+                    .font(Font.custom("Poppins-Medium", size: 25))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                 Spacer()
