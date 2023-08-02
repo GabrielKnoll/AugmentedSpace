@@ -176,6 +176,12 @@
 		C0BD00782A5EDB4A00AB4EFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
+				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
+				E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */,
+				E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */,
+				E9165CAB2A79499100741FF0 /* ComponentView.swift */,
+				E93161C72A7A5336000B080F /* EndSessionView.swift */,
 				C03EBCE52A78F35800F10033 /* StatusCircleView.swift */,
 				C0BD00792A5EDB6100AB4EFB /* StaticARViewContainer.swift */,
 				C0BD007B2A5EDC8700AB4EFB /* BodyTrackedARViewContainer.swift */,
@@ -184,12 +190,6 @@
 				C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */,
 				C051E08D2A77F90600DB0AF4 /* NameView.swift */,
 				C0E2EB792A781E6C00CA730E /* StatusBarView.swift */,
-				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
-				E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */,
-				E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */,
-				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
-				E9165CAB2A79499100741FF0 /* ComponentView.swift */,
-				E93161C72A7A5336000B080F /* EndSessionView.swift */,
 				C03EBCF62A790FF500F10033 /* ItemScrollView.swift */,
 				C03EBCF92A7912A100F10033 /* ItemCardView.swift */,
 				C03EBD012A79187000F10033 /* ItemBackView.swift */,
@@ -498,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = TP5UPDPNZY;
+				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
@@ -531,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = TP5UPDPNZY;
+				DEVELOPMENT_TEAM = FY482T2YCZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;

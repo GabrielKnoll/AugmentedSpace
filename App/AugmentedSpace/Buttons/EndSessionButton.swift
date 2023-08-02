@@ -17,8 +17,9 @@ struct EndSessionButton: View {
             HStack {
                 Text(text)
             }
-            .padding(50.0)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .padding(75)
+            .font(Font.custom("Poppins-SemiBold", size: 21))
+            .frame(maxWidth: .infinity, alignment: .center)
             .foregroundColor(Color.white)
             .background(R.color.customBlue.color)
             .cornerRadius(10)

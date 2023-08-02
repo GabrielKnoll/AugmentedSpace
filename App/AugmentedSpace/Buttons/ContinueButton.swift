@@ -16,7 +16,8 @@ struct ContinueButton: View {
             HStack {
                 Text("Continue")
             }
-            .frame(maxWidth: .infinity, maxHeight: 20)
+            .frame(maxWidth: .infinity, maxHeight: 30)
+            .font(Font.custom("Poppins-SemiBold", size: 18))
             .foregroundColor(Color.white)
             .padding()
             .background(R.color.customBlue.color)
