@@ -34,9 +34,9 @@ struct ComponentView: View {
                 Text(state.steps[currentIndex].componentTextCL)
                 Spacer()
                 HStack {
-                    BackButton() {
+                    BackButton {
                     }
-                    ContinueButton() {
+                    ContinueButton {
                         print("Current index: \(currentIndex)")
                         if currentIndex < maximumIndex {
                             currentIndex += 1

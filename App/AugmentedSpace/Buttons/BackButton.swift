@@ -35,8 +35,7 @@ struct BackButton: View {
 #if DEBUG
 struct BackButton_Previews: PreviewProvider {
     static var previews: some View {
-        BackButton(
-        ) {
+        BackButton {
         }
     }
 }

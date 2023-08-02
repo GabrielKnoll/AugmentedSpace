@@ -34,7 +34,7 @@ struct ChecklistNavigatorIntroView: View {
                 }.padding([.leading, .bottom, .trailing], 40)
                 Spacer()
                 NavigationLink(destination: ComponentView().navigationBarBackButtonHidden(true), isActive: $isShowingComponentView) { EmptyView() }
-                ContinueButton() {
+                ContinueButton {
                     state.role = .checklist
                     isShowingComponentView = true
                 }

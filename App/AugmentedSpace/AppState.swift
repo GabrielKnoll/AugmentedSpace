@@ -29,6 +29,7 @@ class AppState: ObservableObject {
             .helmet(state: .inactive),
             .photo(state: .inactive)
         ]
+        currentStep = steps.first
     }
 
     func finishCurrentStep() {
@@ -36,9 +37,11 @@ class AppState: ObservableObject {
         let index = currStep.number - 1
         currStep.updateState(new: .complete)
         steps[index] = currStep
-        if index + 1 < steps.count {
-            currentStep = steps[index + 1]
-            currentStep?.updateState(new: .active)
+        let newIndex = index + 1
+        if newIndex < steps.count {
+            currentStep = steps[newIndex]
+            currentStep!.updateState(new: .active)
+            steps[newIndex] = currentStep!
         } else {
             currentStep = nil
         }
