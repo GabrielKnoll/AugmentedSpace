@@ -9,20 +9,18 @@ import RealityKit
 import SwiftUI
 
 struct BackButton: View {
-    var text: String
-    var icon: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
             VStack {
                 HStack {
-                    Image(icon)
+                    Image("Icon_BackArrow")
                         .resizable()
                         .scaledToFit()
                         .frame(alignment: .center)
                         .padding(10)
-                    Text(text)
+                    Text("Back")
                         .frame(alignment: .center)
                 }
             }
@@ -38,8 +36,6 @@ struct BackButton: View {
 struct BackButton_Previews: PreviewProvider {
     static var previews: some View {
         BackButton(
-            text: "Back",
-            icon: "Icon_BackArrow"
         ) {
         }
     }

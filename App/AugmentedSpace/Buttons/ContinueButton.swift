@@ -9,13 +9,12 @@ import RealityKit
 import SwiftUI
 
 struct ContinueButton: View {
-    var text: String
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
             HStack {
-                Text(text)
+                Text("Continue")
             }
             .frame(maxWidth: .infinity)
             .foregroundColor(Color.white)
@@ -29,7 +28,6 @@ struct ContinueButton: View {
 struct ContinueButton_Previews: PreviewProvider {
     static var previews: some View {
         ContinueButton(
-            text: "Continue"
         ) {
         }
     }
