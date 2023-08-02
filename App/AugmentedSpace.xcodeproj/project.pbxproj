@@ -127,7 +127,6 @@
 		C08755DF2A5ED2FB00965129 = {
 			isa = PBXGroup;
 			children = (
-				C0F70A9C2A7A98EC00BACE77 /* FinalView.swift */,
 				C08755EA2A5ED2FB00965129 /* AugmentedSpace */,
 				C08755E92A5ED2FB00965129 /* Products */,
 			);
@@ -205,6 +204,7 @@
 				C03EBD172A7A5DE600F10033 /* PhotoView.swift */,
 				C03EBD212A7A784800F10033 /* PhotoIntroView.swift */,
 				C03EBD242A7A809A00F10033 /* FinderView.swift */,
+				C0F70A9C2A7A98EC00BACE77 /* FinalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

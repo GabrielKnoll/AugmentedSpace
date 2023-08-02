@@ -10,8 +10,10 @@ import Foundation
 class AppState: ObservableObject {
     private(set) var sessionManager: SessionManager?
     var role: Role = .checklist
+    var debug = false
     @Published private(set) var currentStep: Step?
     @Published private(set) var steps = [Step]()
+    @Published private(set) var currentStepLimit = 0
     @Published var enablePhoto = false
     @Published var name = ""
     @Published var partnerName = ""
@@ -33,6 +35,13 @@ class AppState: ObservableObject {
         currentStep = steps.first
     }
 
+    private func setCurrentStep(step: Step) {
+        currentStep = step
+        currentStep!.updateState(new: .active)
+        steps[step.number - 1] = currentStep!
+        currentStepLimit = step.number - 1
+    }
+
     func finishCurrentStep() {
         guard var currStep = currentStep else { return }
         let index = currStep.number - 1
@@ -40,9 +49,7 @@ class AppState: ObservableObject {
         steps[index] = currStep
         let newIndex = index + 1
         if newIndex < steps.count {
-            currentStep = steps[newIndex]
-            currentStep!.updateState(new: .active)
-            steps[newIndex] = currentStep!
+            setCurrentStep(step: steps[newIndex])
             if case .photo = currentStep! {
                 enablePhoto = true
             }
@@ -52,6 +59,9 @@ class AppState: ObservableObject {
     }
 
     func receivedStepUpdate(step: Step) {
-        self.currentStep = step
+        steps[step.number - 1] = step
+        if step.state == .active {
+            setCurrentStep(step: step)
+        }
     }
 }

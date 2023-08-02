@@ -10,9 +10,8 @@ import SwiftUI
 struct ComponentView: View {
 
     @EnvironmentObject var state: AppState
-    @State private var isShowingEndSessionView = false
+    @State private var shouldShowPhotoView = false
     @State var currentIndex = 0
-    @State var maximumIndex = 4
     @State var displayedStep: Step?
 
     var body: some View {
@@ -57,16 +56,15 @@ struct ComponentView: View {
                             .frame(maxWidth: 120)
                         }
                         NavigationLink(
-                            destination: EndSessionView()
+                            destination: PhotoIntroView()
                                 .navigationBarBackButtonHidden(true),
-                            isActive: $isShowingEndSessionView ) { EmptyView() }
+                            isActive: $shouldShowPhotoView ) { EmptyView() }
                         ContinueButton {
                             print("Current index: \(currentIndex)")
-                            if currentIndex == maximumIndex {
-                                state.role = .checklist
-                                isShowingEndSessionView = true
+                            if currentIndex == state.steps.count - 2 {
+                                shouldShowPhotoView = true
                             }
-                            if currentIndex < maximumIndex {
+                            if currentIndex < state.currentStepLimit || state.debug {
                                 currentIndex += 1
                             }
                         }

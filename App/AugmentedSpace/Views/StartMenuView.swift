@@ -44,7 +44,7 @@ struct StartMenuView: View {
                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
                 Spacer(minLength: 100)
                 NavigationLink(destination: SelectRoleView().navigationBarBackButtonHidden(true), isActive: $isShowingSelectRoleView) { EmptyView() }
-                StartGameButton() {
+                StartGameButton {
                     state.role = .checklist
                     isShowingSelectRoleView = true
                 }
