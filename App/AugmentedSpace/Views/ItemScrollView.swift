@@ -14,10 +14,10 @@ struct ItemScrollView: View {
         ScrollViewReader { value in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(0..<10) {
-                        ItemCardView(item: .gloves)
+                    ForEach(Item.allCases) { item in
+                        ItemCardView(item: item)
                             .frame(width: 325, height: 450)
-                            .id($0)
+                            .id(item)
                     }
                 }
                 .background(GeometryReader { proxy -> Color in

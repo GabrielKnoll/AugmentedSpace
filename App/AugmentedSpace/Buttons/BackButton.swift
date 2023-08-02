@@ -21,9 +21,10 @@ struct BackButton: View {
                         .frame(alignment: .center)
                     Text("Back")
                         .frame(alignment: .center)
+                        .font(Font.custom("Poppins-SemiBold", size: 15))
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 20)
+            .frame(maxWidth: .infinity, maxHeight: 30)
             .foregroundColor(Color.white)
             .padding()
             .background(R.color.customGrey.color)

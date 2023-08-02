@@ -10,10 +10,9 @@ import SwiftUI
 struct ComponentView: View {
 
     @EnvironmentObject var state: AppState
+    @State private var shouldShowPhotoView = false
     @State var currentIndex = 0
-    @State var maximumIndex = 4
     @State var displayedStep: Step?
-    @State var disabled = false
 
     var body: some View {
         ZStack {
@@ -44,29 +43,40 @@ struct ComponentView: View {
                 }.padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
 
                 Spacer()
-                HStack {
-                    if currentIndex > 0 {
-                        BackButton() {
-                            if currentIndex > 0 {
-                                currentIndex -= 1
+                VStack {
+                    Spacer()
+                    HStack {
+                        if currentIndex > 0 {
+                            BackButton {
+                                if currentIndex > 0 {
+                                    currentIndex -= 1
+                                }
+                            }
+                            .padding(.trailing, 5)
+                            .frame(maxWidth: 120)
+                        }
+                        NavigationLink(
+                            destination: PhotoIntroView()
+                                .navigationBarBackButtonHidden(true),
+                            isActive: $shouldShowPhotoView ) { EmptyView() }
+                        ContinueButton {
+                            print("Current index: \(currentIndex)")
+                            if currentIndex == state.steps.count - 2 {
+                                shouldShowPhotoView = true
+                            }
+                            if currentIndex < state.currentStepLimit || state.debug {
+                                currentIndex += 1
                             }
                         }
-                        .frame(maxWidth: 100)
                     }
-                    ContinueButton {
-                        print("Current index: \(currentIndex)")
-                        if currentIndex < maximumIndex {
-                            currentIndex += 1
-                        }
-                    }.disabled(disabled)
                 }
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
-            }.padding(EdgeInsets(top: 75, leading: 0, bottom: 0, trailing: 0))
+            }.padding(EdgeInsets(top: 75, leading: 0, bottom: 30, trailing: 0))
         }
         .overlay(alignment: .top) {
             StatusBarView()
-                .padding(EdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30))
+                .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
         }
     }
 }

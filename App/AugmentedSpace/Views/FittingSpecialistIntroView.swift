@@ -16,6 +16,7 @@ struct FittingSpecialistIntroView: View {
         ZStack {
             Image("spaceBackground")
                 .resizable()
+                .edgesIgnoringSafeArea(.all)
             VStack(alignment: .center) {
                 Image("Icon_Styler")
                     .resizable()
@@ -40,7 +41,7 @@ struct FittingSpecialistIntroView: View {
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
             }
-        } .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
