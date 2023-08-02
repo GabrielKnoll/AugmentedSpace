@@ -34,7 +34,7 @@ struct FittingSpecialistIntroView: View {
                 }.padding([.leading, .bottom, .trailing], 40)
                 Spacer()
                 NavigationLink(destination: StartMenuView().navigationBarBackButtonHidden(true), isActive: $isShowingStartMenuView) { EmptyView() }
-                ContinueButton() {
+                ContinueButton {
                     state.role = .checklist
                     isShowingStartMenuView = true
                 }
