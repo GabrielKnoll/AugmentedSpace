@@ -53,7 +53,7 @@ enum Item: CaseIterable, Identifiable {
         case .gloves:
             return "In space, hands freeze, but not with these special gloves. They have built-in heaters and maintain finger dexterity for tool use."
         case .helmet:
-            return "Something to think about"
+            return "Not a regular helmet for biking or sports. The spacesuit helmet features a gold-coated visor shielding from sun rays and a built-in ventilation system for oxygen supply."
         case .coolingGarment:
             return "Long spacewalks require hard work. Astronauts wear a cooling garment with water tubes to stay cool."
         case .lowerTorso:
@@ -87,7 +87,7 @@ enum Item: CaseIterable, Identifiable {
         case .coolingGarment:
             return "Cooling Garment"
         case .lowerTorso:
-            return "Lowet Torso"
+            return "Lower Torso"
         case .hardUpperTorso:
             return "Hard Upper Torso"
         }
