@@ -21,10 +21,10 @@ enum Role {
     case fitting
 }
 
-enum Item: CaseIterable, Identifiable {
+enum Item: Int, CaseIterable, Identifiable {
 
-    var id: Self {
-        return self
+    var id: Int {
+        return self.rawValue
     }
 
     case coolingGarment

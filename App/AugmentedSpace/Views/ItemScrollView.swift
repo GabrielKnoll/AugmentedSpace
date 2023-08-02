@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ItemScrollView: View {
-    @State private var selectedCard = 5
+    @State private var selectedCard = 2
 
     var body: some View {
         ScrollViewReader { value in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
-                    ForEach(Item.allCases) { item in
+                    ForEach(Item.allCases, id: \.id) { item in
                         ItemCardView(item: item)
                             .frame(width: 325, height: 400)
                             .id(item)

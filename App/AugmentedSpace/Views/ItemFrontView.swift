@@ -19,7 +19,7 @@ struct ItemFrontView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                 Spacer()
-                ShowInformationButton() {
+                ShowInformationButton {
                     withAnimation(.linear(duration: 0.35)) {
                         animate3d.toggle()
                     }
