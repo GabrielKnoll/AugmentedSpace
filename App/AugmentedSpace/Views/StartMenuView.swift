@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct StartMenuView: View {
-
-    @StateObject var state = AppState()
+    @EnvironmentObject var state: AppState
     @State private var isShowingSelectRoleView = false
 
     var body: some View {
@@ -45,7 +44,6 @@ struct StartMenuView: View {
                 Spacer(minLength: 100)
                 NavigationLink(destination: SelectRoleView().navigationBarBackButtonHidden(true), isActive: $isShowingSelectRoleView) { EmptyView() }
                 StartGameButton {
-                    state.role = .checklist
                     isShowingSelectRoleView = true
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))

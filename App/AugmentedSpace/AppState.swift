@@ -9,8 +9,8 @@ import Foundation
 
 class AppState: ObservableObject {
     private(set) var sessionManager: SessionManager?
-    var role: Role = .checklist
     var debug = false
+    @Published var role: Role = .checklist
     @Published private(set) var currentStep: Step?
     @Published private(set) var steps = [Step]()
     @Published private(set) var currentStepLimit = 0

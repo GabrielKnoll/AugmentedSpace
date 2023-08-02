@@ -7,10 +7,10 @@
 import SwiftUI
 
 struct SelectRoleView: View {
-
-    @StateObject var state = AppState()
+    @EnvironmentObject var state: AppState
     @State private var isShowingFittingSpecialistIntroView = false
     @State private var isShowingChecklistNavigatorIntroView = false
+    @State private var showConnectivityView = false
 
     var body: some View {
         ZStack {
@@ -40,25 +40,36 @@ struct SelectRoleView: View {
                 }
                 .padding(EdgeInsets(top: 0, leading: 50, bottom: 20, trailing: 50))
 
-                NavigationLink(
-                    destination: FittingSpecialistIntroView()
-                        .navigationBarBackButtonHidden(true),
-                    isActive: $isShowingFittingSpecialistIntroView) { EmptyView() }
+                if state.debug {
+                    NavigationLink(
+                        destination: FittingSpecialistIntroView()
+                            .navigationBarBackButtonHidden(true),
+                        isActive: $isShowingFittingSpecialistIntroView) { EmptyView() }
+                } else {
+                    NavigationLink(
+                        destination: ConnectivityView()
+                            .navigationBarBackButtonHidden(true),
+                        isActive: $showConnectivityView) { EmptyView() }
+                }
 
                 SelectRoleButton(textlarge: "Fitting Specialist", textsmall: "Try to assemble the components of the spacesuit correctly") {
-                    state.role = .checklist
+                    state.role = .fitting
                     isShowingFittingSpecialistIntroView = true
+                    showConnectivityView = true
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 5, trailing: 20))
 
-                NavigationLink(
-                    destination: ChecklistNavigatorIntroView()
-                        .navigationBarBackButtonHidden(true),
-                    isActive: $isShowingChecklistNavigatorIntroView ) { EmptyView() }
+                if state.debug {
+                    NavigationLink(
+                        destination: ChecklistNavigatorIntroView()
+                            .navigationBarBackButtonHidden(true),
+                        isActive: $isShowingChecklistNavigatorIntroView ) { EmptyView() }
+                }
 
                 SelectRoleButton(textlarge: "Checklist Navigator", textsmall: "Give instructions which components are needed") {
                     state.role = .checklist
                     isShowingChecklistNavigatorIntroView = true
+                    showConnectivityView = true
                 }
                 .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                 Spacer(minLength: 30)

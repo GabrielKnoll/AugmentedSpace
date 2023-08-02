@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct FittingSpecialistIntroView: View {
-
-    @StateObject var state = AppState()
+    @EnvironmentObject var state: AppState
     @State private var isShowingStartMenuView = false
 
     var body: some View {

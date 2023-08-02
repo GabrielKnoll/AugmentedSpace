@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct EndSessionView: View {
-
-    @StateObject var state = AppState()
+    @EnvironmentObject var state: AppState
     @State private var isShowingPhotoView = false
     @State private var isShowingStartMenuView = false
 

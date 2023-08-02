@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ChecklistNavigatorIntroView: View {
-
-    @StateObject var state = AppState()
+    @EnvironmentObject var state: AppState
     @State private var isShowingComponentView = false
 
     var body: some View {
