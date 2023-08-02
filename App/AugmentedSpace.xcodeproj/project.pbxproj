@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74F8BA562A7A72B400F313A8 /* 01_CG.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA552A7A72B400F313A8 /* 01_CG.usdz */; };
-		74F8BA582A7A72CD00F313A8 /* 02_LT.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA572A7A72CD00F313A8 /* 02_LT.usdz */; };
-		74F8BA5A2A7A72E000F313A8 /* 03_UT.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA592A7A72E000F313A8 /* 03_UT.usdz */; };
-		74F8BA5C2A7A72E900F313A8 /* 04_UTG.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA5B2A7A72E900F313A8 /* 04_UTG.usdz */; };
-		74F8BA5E2A7A72F100F313A8 /* 05_Astronaut.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA5D2A7A72F100F313A8 /* 05_Astronaut.usdz */; };
+		74F8BA612A7AB66300F313A8 /* 05_Astronaut.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA602A7AB66300F313A8 /* 05_Astronaut.usdz */; };
+		74F8BA632A7AB66E00F313A8 /* 04_UTG.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA622A7AB66E00F313A8 /* 04_UTG.usdz */; };
+		74F8BA652A7AB67800F313A8 /* 03_UT.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA642A7AB67800F313A8 /* 03_UT.usdz */; };
+		74F8BA672A7AB68100F313A8 /* 02_LT.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA662A7AB68100F313A8 /* 02_LT.usdz */; };
+		74F8BA6B2A7AB90900F313A8 /* 01_CG.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 74F8BA6A2A7AB90900F313A8 /* 01_CG.usdz */; };
 		C03EBCE62A78F35800F10033 /* StatusCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCE52A78F35800F10033 /* StatusCircleView.swift */; };
 		C03EBCF72A790FF500F10033 /* ItemScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCF62A790FF500F10033 /* ItemScrollView.swift */; };
 		C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBCF92A7912A100F10033 /* ItemCardView.swift */; };
@@ -65,11 +65,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74F8BA552A7A72B400F313A8 /* 01_CG.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 01_CG.usdz; sourceTree = "<group>"; };
-		74F8BA572A7A72CD00F313A8 /* 02_LT.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 02_LT.usdz; sourceTree = "<group>"; };
-		74F8BA592A7A72E000F313A8 /* 03_UT.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 03_UT.usdz; sourceTree = "<group>"; };
-		74F8BA5B2A7A72E900F313A8 /* 04_UTG.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 04_UTG.usdz; sourceTree = "<group>"; };
-		74F8BA5D2A7A72F100F313A8 /* 05_Astronaut.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 05_Astronaut.usdz; sourceTree = "<group>"; };
+		74F8BA602A7AB66300F313A8 /* 05_Astronaut.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 05_Astronaut.usdz; sourceTree = "<group>"; };
+		74F8BA622A7AB66E00F313A8 /* 04_UTG.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 04_UTG.usdz; sourceTree = "<group>"; };
+		74F8BA642A7AB67800F313A8 /* 03_UT.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 03_UT.usdz; sourceTree = "<group>"; };
+		74F8BA662A7AB68100F313A8 /* 02_LT.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 02_LT.usdz; sourceTree = "<group>"; };
+		74F8BA6A2A7AB90900F313A8 /* 01_CG.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 01_CG.usdz; sourceTree = "<group>"; };
 		C03EBCE52A78F35800F10033 /* StatusCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCircleView.swift; sourceTree = "<group>"; };
 		C03EBCF62A790FF500F10033 /* ItemScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemScrollView.swift; sourceTree = "<group>"; };
 		C03EBCF92A7912A100F10033 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
@@ -183,11 +183,11 @@
 		C08755FB2A5ED83100965129 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				74F8BA552A7A72B400F313A8 /* 01_CG.usdz */,
-				74F8BA572A7A72CD00F313A8 /* 02_LT.usdz */,
-				74F8BA592A7A72E000F313A8 /* 03_UT.usdz */,
-				74F8BA5B2A7A72E900F313A8 /* 04_UTG.usdz */,
-				74F8BA5D2A7A72F100F313A8 /* 05_Astronaut.usdz */,
+				74F8BA6A2A7AB90900F313A8 /* 01_CG.usdz */,
+				74F8BA662A7AB68100F313A8 /* 02_LT.usdz */,
+				74F8BA642A7AB67800F313A8 /* 03_UT.usdz */,
+				74F8BA622A7AB66E00F313A8 /* 04_UTG.usdz */,
+				74F8BA602A7AB66300F313A8 /* 05_Astronaut.usdz */,
 				C0BD007F2A5EDF6500AB4EFB /* robot.usdz */,
 				C08755FE2A5ED86F00965129 /* astronaut.usdz */,
 			);
@@ -309,15 +309,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F8BA632A7AB66E00F313A8 /* 04_UTG.usdz in Resources */,
+				74F8BA672A7AB68100F313A8 /* 02_LT.usdz in Resources */,
+				74F8BA652A7AB67800F313A8 /* 03_UT.usdz in Resources */,
+				74F8BA612A7AB66300F313A8 /* 05_Astronaut.usdz in Resources */,
 				E9A697B82A78F90400C006FE /* ProjectFonts in Resources */,
-				74F8BA5A2A7A72E000F313A8 /* 03_UT.usdz in Resources */,
-				74F8BA5E2A7A72F100F313A8 /* 05_Astronaut.usdz in Resources */,
 				C0BD00802A5EDF6500AB4EFB /* robot.usdz in Resources */,
-				74F8BA582A7A72CD00F313A8 /* 02_LT.usdz in Resources */,
 				C08755F52A5ED2FC00965129 /* Preview Assets.xcassets in Resources */,
 				C08755FF2A5ED86F00965129 /* astronaut.usdz in Resources */,
-				74F8BA562A7A72B400F313A8 /* 01_CG.usdz in Resources */,
-				74F8BA5C2A7A72E900F313A8 /* 04_UTG.usdz in Resources */,
+				74F8BA6B2A7AB90900F313A8 /* 01_CG.usdz in Resources */,
 				C08755F22A5ED2FC00965129 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
