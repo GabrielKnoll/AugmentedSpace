@@ -16,30 +16,32 @@ struct ItemBackView: View {
             HStack(alignment: .center) {
                 Spacer()
                 Text(item.title)
-                    .font(Font.custom("Poppins-Regular", size: 32))
+                    .font(Font.custom("Poppins-Regular", size: 25))
                 Spacer()
-            }.padding(.top, 30)
+            }
             Spacer()
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Material:")
                     Text("Weight:")
+                    Text("Material:")
                     Text("Color:")
                 }
                 .padding(.trailing, 15)
-                .font(Font.custom("Poppins-Bold", size: 19))
-                VStack(alignment: .leading) {
-                    Text(item.facts!.weight)
-                    Text(item.facts!.material)
-                    Text(item.facts!.color)
-                }.font(Font.custom("Poppins-Regular", size: 19))
+                .font(Font.custom("Poppins-Medium", size: 15))
+                if let facts = item.facts {
+                    VStack(alignment: .leading) {
+                        Text(facts.weight)
+                        Text(facts.material)
+                        Text(facts.color)
+                    }.font(Font.custom("Poppins-Regular", size: 15))
+                }
                 Spacer()
             }.padding(.horizontal, 40)
             Spacer()
             Text(item.description)
                 .padding(.horizontal, 40)
                 .multilineTextAlignment(.leading)
-                .font(Font.custom("Poppins-Regular", size: 19))
+                .font(Font.custom("Poppins-Regular", size: 15))
             Spacer()
             ShowInformationButton {
                 withAnimation(.linear(duration: 0.35)) {

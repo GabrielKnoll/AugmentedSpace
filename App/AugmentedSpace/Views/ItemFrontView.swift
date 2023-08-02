@@ -12,24 +12,31 @@ struct ItemFrontView: View {
     @Binding var animate3d: Bool
 
     var body: some View {
-        VStack {
-            Text(item.title)
-                .font(Font.custom("Poppins-Medium", size: 35))
-                .foregroundColor(.white)
-                .padding(.top, 40)
-            Image(uiImage: item.image!)
-                .resizable()
-                .scaledToFit()
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            Spacer()
-            ShowInformationButton {
-                withAnimation(.linear(duration: 0.35)) {
-                    animate3d.toggle()
+        ZStack {
+            VStack {
+                Text(item.title)
+                    .font(Font.custom("Poppins-Regular", size: 25))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.white)
+                Spacer()
+                ShowInformationButton() {
+                    withAnimation(.linear(duration: 0.35)) {
+                        animate3d.toggle()
+                    }
                 }
-            } .padding(EdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30))
+            }
+            .padding(EdgeInsets(top: 30, leading: 30, bottom: 30, trailing: 30))
+            .background(Color.black)
+            .cornerRadius(20)
+            VStack {
+                Spacer(minLength: 75)
+                Image(uiImage: item.image!)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                Spacer(minLength: 75)
+            }
         }
-        .background(Color.black)
-        .cornerRadius(20)
     }
 }
 
