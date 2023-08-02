@@ -49,6 +49,7 @@ struct FittingARView: View {
             StatusBarView()
                 .padding(EdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30))
         }
+        NavigationLink(destination: PhotoView().navigationBarBackButtonHidden(true), isActive: $state.enablePhoto) { EmptyView() }
     }
 }
 

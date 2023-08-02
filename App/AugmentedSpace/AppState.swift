@@ -12,6 +12,7 @@ class AppState: ObservableObject {
     var role: Role = .checklist
     @Published private(set) var currentStep: Step?
     @Published private(set) var steps = [Step]()
+    @Published var enablePhoto = false
     @Published var name = ""
     @Published var partnerName = ""
 
@@ -42,6 +43,9 @@ class AppState: ObservableObject {
             currentStep = steps[newIndex]
             currentStep!.updateState(new: .active)
             steps[newIndex] = currentStep!
+            if case .photo = currentStep! {
+                enablePhoto = true
+            }
         } else {
             currentStep = nil
         }

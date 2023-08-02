@@ -15,6 +15,7 @@
 		C03EBD022A79187000F10033 /* ItemBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD012A79187000F10033 /* ItemBackView.swift */; };
 		C03EBD0F2A7952D600F10033 /* FittingARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD0E2A7952D600F10033 /* FittingARView.swift */; };
 		C03EBD112A79624A00F10033 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD102A79624A00F10033 /* Step.swift */; };
+		C03EBD182A7A5DE600F10033 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBD172A7A5DE600F10033 /* PhotoView.swift */; };
 		C04A65182A77A2FD003D9729 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C04A65172A77A2FD003D9729 /* RswiftLibrary */; };
 		C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */; };
 		C04A65282A77B2E3003D9729 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04A65272A77B2E3003D9729 /* SessionManager.swift */; };
@@ -64,6 +65,7 @@
 		C03EBD012A79187000F10033 /* ItemBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBackView.swift; sourceTree = "<group>"; };
 		C03EBD0E2A7952D600F10033 /* FittingARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingARView.swift; sourceTree = "<group>"; };
 		C03EBD102A79624A00F10033 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		C03EBD172A7A5DE600F10033 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		C04A651E2A77A5D6003D9729 /* Rswift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rswift+Extensions.swift"; sourceTree = "<group>"; };
 		C04A65212A77AB91003D9729 /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		C04A65242A77AD07003D9729 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				C03EBD012A79187000F10033 /* ItemBackView.swift */,
 				C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */,
 				C03EBD0E2A7952D600F10033 /* FittingARView.swift */,
+				C03EBD172A7A5DE600F10033 /* PhotoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */,
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
+				C03EBD182A7A5DE600F10033 /* PhotoView.swift in Sources */,
 				E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */,
 				E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */,
 				E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */,
@@ -494,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
@@ -527,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
