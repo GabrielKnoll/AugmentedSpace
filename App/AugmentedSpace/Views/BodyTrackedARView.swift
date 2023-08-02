@@ -46,7 +46,7 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
             }, receiveValue: { (character: Entity) in
                 if let character = character as? BodyTrackedEntity {
                     // Scale the character to human size
-                    character.scale = [1.0, 1.0, 1.0]
+                    character.scale = [1.0, 1.0, 1.0]  // Scale the character to human size [0.1, 0.1, 0.1]
                     self.character = character
                     cancellable?.cancel()
                 } else {
