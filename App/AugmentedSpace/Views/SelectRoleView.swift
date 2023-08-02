@@ -47,7 +47,7 @@ struct SelectRoleView: View {
                         isActive: $isShowingFittingSpecialistIntroView) { EmptyView() }
                 } else {
                     NavigationLink(
-                        destination: ConnectivityView()
+                        destination: NameView()
                             .navigationBarBackButtonHidden(true),
                         isActive: $showConnectivityView) { EmptyView() }
                 }

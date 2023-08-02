@@ -34,7 +34,7 @@ struct ShowInformationButton: View {
 #if DEBUG
 struct ShowInformationButton_Previews: PreviewProvider {
     static var previews: some View {
-        ShowInformationButton() {
+        ShowInformationButton {
         }
     }
 }

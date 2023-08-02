@@ -22,7 +22,7 @@ struct ItemFrontView: View {
                 .scaledToFit()
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             Spacer()
-            ShowInformationButton() {
+            ShowInformationButton {
                 withAnimation(.linear(duration: 0.35)) {
                     animate3d.toggle()
                 }

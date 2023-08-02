@@ -41,7 +41,7 @@ struct ItemBackView: View {
                 .multilineTextAlignment(.leading)
                 .font(Font.custom("Poppins-Regular", size: 19))
             Spacer()
-            ShowInformationButton() {
+            ShowInformationButton {
                 withAnimation(.linear(duration: 0.35)) {
                     animate3d.toggle()
                 }

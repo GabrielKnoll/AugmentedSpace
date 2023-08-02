@@ -29,7 +29,7 @@ struct FittingARView: View {
         }
         .overlay(alignment: .bottom) {
             HStack {
-                ShowInformationButton() {
+                ShowInformationButton {
                     if shouldShowEquipment {
                         state.finishCurrentStep()
                         shouldShowEquipment = false
