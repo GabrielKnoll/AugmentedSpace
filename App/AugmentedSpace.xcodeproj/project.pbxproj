@@ -196,8 +196,8 @@
 				C0E2EB792A781E6C00CA730E /* StatusBarView.swift */,
 				C03EBCF62A790FF500F10033 /* ItemScrollView.swift */,
 				C03EBCF92A7912A100F10033 /* ItemCardView.swift */,
-				C03EBD012A79187000F10033 /* ItemBackView.swift */,
 				C03EBCFF2A79183F00F10033 /* ItemFrontView.swift */,
+				C03EBD012A79187000F10033 /* ItemBackView.swift */,
 				C03EBD0E2A7952D600F10033 /* FittingARView.swift */,
 				C03EBD172A7A5DE600F10033 /* PhotoView.swift */,
 				C03EBD212A7A784800F10033 /* PhotoIntroView.swift */,
@@ -209,10 +209,9 @@
 		E9B729FB2A77C221007E19ED /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */,
-				E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */,
 				E9B729F52A77C14F007E19ED /* StartGameButton.swift */,
 				E9B729FF2A77C410007E19ED /* ContinueButton.swift */,
+				E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */,
 				E9B72A022A77C587007E19ED /* TakePhotoButton.swift */,
 				E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */,
 				E97C64062A77F805008E0C3A /* SaveButton.swift */,
@@ -221,6 +220,7 @@
 				E9B72A0C2A77C8E7007E19ED /* ShowInformationButton.swift */,
 				E9B72A0F2A77C91D007E19ED /* SelectEquipmentButton.swift */,
 				E97C63F62A77CA1D008E0C3A /* RepeatButton.swift */,
+				E97C64092A77F8D1008E0C3A /* EndSessionButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";

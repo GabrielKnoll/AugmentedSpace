@@ -21,7 +21,12 @@ enum Role {
     case fitting
 }
 
-enum Item {
+enum Item: CaseIterable, Identifiable {
+
+    var id: Self {
+        return self
+    }
+
     case coolingGarment
     case lowerTorso
     case hardUpperTorso
@@ -36,11 +41,11 @@ enum Item {
         case .helmet:
             return R.image.helmet()!
         case .coolingGarment:
-            return nil
+            return R.image.coolingGarment()!
         case .lowerTorso:
-            return nil
+            return R.image.lowerTorso()!
         case .hardUpperTorso:
-            return nil
+            return R.image.hardUpperTorso()!
         case .lifeSupportSystem:
             return nil
         }
@@ -81,22 +86,34 @@ enum Item {
     }
 
     var title: String {
-        //TODO: Set titles
-        return "Kein Title lol"
+        switch self {
+        case .gloves:
+            return "Gloves"
+        case .helmet:
+            return "Helmet"
+        case .coolingGarment:
+            return "Cooling Garment"
+        case .lowerTorso:
+            return "Lowet Torso"
+        case .hardUpperTorso:
+            return "Hard Upper Torso"
+        case .lifeSupportSystem:
+            return "Life Support System"
+        }
     }
-}
 
-struct ItemFacts {
-    let weight: String
-    let color: String
-    let cost: String
-    let material: String
-}
+    struct ItemFacts {
+        let weight: String
+        let color: String
+        let cost: String
+        let material: String
+    }
 
-struct ViewProvider {
-    @ViewBuilder
-    static func nextView(current: Page) -> some View { BodyTrackedARViewContainer() }
+    struct ViewProvider {
+        @ViewBuilder
+        static func nextView(current: Page) -> some View { BodyTrackedARViewContainer() }
 
-    @ViewBuilder
-    static func connectivityView() -> some View { ConnectivityView() }
+        @ViewBuilder
+        static func connectivityView() -> some View { ConnectivityView() }
+    }
 }

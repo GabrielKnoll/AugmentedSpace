@@ -13,26 +13,33 @@ struct ItemBackView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .center) {
+                Spacer()
                 Text(item.title)
-                    .font(.title)
-                    .frame(alignment: .center)
-            }
+                    .font(Font.custom("Poppins-Regular", size: 36))
+                Spacer()
+            }.padding(.top, 30)
             Spacer()
             HStack {
-                Text("Material").bold()
-                Text(item.facts!.material)
-            }
-            HStack {
-                Text("Weight").bold()
-                Text(item.facts!.weight)
-            }
-            HStack {
-                Text("Color").bold()
-                Text(item.facts!.color)
-            }
+                VStack(alignment: .leading) {
+                    Text("Material:")
+                    Text("Weight:")
+                    Text("Color:")
+                }
+                .padding(.trailing, 15)
+                .font(Font.custom("Poppins-Bold", size: 21))
+                VStack(alignment: .leading) {
+                    Text(item.facts!.weight)
+                    Text(item.facts!.material)
+                    Text(item.facts!.color)
+                }.font(Font.custom("Poppins-Regular", size: 21))
+                Spacer()
+            }.padding(.horizontal, 40)
             Spacer()
             Text(item.description)
+                .padding(.horizontal, 40)
+                .multilineTextAlignment(.leading)
+                .font(Font.custom("Poppins-Regular", size: 21))
             Spacer()
             ShowInformationButton(text: "Show Image", icon: R.image.icon_Image()!) {
                 withAnimation(.linear(duration: 0.35)) {

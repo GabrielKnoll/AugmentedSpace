@@ -38,7 +38,7 @@ struct SelectRoleView: View {
                         .font(Font.custom("Poppins-SemiBold", size: 21))
                         .foregroundColor(R.color.customOrange.color)
                 }
-                .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
+                .padding(EdgeInsets(top: 0, leading: 50, bottom: 20, trailing: 50))
 
                 NavigationLink(
                     destination: FittingSpecialistIntroView()

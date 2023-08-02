@@ -35,7 +35,7 @@ struct SelectRoleButton_Previews: PreviewProvider {
     static var previews: some View {
         SelectRoleButton(
             textlarge: "Fitting Specialist",
-            textsmall: ""
+            textsmall: "asdfasdfasdfasdfasdfasdfasdf"
         ) {
         }
     }
