@@ -53,7 +53,7 @@ struct ComponentView: View {
                         }
                         .frame(maxWidth: 100)
                     }
-                    ContinueButton() {
+                    ContinueButton {
                         print("Current index: \(currentIndex)")
                         if currentIndex < maximumIndex {
                             currentIndex += 1
