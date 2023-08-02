@@ -11,11 +11,14 @@ struct StatusBarView: View {
     @EnvironmentObject var state: AppState
 
     var body: some View {
-        HStack {
-            ForEach(state.steps, id: \.number) { step in
-                StatusCircleView(step: step)
+            HStack {
+                ForEach(state.steps, id: \.number) { step in
+                    StatusCircleView(step: step)
+                }
             }
-        }
+            .padding(7.5)
+            .background(Color(red: 0, green: 0, blue: 0, opacity: 0.75))
+            .clipShape(Capsule(style: .continuous))
     }
 }
 

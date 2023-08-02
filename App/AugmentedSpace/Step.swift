@@ -11,9 +11,9 @@ enum Step: Codable {
     case coolingGarment(state: StepState)
     case lowerTorso(state: StepState)
     case hardUpperTorso(state: StepState)
-    case lifeSupportSystem(state: StepState)
     case gloves(state: StepState)
     case helmet(state: StepState)
+    case photo(state: StepState)
 
     var number: Int {
         switch self {
@@ -23,11 +23,11 @@ enum Step: Codable {
             return 2
         case .hardUpperTorso:
             return 3
-        case .lifeSupportSystem:
-            return 4
         case .gloves:
-            return 5
+            return 4
         case .helmet:
+            return 5
+        case .photo:
             return 6
         }
     }
@@ -44,7 +44,7 @@ enum Step: Codable {
             return result
         case let .hardUpperTorso(state: result):
             return result
-        case let .lifeSupportSystem(state: result):
+        case let .photo(state: result):
             return result
         }
     }
@@ -57,12 +57,23 @@ enum Step: Codable {
             return ("LT")
         case .hardUpperTorso:
             return ("HUT")
-        case .lifeSupportSystem:
-            return ("LSS")
         case .gloves:
             return ("GL")
         case .helmet:
             return ("HT")
+        case .photo:
+            return ("PH")
+        }
+    }
+
+    var color: Color {
+        switch self.state {
+        case .active:
+            return .red
+        case .inactive:
+            return .gray
+        case .complete:
+            return .green
         }
     }
 
@@ -74,12 +85,12 @@ enum Step: Codable {
             return ("This section of the suit is made up of spacesuit pants, boots and the lower half of the waist closure. A metal body-seal closure connects this part of the suit to the hard upper torso. A part of it called the waist bearing helps the astronaut move and turn.")
         case .hardUpperTorso:
             return ("The next piece we are looking for is lightweight but strong and connects the inside of the suit with the appropriate systems in the portable life support system. It is shaped like a sleeveless shirt and connects to the arm assembly that covers the arms and joins the gloves.")
-        case .lifeSupportSystem:
-            return ("The next component houses the supplies and equipment to make the suit work. It contains the oxygen that astronauts breathe and that pressurizes the suit. It also provides electricity for the suit and holds a two-way radio for communication.")
         case .gloves:
             return ("The next component protects a part of the body that gets coldest in space. It is equipped with heaters and should also allow dexterity for the use of tools.")
         case .helmet:
             return ("The last piece we are looking for serves as a pressure bubble and is made of strong plastic to keep the pressure of the suit contained. It also has a ventilation system that provides astronauts with oxygen. Outside of this bubble is a protective visor that keeps the pressure bubble from getting bumped or scratched.")
+        case .photo:
+            return ""
         }
     }
 
@@ -93,10 +104,10 @@ enum Step: Codable {
             self = .lowerTorso(state: state)
         case .hardUpperTorso:
             self = .hardUpperTorso(state: state)
-        case .lifeSupportSystem:
-            self = .lifeSupportSystem(state: state)
         case .gloves:
             self = .gloves(state: state)
+        case .photo:
+            self = .photo(state: state)
         }
     }
 }

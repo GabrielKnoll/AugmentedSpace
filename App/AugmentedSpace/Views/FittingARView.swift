@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FittingARView: View {
+    @EnvironmentObject var state: AppState
+
     @State private var shouldShowEquipment = false {
         didSet {
             buttonText = shouldShowEquipment ? "Choose Component" : "Select Equipment"
@@ -28,7 +30,12 @@ struct FittingARView: View {
         .overlay(alignment: .bottom) {
             HStack {
                 ShowInformationButton(text: buttonText, icon: R.image.icon_Helmet()!) {
-                    shouldShowEquipment.toggle()
+                    if shouldShowEquipment {
+                        state.finishCurrentStep()
+                        shouldShowEquipment = false
+                    } else {
+                        shouldShowEquipment.toggle()
+                    }
                 }
                 if shouldShowEquipment {
                     Button("Close", role: .cancel) {
@@ -38,7 +45,10 @@ struct FittingARView: View {
             }
             .padding(15)
         }
-
+        .overlay(alignment: .top) {
+            StatusBarView()
+                .padding(EdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30))
+        }
     }
 }
 

@@ -13,15 +13,20 @@ struct StatusCircleView: View {
     var body: some View {
         ZStack {
             Circle()
-            //TODO: Add Color
-                //.fill(step.complete ? .green : .red)
-            Text(String(step.number))
+                .fill(step.color)
+            textForStep()
                 .scaledToFit()
-                .font(.system(size: 400))
-                .minimumScaleFactor(0.01)
-                .padding(50)
+                .bold()
                 .foregroundColor(.white)
 
+        }
+    }
+
+    func textForStep() -> Text {
+        if case .photo = step {
+            return Text("\(Image(systemName: "camera.fill"))")
+        } else {
+            return Text(String(step.number))
         }
     }
 }
