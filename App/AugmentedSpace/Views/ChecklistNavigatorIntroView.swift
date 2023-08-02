@@ -10,7 +10,7 @@ import SwiftUI
 struct ChecklistNavigatorIntroView: View {
 
     @StateObject var state = AppState()
-    @State private var isShowingStartMenuView = false
+    @State private var isShowingComponentView = false
 
     var body: some View {
         ZStack {
@@ -33,10 +33,10 @@ struct ChecklistNavigatorIntroView: View {
                         .foregroundColor(Color.white)
                 }.padding([.leading, .bottom, .trailing], 40)
                 Spacer()
-                NavigationLink(destination: StartMenuView().navigationBarBackButtonHidden(true), isActive: $isShowingStartMenuView) { EmptyView() }
-                ContinueButton(text: "Continue") {
+                NavigationLink(destination: ComponentView().navigationBarBackButtonHidden(true), isActive: $isShowingComponentView) { EmptyView() }
+                ContinueButton() {
                     state.role = .checklist
-                    isShowingStartMenuView = true
+                    isShowingComponentView = true
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
             }

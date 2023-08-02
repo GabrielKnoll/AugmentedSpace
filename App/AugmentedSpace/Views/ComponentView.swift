@@ -10,9 +10,10 @@ import SwiftUI
 struct ComponentView: View {
 
     @EnvironmentObject var state: AppState
-    @State var currentIndex = 0
-    @State var maximumIndex = 0
+    @State var currentIndex = 1
+    @State var maximumIndex = 2
     @State var displayedStep: Step?
+    @State var disabled = false
 
     var body: some View {
         ZStack {
@@ -22,7 +23,7 @@ struct ComponentView: View {
             VStack(alignment: .center) {
                 Rectangle()
                     .fill(.white)
-                    .frame(width: .infinity, height: 75)
+                    .frame(width: 100, height: 75)
                 Text("What important equipment do we search?")
                     .font(Font.custom("Poppins-Medium", size: 14))
                     .foregroundColor(R.color.customOrange.color)
@@ -32,13 +33,15 @@ struct ComponentView: View {
                 Text(state.steps[currentIndex].componentTitleCL)
                 Text(state.steps[currentIndex].componentTextCL)
                 Spacer()
-                HStack{
-                    BackButton(text:, icon: <#T##String#>, clicked: <#T##(() -> Void)##(() -> Void)##() -> Void#>)
-                    ContinueButton(text: ("Continue")) {
+                HStack {
+                    BackButton() {
+                    }
+                    ContinueButton() {
+                        print("Current index: \(currentIndex)")
                         if currentIndex < maximumIndex {
                             currentIndex += 1
                         }
-                    }
+                    }.disabled(disabled)
                 }
                 .padding(.bottom, 30)
             }
