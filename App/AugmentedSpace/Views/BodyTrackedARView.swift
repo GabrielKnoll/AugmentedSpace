@@ -82,6 +82,7 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
                 // Attach the character to its anchor as soon as
                 // 1. the body anchor was detected and
                 // 2. the character was loaded.
+                characterAnchor.children.removeAll()
                 characterAnchor.addChild(character)
             }
         }

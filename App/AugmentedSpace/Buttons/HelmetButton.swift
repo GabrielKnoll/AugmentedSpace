@@ -19,7 +19,7 @@ struct HelmetButton: View {
             if isOn {
                 VStack {
                     HStack {
-                        Image("Icon_Helmet2")
+                        Image("Icon_Not_Helmet")
                             .resizable()
                             .scaledToFit()
                             .frame(alignment: .center)
@@ -33,7 +33,7 @@ struct HelmetButton: View {
             } else {
                 VStack {
                     HStack {
-                        Image("Icon_Not_Helmet")
+                        Image("Icon_Helmet2")
                             .resizable()
                             .scaledToFit()
                             .frame(alignment: .center)

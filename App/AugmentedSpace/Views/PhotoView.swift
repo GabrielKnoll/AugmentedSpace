@@ -15,7 +15,6 @@ struct PhotoView: View {
     @State private var resultImage = Image(systemName: "camera.fill")
     @State private var currentImage: UIImage?
     @State private var helmet = false
-    @State private var itemToDisplay = Item.helmet
 
     var body: some View {
         ZStack {
@@ -23,7 +22,7 @@ struct PhotoView: View {
                 BodyTrackedARViewContainer()
                     .ignoresSafeArea(.all)
                     .onAppear {
-                        state.selectedItemToDisplay!(.coolingGarment)
+                        state.selectedItemToDisplay!(.gloves)
                     }
                 VStack {
                     Spacer(minLength: 75)
@@ -57,14 +56,10 @@ struct PhotoView: View {
                         HelmetButton {
                             if helmet {
                                 helmet = false
-                                itemToDisplay = .gloves
-                                state.selectedItemToDisplay!(itemToDisplay)
-                                print("Helmet is ", helmet)
+                                state.selectedItemToDisplay!(.gloves)
                             } else {
                                 helmet = true
-                                itemToDisplay = .helmet
-                                state.selectedItemToDisplay!(itemToDisplay)
-                                print("Helmet is ", helmet)
+                                state.selectedItemToDisplay!(.helmet)
                             }
                         }
                     }
