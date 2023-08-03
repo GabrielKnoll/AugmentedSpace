@@ -8,17 +8,17 @@
 import UIKit
 
 enum Item: Int, CaseIterable, Identifiable {
-    
+
     var id: Int {
         return self.rawValue
     }
-    
+
     case coolingGarment
     case lowerTorso
     case hardUpperTorso
     case gloves
     case helmet
-    
+
     var image: UIImage? {
         switch self {
         case .gloves:
@@ -33,7 +33,7 @@ enum Item: Int, CaseIterable, Identifiable {
             return R.image.card_Upper_Torso()!
         }
     }
-    
+
     var description: String {
         switch self {
         case .gloves:
@@ -48,7 +48,7 @@ enum Item: Int, CaseIterable, Identifiable {
             return "The Hard Upper Torso establishes a connection between the suit's internal components and the relevant systems in the Portable Life Support System."
         }
     }
-    
+
     var facts: ItemFacts? {
         switch self {
         case .gloves:
@@ -63,7 +63,7 @@ enum Item: Int, CaseIterable, Identifiable {
             return nil
         }
     }
-    
+
     var title: String {
         switch self {
         case .gloves:
@@ -78,7 +78,7 @@ enum Item: Int, CaseIterable, Identifiable {
             return "Hard Upper Torso"
         }
     }
-    
+
     var model: String {
         switch self {
         case .coolingGarment:

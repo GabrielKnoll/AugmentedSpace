@@ -67,7 +67,10 @@ struct PhotoView: View {
             .background(Color(red: 0, green: 0, blue: 0, opacity: 0.75))
             .isHidden(hideUI)
         }
-        NavigationLink(destination: FinalView().navigationBarBackButtonHidden(true), isActive: $finish) { EmptyView() }
+        .onAppear {
+            state.selectedItemToDisplay!(.gloves)
+        }
+        NavigationLink(destination: EndSessionView().navigationBarBackButtonHidden(true), isActive: $finish) { EmptyView() }
     }
 
     private func takePhoto() {

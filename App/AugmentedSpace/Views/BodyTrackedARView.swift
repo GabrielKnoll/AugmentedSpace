@@ -46,7 +46,7 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
 
         scene.addAnchor(characterAnchor)
     }
-    
+
     func loadModel(for item: Item) {
         var cancellable: AnyCancellable?
         cancellable = Entity.loadBodyTrackedAsync(named: item.model).sink(

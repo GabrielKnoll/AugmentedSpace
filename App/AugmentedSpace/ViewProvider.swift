@@ -24,7 +24,7 @@ enum Role {
 struct ViewProvider {
     @ViewBuilder
     static func nextView(current: Page) -> some View { BodyTrackedARViewContainer() }
-    
+
     @ViewBuilder
     static func connectivityView() -> some View { ConnectivityView() }
 }
