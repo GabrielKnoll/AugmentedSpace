@@ -66,7 +66,7 @@ struct ComponentView: View {
                             if currentIndex < state.currentStepLimit || state.debug {
                                 currentIndex += 1
                             }
-                        }
+                        }.disabled(currentIndex == state.currentStepLimit ? true : false)
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))

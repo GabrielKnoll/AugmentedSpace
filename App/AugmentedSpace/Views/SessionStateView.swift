@@ -18,7 +18,6 @@ struct SessionStateView: View {
                     Text("Session connected. Second player is \($state.partnerName.wrappedValue).")
                         .font(Font.custom("Poppins-SemiBold", size: 35))
                         .foregroundColor(.white)
-                        .padding(.top, 100)
                     Spacer()
                 } else {
                     VStack(alignment: .leading, spacing: 0) {
@@ -31,13 +30,17 @@ struct SessionStateView: View {
                             .foregroundColor(R.color.customOrange.color)
                     }
                     Spacer()
-                    ProgressView()
-                        .tint(.white)
-                        .controlSize(.large)
-                        .scaleEffect(1.25)
-                        .onAppear {
-                            state.sessionManager?.startSession()
-                        }
+                    HStack {
+                        Spacer()
+                        ProgressView()
+                            .tint(.white)
+                            .controlSize(.large)
+                            .scaleEffect(1.25)
+                            .onAppear {
+                                state.sessionManager?.startSession()
+                            }
+                        Spacer()
+                    }
                     Spacer()
                 }
             }

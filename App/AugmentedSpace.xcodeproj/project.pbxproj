@@ -145,7 +145,6 @@
 		C08755DF2A5ED2FB00965129 = {
 			isa = PBXGroup;
 			children = (
-				C065ACE62A7C088B0004D407 /* SessionStateView.swift */,
 				C08755EA2A5ED2FB00965129 /* AugmentedSpace */,
 				C08755E92A5ED2FB00965129 /* Products */,
 			);
@@ -207,6 +206,7 @@
 		C0BD00782A5EDB4A00AB4EFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C065ACE62A7C088B0004D407 /* SessionStateView.swift */,
 				C065ACE12A7C06DB0004D407 /* ShowQRCodeView.swift */,
 				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
 				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,

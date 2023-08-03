@@ -46,6 +46,7 @@ struct ConnectivityView: View {
                         ShowQRCodeView()
                             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     } else {
+                        Spacer()
                         Text("Session connected.\nSecond player is \($state.partnerName.wrappedValue).")
                             .font(Font.custom("Poppins-SemiBold", size: 30))
                             .foregroundColor(.white)
