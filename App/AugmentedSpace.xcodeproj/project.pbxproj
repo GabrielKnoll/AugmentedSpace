@@ -30,6 +30,8 @@
 		C051E08B2A77EE0D00DB0AF4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */; };
 		C051E08E2A77F90600DB0AF4 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051E08D2A77F90600DB0AF4 /* NameView.swift */; };
 		C065ACD12A7BC8F10004D407 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C065ACD02A7BC8F10004D407 /* Item.swift */; };
+		C065ACE22A7C06DB0004D407 /* ShowQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C065ACE12A7C06DB0004D407 /* ShowQRCodeView.swift */; };
+		C065ACE72A7C088B0004D407 /* SessionStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C065ACE62A7C088B0004D407 /* SessionStateView.swift */; };
 		C08755EE2A5ED2FB00965129 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08755ED2A5ED2FB00965129 /* ContentView.swift */; };
 		C08755F22A5ED2FC00965129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08755F12A5ED2FC00965129 /* Assets.xcassets */; };
 		C08755F52A5ED2FC00965129 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08755F42A5ED2FC00965129 /* Preview Assets.xcassets */; };
@@ -91,6 +93,8 @@
 		C051E08A2A77EE0D00DB0AF4 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		C051E08D2A77F90600DB0AF4 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		C065ACD02A7BC8F10004D407 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C065ACE12A7C06DB0004D407 /* ShowQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowQRCodeView.swift; sourceTree = "<group>"; };
+		C065ACE62A7C088B0004D407 /* SessionStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStateView.swift; sourceTree = "<group>"; };
 		C08755E82A5ED2FB00965129 /* AugmentedSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AugmentedSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08755EB2A5ED2FB00965129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08755ED2A5ED2FB00965129 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		C08755DF2A5ED2FB00965129 = {
 			isa = PBXGroup;
 			children = (
+				C065ACE62A7C088B0004D407 /* SessionStateView.swift */,
 				C08755EA2A5ED2FB00965129 /* AugmentedSpace */,
 				C08755E92A5ED2FB00965129 /* Products */,
 			);
@@ -202,6 +207,7 @@
 		C0BD00782A5EDB4A00AB4EFB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C065ACE12A7C06DB0004D407 /* ShowQRCodeView.swift */,
 				E97C640C2A77FA15008E0C3A /* StartMenuView.swift */,
 				E9A697C52A79023B00C006FE /* SelectRoleView.swift */,
 				E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */,
@@ -366,6 +372,7 @@
 				C065ACD12A7BC8F10004D407 /* Item.swift in Sources */,
 				C03EBCFD2A7917CF00F10033 /* FlipEffect.swift in Sources */,
 				E93161C82A7A5336000B080F /* EndSessionView.swift in Sources */,
+				C065ACE72A7C088B0004D407 /* SessionStateView.swift in Sources */,
 				E9FC44212A7808010003BEF7 /* StaticARViewContainer.swift in Sources */,
 				C03EBCFA2A7912A100F10033 /* ItemCardView.swift in Sources */,
 				C03EBD112A79624A00F10033 /* Step.swift in Sources */,
@@ -387,6 +394,7 @@
 				E9B72A0D2A77C8E7007E19ED /* ShowInformationButton.swift in Sources */,
 				C04A651F2A77A5D6003D9729 /* Rswift+Extensions.swift in Sources */,
 				C03EBD182A7A5DE600F10033 /* PhotoView.swift in Sources */,
+				C065ACE22A7C06DB0004D407 /* ShowQRCodeView.swift in Sources */,
 				E97C640D2A77FA15008E0C3A /* StartMenuView.swift in Sources */,
 				E97C63F72A77CA1D008E0C3A /* RepeatButton.swift in Sources */,
 				E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */,
@@ -538,7 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;
@@ -572,7 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AugmentedSpace/Preview Content\"";
-				DEVELOPMENT_TEAM = FY482T2YCZ;
+				DEVELOPMENT_TEAM = TP5UPDPNZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AugmentedSpace/Info.plist;

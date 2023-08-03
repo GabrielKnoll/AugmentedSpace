@@ -9,6 +9,7 @@ import RealityKit
 import SwiftUI
 
 struct ContinueButton: View {
+    @Environment(\.isEnabled) private var isEnabled
     var clicked: (() -> Void)
 
     var body: some View {
@@ -21,9 +22,9 @@ struct ContinueButton: View {
                     .bold()
             }
             .frame(maxWidth: .infinity, maxHeight: 30)
-            .foregroundColor(.black)
+            .foregroundColor(isEnabled ? .black : R.color.customFontDisabled.color)
             .padding()
-            .background(R.color.customOrange.color)
+            .background(isEnabled ? R.color.customOrange.color : R.color.customOrangeDisabled.color)
             .cornerRadius(10)
         }
         .buttonStyle(CustomButtonStyle())
