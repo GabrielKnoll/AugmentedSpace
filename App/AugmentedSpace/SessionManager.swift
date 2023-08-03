@@ -6,6 +6,7 @@
 //
 
 import MultipeerConnectivity
+import SwiftUI
 
 enum DecodingError: Error {
     case unsupportedDataType
@@ -33,6 +34,7 @@ class SessionManager: NSObject {
         serviceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "ifi-par")
         serviceAdvertiser?.delegate = self
         serviceAdvertiser?.startAdvertisingPeer()
+        print("session started")
     }
 
     func joinSession() {
@@ -45,12 +47,14 @@ class SessionManager: NSObject {
         serviceBrowser = MCNearbyServiceBrowser(peer: peerID, serviceType: "ifi-par")
         serviceBrowser?.delegate = self
         serviceBrowser?.startBrowsingForPeers()
+        print("trying to join session")
     }
 
     private func initSession(name: String) {
         peerID = MCPeerID(displayName: name)
         mcSession = MCSession(peer: peerID)
         mcSession.delegate = self
+        print("session initialized")
     }
 
     func sendText(text: String) {
@@ -125,7 +129,10 @@ extension SessionManager: MCSessionDelegate {
         switch state {
         case MCSessionState.connected:
             print("Connected: \(peerID.displayName)")
-
+            DispatchQueue.main.async {
+                self.state!.sessionConnected = true
+                self.state!.partnerName = peerID.displayName
+            }
         case MCSessionState.connecting:
             print("Connecting: \(peerID.displayName)")
 

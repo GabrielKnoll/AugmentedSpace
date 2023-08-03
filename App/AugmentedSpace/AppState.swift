@@ -17,8 +17,14 @@ class AppState: ObservableObject {
     @Published var enablePhoto = false
     @Published var name = ""
     @Published var partnerName = ""
+    @Published var sessionConnected = false {
+        didSet {
+            print("sessionConnected: \(sessionConnected)")
+        }
+    }
 
     init() {
+        print("init AppState")
         sessionManager = SessionManager(state: self)
         setSteps()
     }

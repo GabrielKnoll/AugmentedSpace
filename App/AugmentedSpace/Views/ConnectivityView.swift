@@ -25,33 +25,49 @@ struct ConnectivityView: View {
                             .font(.largeTitle)
                             .foregroundColor(.white)
                             .padding(.top, 100)
-                        Spacer(minLength: 150)
+                        Spacer()
                         ScannerViewControllerContainer()
                             .padding(.leading, 40)
                         Spacer()
                     } else {
+                        Spacer()
                         Text("Your partner is \($state.partnerName.wrappedValue)")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
                             .onAppear {
                                 state.sessionManager?.startSession()
                             }
+                        Spacer()
                     }
                 } else {
                     //Guest
-                    Text("Show this QR-Code to your second player")
-                        .font(.title)
-                        .foregroundColor(Color.white)
-                    Image(uiImage: QRUtility.generateQRCode(from: state.name))
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .onAppear {
-                            state.sessionManager?.joinSession()
-                        }
+                    if !state.sessionConnected {
+                        Spacer()
+                        Text("Show this QR-Code to your second player")
+                            .font(.title)
+                            .foregroundColor(Color.white)
+                        Image(uiImage: QRUtility.generateQRCode(from: state.name))
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFit()
+                            .onAppear {
+                                state.sessionManager?.joinSession()
+                            }
+                        Spacer()
+                    } else {
+                        Spacer()
+                        Text("Session connected. Second Player is: \($state.partnerName.wrappedValue)")
+                            .font(.title)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
                 }
                 ContinueButton {
-                    print("Hello")
+                    print("Hello: \(state.sessionConnected)")
                 }
+                .disabled(!state.sessionConnected)
                 .padding(30)
+                //TODO: Disabled style
             }
             .padding()
             .onAppear {
