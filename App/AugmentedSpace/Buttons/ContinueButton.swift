@@ -15,9 +15,12 @@ struct ContinueButton: View {
         Button(action: clicked) {
             HStack {
                 Text("Continue")
+                    .font(Font.custom("Poppins-SemiBold", size: 17))
+                Image(systemName: "chevron.forward")
+                    .font(Font.system(size: 17))
+                    .bold()
             }
             .frame(maxWidth: .infinity, maxHeight: 30)
-            .font(Font.custom("Poppins-SemiBold", size: 18))
             .foregroundColor(.black)
             .padding()
             .background(R.color.customOrange.color)

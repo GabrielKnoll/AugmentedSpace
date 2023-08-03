@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConnectivityView: View {
     @EnvironmentObject var state: AppState
+    @Environment(\.dismiss) var dismiss
     @State private var showingAlert = false
     @State private var isShowingScanner = false
     @State private var shouldContinue = false
@@ -71,11 +72,18 @@ struct ConnectivityView: View {
                         Spacer()
                     }
                 }
-                ContinueButton {
-                    shouldContinue = true
+                HStack(spacing: 15) {
+                    BackButton {
+                        dismiss()
+                    }
+                    .frame(maxWidth: 120)
+                    .padding(.leading, 30)
+                    ContinueButton {
+                        shouldContinue = true
+                    }
+                    .disabled(!state.sessionConnected)
+                    .padding(.trailing, 30)
                 }
-                .disabled(!state.sessionConnected)
-                .padding(30)
                 //TODO: Disabled style
             }
             .padding()

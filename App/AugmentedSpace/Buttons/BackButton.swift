@@ -15,17 +15,15 @@ struct BackButton: View {
         Button(action: clicked) {
             VStack {
                 HStack {
-                    Image("Icon_BackArrow")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(alignment: .center)
+                    Image(systemName: "chevron.backward")
+                        .font(.system(size: 17))
+                        .bold()
                     Text("Back")
-                        .frame(alignment: .center)
-                        .font(Font.custom("Poppins-SemiBold", size: 15))
+                        .font(Font.custom("Poppins-SemiBold", size: 17))
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: 30)
-            .foregroundColor(Color.white)
+            .foregroundColor(.white)
             .padding()
             .background(R.color.customGrey.color)
             .cornerRadius(10)

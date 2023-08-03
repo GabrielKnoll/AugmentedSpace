@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FittingSpecialistIntroView: View {
     @EnvironmentObject var state: AppState
+    @Environment(\.dismiss) var dismiss
     @State private var isShowingStartMenuView = false
 
     var body: some View {
@@ -34,9 +35,17 @@ struct FittingSpecialistIntroView: View {
                 }.padding([.leading, .bottom, .trailing], 40)
                 Spacer()
                 NavigationLink(destination: FittingARView().navigationBarBackButtonHidden(true), isActive: $isShowingStartMenuView) { EmptyView() }
-                ContinueButton {
-                    state.role = .checklist
-                    isShowingStartMenuView = true
+                HStack(spacing: 15) {
+                    BackButton {
+                        dismiss()
+                    }
+                    .frame(maxWidth: 120)
+                    .padding(.leading, 30)
+                    ContinueButton {
+                        state.role = .checklist
+                        isShowingStartMenuView = true
+                    }
+                    .padding(.trailing, 30)
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
             }

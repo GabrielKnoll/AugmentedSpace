@@ -9,13 +9,12 @@ import SwiftUI
 
 struct NameView: View {
     @EnvironmentObject var state: AppState
+    @Environment(\.dismiss) var dismiss
     @State private var shouldContinue = false
 
     var body: some View {
         ZStack {
-            Image("spaceBackground")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView()
             VStack {
                 VStack(alignment: .leading, spacing: 0) {
                     Text("What's")
@@ -26,6 +25,7 @@ struct NameView: View {
                         .font(Font.custom("Poppins-SemiBold", size: 46))
                         .foregroundColor(R.color.customOrange.color)
                 }
+                .padding(EdgeInsets(top: 0, leading: -65, bottom: 0, trailing: 0))
                 Spacer()
                 HStack {
                     Spacer(minLength: 30)
@@ -41,10 +41,17 @@ struct NameView: View {
                     Spacer(minLength: 30)
                 }
                 Spacer()
-                ContinueButton {
-                    shouldContinue = true
+                HStack(spacing: 15) {
+                    BackButton {
+                        dismiss()
+                    }
+                    .frame(maxWidth: 120)
+                    .padding(.leading, 30)
+                    ContinueButton {
+                        shouldContinue = true
+                    }
+                    .padding(.trailing, 30)
                 }
-                .padding(30)
             }
         }
         NavigationLink(

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChecklistNavigatorIntroView: View {
     @EnvironmentObject var state: AppState
+    @Environment(\.dismiss) var dismiss
     @State private var isShowingComponentView = false
 
     var body: some View {
@@ -34,9 +35,17 @@ struct ChecklistNavigatorIntroView: View {
                 }.padding([.leading, .bottom, .trailing], 40)
                 Spacer()
                 NavigationLink(destination: ComponentView().navigationBarBackButtonHidden(true), isActive: $isShowingComponentView) { EmptyView() }
-                ContinueButton {
-                    state.role = .checklist
-                    isShowingComponentView = true
+                HStack(spacing: 15) {
+                    BackButton {
+                        dismiss()
+                    }
+                    .frame(maxWidth: 120)
+                    .padding(.leading, 30)
+                    ContinueButton {
+                        state.role = .checklist
+                        isShowingComponentView = true
+                    }
+                    .padding(.trailing, 30)
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 30, trailing: 20))
             }
