@@ -13,7 +13,7 @@ import UIKit
 class BodyTrackedARView: ARView, ARSessionDelegate {
     var state: AppState
     var character: BodyTrackedEntity?
-    let characterOffset: SIMD3<Float> = [-1.0, 0, 0] // Offset the character by one meter to the left
+    let characterOffset: SIMD3<Float> = [0, 0, 0] // Offset the character by one meter to the left
     let characterAnchor = AnchorEntity()
 
     init(state: AppState) {
@@ -45,10 +45,11 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
         session.run(configuration)
 
         scene.addAnchor(characterAnchor)
-
-        // Asynchronously load the 3D character.
+    }
+    
+    func loadModel(for item: Item) {
         var cancellable: AnyCancellable?
-        cancellable = Entity.loadBodyTrackedAsync(named: "robot").sink(
+        cancellable = Entity.loadBodyTrackedAsync(named: item.model).sink(
             receiveCompletion: { completion in
                 if case let .failure(error) = completion {
                     print("Error: Unable to load model: \(error.localizedDescription)")
@@ -57,7 +58,7 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
             }, receiveValue: { (character: Entity) in
                 if let character = character as? BodyTrackedEntity {
                     // Scale the character to human size
-                    character.scale = [1.0, 1.0, 1.0]  // Scale the character to human size [0.1, 0.1, 0.1]
+                    character.scale = [0.01, 0.01, 0.01]  // Scale the character to human size [0.1, 0.1, 0.1]
                     self.character = character
                     cancellable?.cancel()
                 } else {
@@ -84,10 +85,6 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
                 characterAnchor.addChild(character)
             }
         }
-    }
-
-    func loadModel(for item: Item) {
-        print("Load Model")
     }
 
     func takeSnapshot(completion: @escaping (Image) -> Void) {
