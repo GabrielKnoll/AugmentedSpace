@@ -52,15 +52,15 @@ enum Item: Int, CaseIterable, Identifiable {
     var facts: ItemFacts? {
         switch self {
         case .gloves:
-            return ItemFacts(weight: "25 kg", color: "white", cost: "9000000$", material: "fabric")
+            return ItemFacts(weight: "1 kg", color: "White", cost: "9000000$", material: "Nomex, Gore-Tex, Kevlar")
         case .helmet:
-            return ItemFacts(weight: "100 kg", color: "black", cost: "9$", material: "metal")
+            return ItemFacts(weight: "11 kg", color: "Black, White", cost: "9$", material: "Polycarbonat, Plexiglas")
         case .coolingGarment:
-            return nil
+            return ItemFacts(weight: "6 kg", color: "White", cost: "9$", material: "Elastic Nomex")
         case .lowerTorso:
-            return nil
+            return ItemFacts(weight: "30 kg", color: "White, Grey, Red", cost: "9$", material: "Nylon, Kevlar, Mylar")
         case .hardUpperTorso:
-            return nil
+            return ItemFacts(weight: "110 kg", color: "White, Grey, Red", cost: "9$", material: "Fiberglass")
         }
     }
 

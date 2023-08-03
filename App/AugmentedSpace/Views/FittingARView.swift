@@ -47,13 +47,13 @@ struct FittingARView: View {
                     HStack {
                         if !state.enablePhoto {
                         if shouldShowEquipment {
-                            BackButton() {
+                            BackButton {
                                 shouldShowEquipment = false
                             } .frame(maxWidth: 120)
 
                         }
                         if !shouldShowEquipment {
-                            SelectEquipmentButton() {
+                            SelectEquipmentButton {
                                 if shouldShowEquipment {
                                     state.finishCurrentStep()
                                     shouldShowEquipment = false
@@ -62,7 +62,7 @@ struct FittingARView: View {
                                 }
                             }
                         } else {
-                            ChoosePieceButton() {
+                            ChoosePieceButton {
                                 if state.currentStep!.number - 1 == state.selectedCard {
                                     shouldShowEquipment = false
                                     state.selectedItemToDisplay!(Item(rawValue: state.selectedCard)!)
@@ -70,7 +70,7 @@ struct FittingARView: View {
                                 } else {
                                     wrongSelection = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                        withAnimation() {
+                                        withAnimation {
                                             self.wrongSelection = false
                                         }
                                     }
@@ -79,7 +79,7 @@ struct FittingARView: View {
                         }
                         } else {
                             NavigationLink(destination: PhotoIntroView().navigationBarBackButtonHidden(true), isActive: $isShowingPhotoView) { EmptyView() }
-                            ContinueButton() {
+                            ContinueButton {
                                 isShowingPhotoView = true
                             }
                         }

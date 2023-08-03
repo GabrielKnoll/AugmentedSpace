@@ -51,7 +51,7 @@ struct HelmetButton: View {
 
 struct HelmetButton_Previews: PreviewProvider {
     static var previews: some View {
-        HelmetButton() {
+        HelmetButton {
         }
     }
 }
