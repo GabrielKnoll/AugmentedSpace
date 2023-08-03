@@ -9,7 +9,7 @@ import Foundation
 
 class AppState: ObservableObject {
     private(set) var sessionManager: SessionManager?
-    var debug = false
+    var debug = true
     @Published var role: Role = .checklist
     @Published private(set) var currentStep: Step?
     @Published private(set) var steps = [Step]()

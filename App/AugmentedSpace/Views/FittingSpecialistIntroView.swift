@@ -33,7 +33,7 @@ struct FittingSpecialistIntroView: View {
                         .foregroundColor(Color.white)
                 }.padding([.leading, .bottom, .trailing], 40)
                 Spacer()
-                NavigationLink(destination: StartMenuView().navigationBarBackButtonHidden(true), isActive: $isShowingStartMenuView) { EmptyView() }
+                NavigationLink(destination: FittingARView().navigationBarBackButtonHidden(true), isActive: $isShowingStartMenuView) { EmptyView() }
                 ContinueButton {
                     state.role = .checklist
                     isShowingStartMenuView = true

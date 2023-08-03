@@ -13,22 +13,19 @@ struct ShowInformationButton: View {
 
     var body: some View {
         Button(action: clicked) {
-            HStack(spacing: 10) {
+            HStack {
                 Text("Show Information")
-                    .lineLimit(1)
-                    .font(Font.custom("Poppins-Medium", size: 15))
                 Image("Icon_Info")
                     .resizable()
                     .scaledToFit()
-                    .frame(maxHeight: 30)
             }
+            .frame(maxWidth: .infinity, maxHeight: 30)
+            .font(Font.custom("Poppins-Regular", size: 18))
+            .foregroundColor(.white)
+            .padding()
+            .background(R.color.customBlue.color)
+            .cornerRadius(10)
         }
-        .fixedSize()
-        .frame(maxWidth: .infinity, maxHeight: 40)
-        .padding(5)
-        .foregroundColor(Color.white)
-        .background(R.color.customBlue.color)
-        .cornerRadius(10)
     }
 }
 #if DEBUG
