@@ -9,9 +9,9 @@ import RealityKit
 import SwiftUI
 
 struct BodyTrackedARViewContainer: UIViewRepresentable {
-   // private(set) var arView: BodyTrackedARView = .init()
+    @EnvironmentObject var state: AppState
 
-    func makeUIView(context: Context) -> ARView { BodyTrackedARView() }
+    func makeUIView(context: Context) -> ARView { BodyTrackedARView(state: state) }
 
     func updateUIView(_ uiView: ARView, context: Context) {}
 }

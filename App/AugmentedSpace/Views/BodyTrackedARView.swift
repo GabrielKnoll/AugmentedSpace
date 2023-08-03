@@ -11,12 +11,23 @@ import RealityKit
 import UIKit
 
 class BodyTrackedARView: ARView, ARSessionDelegate {
+    var state: AppState
     var character: BodyTrackedEntity?
     let characterOffset: SIMD3<Float> = [-1.0, 0, 0] // Offset the character by one meter to the left
     let characterAnchor = AnchorEntity()
 
-    init() {
+    init(state: AppState) {
+        self.state = state
         super.init(frame: .zero)
+
+        state.selectedItemToDisplay = { item in
+            self.loadModel(for: item)
+        }
+
+        state.machFoto = { completion in
+            self.takeSnapshot(completion: completion)
+        }
+
         configureARView()
     }
 
@@ -73,6 +84,10 @@ class BodyTrackedARView: ARView, ARSessionDelegate {
                 characterAnchor.addChild(character)
             }
         }
+    }
+
+    func loadModel(for item: Item) {
+        print("Load Model")
     }
 
     func takeSnapshot(completion: @escaping (Image) -> Void) {

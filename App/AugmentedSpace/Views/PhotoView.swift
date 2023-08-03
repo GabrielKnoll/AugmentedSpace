@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PhotoView: View {
+    @EnvironmentObject var state: AppState
     @State private var secondPage = false
     @State private var hideUI = false
     @State private var finish = false
@@ -53,7 +54,7 @@ struct PhotoView: View {
                 } else {
                     HStack {
                         RepeatButton {
-                           secondPage = false
+                            secondPage = false
                         }
                         SaveButton {
                             saveImage()
@@ -70,13 +71,14 @@ struct PhotoView: View {
     }
 
     private func takePhoto() {
-//        hideUI = true
-//        arViewContainer.arView.takeSnapshot(completion: { image in
-//            currentImage = image
-//            resultImage = Image(uiImage: image)
-//            secondPage = true
-//            hideUI = false
-//        })
+        hideUI = true
+        state.machFoto! {
+            image in
+            currentImage = image
+            resultImage = Image(uiImage: image)
+            secondPage = true
+            hideUI = false
+        }
     }
 
     private func saveImage() {

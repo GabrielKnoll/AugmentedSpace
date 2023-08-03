@@ -5,7 +5,7 @@
 //  Created by Gabriel Knoll on 31.07.23.
 //
 
-import Foundation
+import SwiftUI
 
 class AppState: ObservableObject {
     private(set) var sessionManager: SessionManager?
@@ -22,6 +22,9 @@ class AppState: ObservableObject {
             print("sessionConnected: \(sessionConnected)")
         }
     }
+
+    var selectedItemToDisplay: ((Item) -> Void)?
+    var machFoto: ((@escaping (UIImage) -> Void) -> Void)?
 
     init() {
         print("init AppState")
