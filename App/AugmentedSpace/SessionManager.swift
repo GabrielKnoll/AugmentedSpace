@@ -70,7 +70,8 @@ class SessionManager: NSObject {
     }
 
     func sendStep(step: Step) {
-        if !mcSession.connectedPeers.isEmpty {
+        guard let session = mcSession else { return }
+        if session.connectedPeers.isEmpty {
             do {
                 let encoder = JSONEncoder()
                 let data = try encoder.encode(step)
