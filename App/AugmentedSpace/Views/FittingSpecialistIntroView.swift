@@ -14,9 +14,7 @@ struct FittingSpecialistIntroView: View {
 
     var body: some View {
         ZStack {
-            Image("spaceBackground")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView()
             VStack(alignment: .center) {
                 Image("Icon_Styler")
                     .resizable()
