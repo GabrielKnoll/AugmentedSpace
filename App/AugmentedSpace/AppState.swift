@@ -52,10 +52,12 @@ class AppState: ObservableObject {
         guard var currStep = currentStep else { return }
         let index = currStep.number - 1
         currStep.updateState(new: .complete)
+        sessionManager?.sendStep(step: currStep)
         steps[index] = currStep
         let newIndex = index + 1
         if newIndex < steps.count {
             setCurrentStep(step: steps[newIndex])
+            sessionManager?.sendStep(step: currentStep!)
             if case .photo = currentStep! {
                 enablePhoto = true
             }
