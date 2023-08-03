@@ -51,6 +51,7 @@
 		E9A697C62A79023B00C006FE /* SelectRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697C52A79023B00C006FE /* SelectRoleView.swift */; };
 		E9A697DD2A792D9300C006FE /* FittingSpecialistIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */; };
 		E9A697E02A792DAC00C006FE /* ChecklistNavigatorIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */; };
+		E9A97F2F2A7BE8D100FA1A48 /* HelmetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A97F2E2A7BE8D100FA1A48 /* HelmetButton.swift */; };
 		E9B729F62A77C14F007E19ED /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F52A77C14F007E19ED /* StartGameButton.swift */; };
 		E9B729F92A77C1F4007E19ED /* SelectRoleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */; };
 		E9B72A002A77C411007E19ED /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B729FF2A77C410007E19ED /* ContinueButton.swift */; };
@@ -114,6 +115,7 @@
 		E9A697C52A79023B00C006FE /* SelectRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleView.swift; sourceTree = "<group>"; };
 		E9A697DC2A792D9300C006FE /* FittingSpecialistIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingSpecialistIntroView.swift; sourceTree = "<group>"; };
 		E9A697DF2A792DAC00C006FE /* ChecklistNavigatorIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistNavigatorIntroView.swift; sourceTree = "<group>"; };
+		E9A97F2E2A7BE8D100FA1A48 /* HelmetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelmetButton.swift; sourceTree = "<group>"; };
 		E9B729F52A77C14F007E19ED /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		E9B729F82A77C1F4007E19ED /* SelectRoleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleButton.swift; sourceTree = "<group>"; };
 		E9B729FF2A77C410007E19ED /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				E97C64032A77F6A2008E0C3A /* TakePhotoIconButton.swift */,
 				E97C64062A77F805008E0C3A /* SaveButton.swift */,
 				E9B72A062A77C8A9007E19ED /* BackButton.swift */,
+				E9A97F2E2A7BE8D100FA1A48 /* HelmetButton.swift */,
 				E9B72A092A77C8C9007E19ED /* ChoosePieceButton.swift */,
 				E9B72A0C2A77C8E7007E19ED /* ShowInformationButton.swift */,
 				E9B72A0F2A77C91D007E19ED /* SelectEquipmentButton.swift */,
@@ -376,6 +379,7 @@
 				E9A697DD2A792D9300C006FE /* FittingSpecialistIntroView.swift in Sources */,
 				E9B72A0A2A77C8C9007E19ED /* ChoosePieceButton.swift in Sources */,
 				C0E2EB7A2A781E6C00CA730E /* StatusBarView.swift in Sources */,
+				E9A97F2F2A7BE8D100FA1A48 /* HelmetButton.swift in Sources */,
 				E9165CAC2A79499100741FF0 /* ComponentView.swift in Sources */,
 				C03EBCF72A790FF500F10033 /* ItemScrollView.swift in Sources */,
 				E97C640A2A77F8D1008E0C3A /* EndSessionButton.swift in Sources */,
