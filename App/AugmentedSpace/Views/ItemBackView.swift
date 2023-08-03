@@ -22,24 +22,38 @@ struct ItemBackView: View {
             Spacer()
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Weight:")
-                    Text("Material:")
-                    Text("Color:")
-                }
-                .padding(.trailing, 15)
-                .font(Font.custom("Poppins-Bold", size: 15))
-                if let facts = item.facts {
-                    VStack(alignment: .leading) {
-                        Text(facts.weight)
-                        Text(facts.material)
-                        Text(facts.color)
-                    }.font(Font.custom("Poppins-Regular", size: 15))
+                    if let facts = item.facts {
+                        HStack(alignment: .top) {
+                            Text("Weight:")
+                                .font(Font.custom("Poppins-Bold", size: 15))
+                            Spacer(minLength: 20)
+                            Text(facts.weight)
+                                .font(Font.custom("Poppins-Regular", size: 15))
+                            Spacer()
+                        }
+                        HStack(alignment: .top) {
+                            Text("Material:")
+                                .font(Font.custom("Poppins-Bold", size: 15))
+                            Spacer()
+                            Text(facts.material)
+                                .font(Font.custom("Poppins-Regular", size: 15))
+                            Spacer()
+                        }
+                        HStack(alignment: .top) {
+                            Text("Color:")
+                                .font(Font.custom("Poppins-Bold", size: 15))
+                            Spacer()
+                            Text(facts.color)
+                                .font(Font.custom("Poppins-Regular", size: 15))
+                            Spacer()
+                        }
+                    }
                 }
                 Spacer()
-            }.padding(.horizontal, 40)
+            }.padding(.horizontal, 30)
             Spacer()
             Text(item.description)
-                .padding(.horizontal, 40)
+                .padding(.horizontal, 30)
                 .multilineTextAlignment(.leading)
                 .font(Font.custom("Poppins-Regular", size: 15))
             Spacer()

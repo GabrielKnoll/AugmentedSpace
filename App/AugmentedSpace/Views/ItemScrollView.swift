@@ -61,6 +61,8 @@ struct ItemScrollView: View {
 
 struct ItemScrollView_Previews: PreviewProvider {
     static var previews: some View {
+        let state = AppState()
         ItemScrollView()
+            .environmentObject(state)
     }
 }

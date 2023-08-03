@@ -69,11 +69,11 @@ enum Step: Codable {
     var color: Color {
         switch self.state {
         case .active:
-            return .red
+            return R.color.customOrange.color
         case .inactive:
             return .gray
         case .complete:
-            return .green
+            return R.color.customBlue.color
         }
     }
 
