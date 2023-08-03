@@ -26,26 +26,33 @@ struct ItemBackView: View {
                         HStack(alignment: .top) {
                             Text("Weight:")
                                 .font(Font.custom("Poppins-Bold", size: 15))
-                            Spacer(minLength: 20)
-                            Text(facts.weight)
-                                .font(Font.custom("Poppins-Regular", size: 15))
+                                .padding(.trailing, 8)
+                            VStack(alignment: .leading) {
+                                Text(facts.weight)
+                            }
+                            .font(Font.custom("Poppins-Regular", size: 15))
+                            .multilineTextAlignment(.leading)
                             Spacer()
                         }
+                        
                         HStack(alignment: .top) {
                             Text("Material:")
                                 .font(Font.custom("Poppins-Bold", size: 15))
-                            Spacer()
-                            Text(facts.material)
-                                .font(Font.custom("Poppins-Regular", size: 15))
-                            Spacer()
+                                .padding(.trailing, 0)
+                            VStack(alignment: .leading) {
+                                Text(facts.material)
+                            }.font(Font.custom("Poppins-Regular", size: 15))
+                                .multilineTextAlignment(.leading)
                         }
                         HStack(alignment: .top) {
                             Text("Color:")
                                 .font(Font.custom("Poppins-Bold", size: 15))
-                            Spacer()
-                            Text(facts.color)
-                                .font(Font.custom("Poppins-Regular", size: 15))
-                            Spacer()
+                                .padding(.trailing, 25)
+                            VStack(alignment: .leading) {
+                                Text(facts.color)
+                            }
+                            .font(Font.custom("Poppins-Regular", size: 15))
+                            .multilineTextAlignment(.leading)
                         }
                     }
                 }
