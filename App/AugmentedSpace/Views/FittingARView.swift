@@ -40,7 +40,7 @@ struct FittingARView: View {
                     .ignoresSafeArea(.all)
                     .blur(radius: shouldShowEquipment ? 10 : 0)
                 if shouldShowEquipment {
-                    ItemScrollView()
+                        ItemScrollView()
                 }
             }.blur(radius: wrongSelection ? 10 : 0)
             .overlay(alignment: .bottom) {
@@ -49,7 +49,8 @@ struct FittingARView: View {
                         if shouldShowEquipment {
                             BackButton() {
                                 shouldShowEquipment = false
-                            }
+                            } .frame(maxWidth: 120)
+
                         }
                         if !shouldShowEquipment {
                             SelectEquipmentButton() {

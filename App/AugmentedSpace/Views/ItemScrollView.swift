@@ -15,9 +15,23 @@ struct ItemScrollView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     ForEach(Item.allCases, id: \.id) { item in
-                        ItemCardView(item: item)
-                            .frame(width: 325, height: 400)
-                            .id(item)
+                        if item.id < 1 {
+                            ItemCardView(item: item)
+                                .frame(width: 325, height: 400)
+                                .padding(.leading, 50)
+                                .id(item)
+                        }
+                        if item.id > 3 {
+                            ItemCardView(item: item)
+                                .frame(width: 325, height: 400)
+                                .padding(.trailing, 50)
+                                .id(item)
+                        }
+                        if item.id > 0 && item.id < 4 {
+                            ItemCardView(item: item)
+                                .frame(width: 325, height: 400)
+                                .id(item)
+                        }
                     }
                 }
                 .frame(maxHeight: 700)
