@@ -40,7 +40,7 @@ struct NameView: View {
                         )
                     Spacer(minLength: 30)
                 }
-                Spacer()
+                .padding(.bottom, 100)
                 HStack(spacing: 15) {
                     BackButton {
                         dismiss()
