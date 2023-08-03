@@ -34,6 +34,7 @@ struct PhotoView: View {
                     resultImage
                         .resizable()
                         .aspectRatio(contentMode: .fill)
+                        .ignoresSafeArea()
                 }
             }
         }
