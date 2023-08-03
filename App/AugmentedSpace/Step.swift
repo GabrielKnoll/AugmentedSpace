@@ -77,6 +77,7 @@ enum Step: Codable {
         }
     }
 
+    //swiftlint:disable line_length
     var componentTextCL: String {
         switch self {
         case .coolingGarment:
@@ -93,6 +94,7 @@ enum Step: Codable {
             return ("Capture your personal space experience and take a souvenir photo.")
         }
     }
+    //swiftlint:enable line_length
 
     mutating func updateState(new state: StepState) {
         switch self {

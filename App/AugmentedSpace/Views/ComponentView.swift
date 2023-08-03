@@ -39,6 +39,7 @@ struct ComponentView: View {
                         .font(Font.custom("Poppins-Regular", size: 21))
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                 }.padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
 
