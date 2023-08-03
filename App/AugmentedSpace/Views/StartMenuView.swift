@@ -13,9 +13,7 @@ struct StartMenuView: View {
 
     var body: some View {
         ZStack {
-            Image("spaceBackground")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView()
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text("Welcome to")
