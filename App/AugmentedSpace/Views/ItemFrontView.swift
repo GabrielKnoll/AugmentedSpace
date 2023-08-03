@@ -19,6 +19,11 @@ struct ItemFrontView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                 Spacer()
+                Image(uiImage: item.image!)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                Spacer()
                 ShowInformationButton {
                     withAnimation(.linear(duration: 0.35)) {
                         animate3d.toggle()
@@ -29,12 +34,8 @@ struct ItemFrontView: View {
             .background(Color.black)
             .cornerRadius(20)
             VStack {
-                Spacer(minLength: 75)
-                Image(uiImage: item.image!)
-                    .resizable()
-                    .scaledToFit()
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                Spacer(minLength: 75)
+                Spacer(minLength: 90)
+                Spacer(minLength: 90)
             }
         }
     }

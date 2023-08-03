@@ -14,6 +14,7 @@ class AppState: ObservableObject {
     @Published private(set) var currentStep: Step?
     @Published private(set) var steps = [Step]()
     @Published private(set) var currentStepLimit = 0
+    @Published var selectedCard = 2
     @Published var enablePhoto = false
     @Published var name = ""
     @Published var partnerName = ""

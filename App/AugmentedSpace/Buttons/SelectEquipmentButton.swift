@@ -9,27 +9,24 @@ import RealityKit
 import SwiftUI
 
 struct SelectEquipmentButton: View {
-    var text: String
-    var icon: UIImage
     var clicked: (() -> Void)
 
     var body: some View {
         Button(action: clicked) {
             VStack {
                 HStack {
-                    Text(text)
-                        .frame(alignment: .center)
-                    Image(uiImage: icon)
+                    Text("Select Equipment")
+                        .font(Font.custom("Poppins-Medium", size: 18))
+                    Image("Icon_Helmet")
                         .resizable()
                         .scaledToFit()
-                        .frame(alignment: .center)
-                        .padding(10)
+                        .frame(alignment: .leading)
                 }
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: 30)
             .foregroundColor(Color.white)
             .padding()
-            .background(R.color.customBlue.color)
+            .background(R.color.customLightBlue.color)
             .cornerRadius(10)
         }
     }
@@ -37,10 +34,7 @@ struct SelectEquipmentButton: View {
 #if DEBUG
 struct SelectEquipmentButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectEquipmentButton(
-            text: "Select Equipment",
-            icon: R.image.icon_Helmet()!
-        ) {
+        SelectEquipmentButton() {
         }
     }
 }
