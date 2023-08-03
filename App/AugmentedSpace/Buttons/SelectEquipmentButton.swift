@@ -34,7 +34,7 @@ struct SelectEquipmentButton: View {
 #if DEBUG
 struct SelectEquipmentButton_Previews: PreviewProvider {
     static var previews: some View {
-        SelectEquipmentButton() {
+        SelectEquipmentButton {
         }
     }
 }

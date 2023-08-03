@@ -14,14 +14,15 @@ struct PhotoView: View {
     @State private var finish = false
     @State private var resultImage = Image(systemName: "camera.fill")
     @State private var currentImage: UIImage?
-    private let arViewContainer = BodyTrackedARViewContainer()
 
     var body: some View {
         ZStack {
             if !secondPage {
-                arViewContainer
+                BodyTrackedARViewContainer()
                     .ignoresSafeArea(.all)
-
+                    .onAppear {
+                        state.selectedItemToDisplay!(.gloves)
+                    }
                 VStack {
                     Spacer(minLength: 75)
                     FinderView()
@@ -66,9 +67,6 @@ struct PhotoView: View {
             }
             .background(Color(red: 0, green: 0, blue: 0, opacity: 0.75))
             .isHidden(hideUI)
-        }
-        .onAppear {
-            state.selectedItemToDisplay!(.gloves)
         }
         NavigationLink(destination: EndSessionView().navigationBarBackButtonHidden(true), isActive: $finish) { EmptyView() }
     }

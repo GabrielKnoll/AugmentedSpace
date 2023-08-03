@@ -35,7 +35,7 @@ struct ChoosePieceButton: View {
 struct ChoosePieceButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ChoosePieceButton() {
+            ChoosePieceButton {
             }
         }
     }

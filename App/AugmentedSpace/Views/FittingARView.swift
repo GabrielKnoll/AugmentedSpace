@@ -45,12 +45,12 @@ struct FittingARView: View {
             .overlay(alignment: .bottom) {
                 HStack {
                     if shouldShowEquipment {
-                        BackButton() {
+                        BackButton {
                             shouldShowEquipment = false
                         }
                     }
                     if !shouldShowEquipment {
-                        SelectEquipmentButton() {
+                        SelectEquipmentButton {
                             if shouldShowEquipment {
                                 state.finishCurrentStep()
                                 shouldShowEquipment = false
@@ -59,7 +59,7 @@ struct FittingARView: View {
                             }
                         }
                     } else {
-                        ChoosePieceButton() {
+                        ChoosePieceButton {
                             if state.currentStep!.number - 1 == state.selectedCard {
                                 shouldShowEquipment = false
                                 state.selectedItemToDisplay!(Item(rawValue: state.selectedCard)!)
@@ -67,7 +67,7 @@ struct FittingARView: View {
                             } else {
                                 wrongSelection = true
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation() {
+                                    withAnimation {
                                         self.wrongSelection = false
                                     }
                                 }
