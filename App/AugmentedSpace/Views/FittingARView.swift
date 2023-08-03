@@ -10,6 +10,7 @@ import SwiftUI
 struct FittingARView: View {
     @EnvironmentObject var state: AppState
 
+    @State private var isShowingPhotoView = false
     @State private var wrongSelection = false
     @State private var shouldShowEquipment = false {
         didSet {
@@ -43,39 +44,45 @@ struct FittingARView: View {
                 }
             }.blur(radius: wrongSelection ? 10 : 0)
             .overlay(alignment: .bottom) {
-                HStack {
-                    if shouldShowEquipment {
-                        BackButton {
-                            shouldShowEquipment = false
-                        }
-                    }
-                    if !shouldShowEquipment {
-                        SelectEquipmentButton {
-                            if shouldShowEquipment {
-                                state.finishCurrentStep()
+                    HStack {
+                        if !state.enablePhoto {
+                        if shouldShowEquipment {
+                            BackButton() {
                                 shouldShowEquipment = false
-                            } else {
-                                shouldShowEquipment.toggle()
                             }
                         }
-                    } else {
-                        ChoosePieceButton {
-                            if state.currentStep!.number - 1 == state.selectedCard {
-                                shouldShowEquipment = false
-                                state.selectedItemToDisplay!(Item(rawValue: state.selectedCard)!)
-                                state.finishCurrentStep()
-                            } else {
-                                wrongSelection = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    withAnimation {
-                                        self.wrongSelection = false
+                        if !shouldShowEquipment {
+                            SelectEquipmentButton() {
+                                if shouldShowEquipment {
+                                    state.finishCurrentStep()
+                                    shouldShowEquipment = false
+                                } else {
+                                    shouldShowEquipment.toggle()
+                                }
+                            }
+                        } else {
+                            ChoosePieceButton() {
+                                if state.currentStep!.number - 1 == state.selectedCard {
+                                    shouldShowEquipment = false
+                                    state.selectedItemToDisplay!(Item(rawValue: state.selectedCard)!)
+                                    state.finishCurrentStep()
+                                } else {
+                                    wrongSelection = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        withAnimation() {
+                                            self.wrongSelection = false
+                                        }
                                     }
                                 }
                             }
                         }
+                        } else {
+                            NavigationLink(destination: PhotoIntroView().navigationBarBackButtonHidden(true), isActive: $isShowingPhotoView) { EmptyView() }
+                            ContinueButton() {
+                                isShowingPhotoView = true
+                            }
+                        }
                     }
-
-                }
                 .padding(15)
             }
             .blur(radius: wrongSelection ? 10 : 0)
@@ -84,7 +91,7 @@ struct FittingARView: View {
                     .padding(EdgeInsets(top: 0, leading: 30, bottom: 30, trailing: 30))
                     .blur(radius: wrongSelection ? 10 : 0)
             }
-            NavigationLink(destination: PhotoIntroView().navigationBarBackButtonHidden(true), isActive: $state.enablePhoto) { EmptyView() }
+
         }
     }
 }
