@@ -26,6 +26,7 @@ struct ShowInformationButton: View {
             .background(R.color.customBlue.color)
             .cornerRadius(10)
         }
+        .buttonStyle(CustomButtonStyle())
     }
 }
 #if DEBUG

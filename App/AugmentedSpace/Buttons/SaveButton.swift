@@ -22,6 +22,7 @@ struct SaveButton: View {
                 .padding(15)
                 .background(R.color.customOrange.color)
                 .cornerRadius(10)
+                .buttonStyle(CustomButtonStyle())
         }
     }
 }

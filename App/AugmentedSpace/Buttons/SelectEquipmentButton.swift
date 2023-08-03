@@ -29,6 +29,7 @@ struct SelectEquipmentButton: View {
             .background(R.color.customLightBlue.color)
             .cornerRadius(10)
         }
+        .buttonStyle(CustomButtonStyle())
     }
 }
 #if DEBUG

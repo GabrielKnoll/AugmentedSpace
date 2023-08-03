@@ -27,6 +27,7 @@ struct TakePhotoButton: View {
             .background(R.color.customOrange.color)
             .cornerRadius(10)
         }
+        .buttonStyle(CustomButtonStyle())
     }
 }
 #if DEBUG

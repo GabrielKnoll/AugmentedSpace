@@ -24,6 +24,7 @@ struct EndSessionButton: View {
             .background(R.color.customBlue.color)
             .cornerRadius(10)
         }
+        .buttonStyle(CustomButtonStyle())
     }
 }
 

@@ -22,6 +22,7 @@ struct RepeatButton: View {
                 .background(R.color.customGrey.color)
                 .cornerRadius(10)
         }
+        .buttonStyle(CustomButtonStyle())
     }
 }
 #if DEBUG

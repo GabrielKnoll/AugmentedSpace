@@ -8,6 +8,14 @@
 import RealityKit
 import SwiftUI
 
+struct CustomButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .opacity(1)
+            .brightness(configuration.isPressed ? -0.15 : 0)
+    }
+}
+
 struct BackButton: View {
     var clicked: (() -> Void)
 
@@ -28,8 +36,10 @@ struct BackButton: View {
             .background(R.color.customGrey.color)
             .cornerRadius(10)
         }
+        .buttonStyle(CustomButtonStyle())
     }
 }
+
 #if DEBUG
 struct BackButton_Previews: PreviewProvider {
     static var previews: some View {

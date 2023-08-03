@@ -23,6 +23,7 @@ struct TakePhotoIconButton: View {
         .foregroundColor(Color.white)
         .background(R.color.customOrange.color)
         .cornerRadius(10)
+        .buttonStyle(CustomButtonStyle())
     }
 }
 
