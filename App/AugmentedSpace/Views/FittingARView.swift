@@ -18,9 +18,11 @@ struct FittingARView: View {
 
     @State private var buttonText = "Select Equipment"
 
+    let arViewContainer = BodyTrackedARViewContainer()
+
     var body: some View {
         ZStack {
-            BodyTrackedARViewContainer()
+            arViewContainer
                 .ignoresSafeArea(.all)
                 .blur(radius: shouldShowEquipment ? 10 : 0)
             if shouldShowEquipment {

@@ -70,13 +70,13 @@ struct PhotoView: View {
     }
 
     private func takePhoto() {
-        hideUI = true
-        arViewContainer.arView.takeSnapshot(completion: { image in
-            currentImage = image
-            resultImage = Image(uiImage: image)
-            secondPage = true
-            hideUI = false
-        })
+//        hideUI = true
+//        arViewContainer.arView.takeSnapshot(completion: { image in
+//            currentImage = image
+//            resultImage = Image(uiImage: image)
+//            secondPage = true
+//            hideUI = false
+//        })
     }
 
     private func saveImage() {

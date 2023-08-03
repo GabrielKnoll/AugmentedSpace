@@ -11,6 +11,7 @@ struct ConnectivityView: View {
     @EnvironmentObject var state: AppState
     @State private var showingAlert = false
     @State private var isShowingScanner = false
+    @State private var shouldContinue = false
 
     var body: some View {
         ZStack {
@@ -20,6 +21,10 @@ struct ConnectivityView: View {
             VStack(alignment: .center) {
                 if state.role == .fitting {
                     //Host
+                    NavigationLink(
+                        destination: FittingARView()
+                            .navigationBarBackButtonHidden(true),
+                        isActive: $shouldContinue) { EmptyView() }
                     if state.partnerName.isEmpty {
                         Text("Scan the QR Code on your partners device")
                             .font(.largeTitle)
@@ -41,6 +46,10 @@ struct ConnectivityView: View {
                     }
                 } else {
                     //Guest
+                    NavigationLink(
+                        destination: ComponentView()
+                            .navigationBarBackButtonHidden(true),
+                        isActive: $shouldContinue) { EmptyView() }
                     if !state.sessionConnected {
                         Spacer()
                         Text("Show this QR-Code to your second player")
@@ -63,7 +72,7 @@ struct ConnectivityView: View {
                     }
                 }
                 ContinueButton {
-                    print("Hello: \(state.sessionConnected)")
+                    shouldContinue = true
                 }
                 .disabled(!state.sessionConnected)
                 .padding(30)
